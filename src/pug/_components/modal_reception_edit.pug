@@ -1,0 +1,132 @@
+#receptionModal.modalRecpt.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-content_head
+        h2.title Edit page Reception
+        .m-content_head-btn
+          a.btn.btn-cancel.trans(href="javascript:;" data-dismiss="modal")
+            span Cancel
+          button.btn.btn-primary.btn-save.trans.btn-sm
+            span Save
+      .modal-wrapper
+        .modal-content_body
+          .view-side
+            .size Reception size:
+              span 1440px X 958px
+            .box-view
+          .control-side
+            p.desc
+              span.icon
+                img(src=path+"/assets/images/ico_light.svg", alt="")
+              |Drag and drop objects to place on the Reception. You can then customize them in the canvas.
+            .edit-area
+              ul.nav.nav-tabs
+                li.nav-link
+                  a.active(href="#add-block" data-toggle="tab")
+                    svg(width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M2.19287 4C2.19287 2.89543 3.0883 2 4.19287 2H12.1929C13.2974 2 14.1929 2.89543 14.1929 4V5.33333C14.1929 6.4379 13.2974 7.33333 12.1929 7.33333H4.19287C3.0883 7.33333 2.19287 6.4379 2.19287 5.33333V4ZM3.85954 4.66667C3.85954 4.29848 4.15801 4 4.5262 4H9.19287C9.56106 4 9.85954 4.29848 9.85954 4.66667C9.85954 5.03486 9.56106 5.33333 9.19287 5.33333H4.5262C4.15801 5.33333 3.85954 5.03486 3.85954 4.66667ZM11.8595 5.33333C12.2277 5.33333 12.5262 5.03486 12.5262 4.66667C12.5262 4.29848 12.2277 4 11.8595 4C11.4913 4 11.1929 4.29848 11.1929 4.66667C11.1929 5.03486 11.4913 5.33333 11.8595 5.33333Z' fill='#FCFCFC')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M2.19287 10.666C2.19287 9.56145 3.0883 8.66602 4.19287 8.66602H12.1929C13.2974 8.66602 14.1929 9.56145 14.1929 10.666V11.9993C14.1929 13.1039 13.2974 13.9993 12.1929 13.9993H4.19287C3.0883 13.9993 2.19287 13.1039 2.19287 11.9993V10.666ZM3.85954 11.3327C3.85954 10.9645 4.15801 10.666 4.5262 10.666H9.19287C9.56106 10.666 9.85954 10.9645 9.85954 11.3327C9.85954 11.7009 9.56106 11.9993 9.19287 11.9993H4.5262C4.15801 11.9993 3.85954 11.7009 3.85954 11.3327ZM11.8595 11.9993C12.2277 11.9993 12.5262 11.7009 12.5262 11.3327C12.5262 10.9645 12.2277 10.666 11.8595 10.666C11.4913 10.666 11.1929 10.9645 11.1929 11.3327C11.1929 11.7009 11.4913 11.9993 11.8595 11.9993Z' fill='#FCFCFC')
+                    |Add block
+                li.nav-link
+                  a(href="#opt-block" data-toggle="tab")
+                    svg(width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M2 4.66667C2 4.29848 2.29848 4 2.66667 4L13.3333 4C13.7015 4 14 4.29848 14 4.66667C14 5.03486 13.7015 5.33333 13.3333 5.33333L2.66667 5.33333C2.29848 5.33333 2 5.03486 2 4.66667Z' fill='#FCFCFC')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M2 11.3327C2 10.9645 2.29848 10.666 2.66667 10.666L13.3333 10.666C13.7015 10.666 14 10.9645 14 11.3327C14 11.7009 13.7015 11.9993 13.3333 11.9993L2.66667 11.9993C2.29848 11.9993 2 11.7009 2 11.3327Z' fill='#FCFCFC')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M6.6665 13.334C7.77107 13.334 8.6665 12.4386 8.6665 11.334C8.6665 10.2294 7.77107 9.33398 6.6665 9.33398C5.56193 9.33398 4.6665 10.2294 4.6665 11.334C4.6665 12.4386 5.56193 13.334 6.6665 13.334Z' fill='#FCFCFC')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M9.3335 6.66602C10.4381 6.66602 11.3335 5.77059 11.3335 4.66602C11.3335 3.56145 10.4381 2.66602 9.3335 2.66602C8.22893 2.66602 7.3335 3.56145 7.3335 4.66602C7.3335 5.77059 8.22893 6.66602 9.3335 6.66602Z' fill='#FCFCFC')
+                    |Block Options
+              .tab-content
+                .tab-pane.fade.show.active#add-block
+                  .drag-list
+                    .tag-drag
+                      .ic
+                        img(src=path+"/assets/images/ico_add_bg.svg", alt="")
+                      .ct
+                        strong Add background
+                        p Add a background photo for your reception on which you can place videos or link
+                    .tag-drag
+                      .ic
+                        img(src=path+"/assets/images/ico_add_image.svg", alt="")
+                      .ct
+                        strong Add image/video
+                        p Add promo image/videos to welcome attendees like product showcases, services
+                    .tag-drag
+                      .ic
+                        img(src=path+"/assets/images/ico_add_sponsor.svg", alt="")
+                      .ct
+                        strong Add Sponsor
+                        p Add Sponsor to welcome attendees like product showcases, services
+                    .tag-drag
+                      .ic
+                        img(src=path+"/assets/images/ico_add_text.svg", alt="")
+                      .ct
+                        strong Add text
+                        p Add more description areas of the event
+                    .tag-drag
+                      .ic
+                        img(src=path+"/assets/images/ico_add_link.svg", alt="")
+                      .ct
+                        strong Add link
+                        p Add transparent clickable areas which can be link to areas of the event
+                .tab-pane.fade#opt-block
+                  .module-edit
+                    .ttl Add background
+                    .m-input
+                      span.m-input_label Choose image
+                      .input-file-wrap
+                        input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                        img.img-upload(src='' alt='your image')
+                        .btn-upload
+                          img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                          span Upload image
+                        .btn-update
+                          img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                          span Upload image
+                        .btn-remove
+                          img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                          span Remove image
+                    p.format Recommended format: 1440 x 958px | JPG, JPEG, PNG | Up to 20 MB
+                  .module-edit
+                    .ttl Add Image/Video
+                    .m-input
+                      span.m-input_label Choose image/video
+                      .input-file-wrap
+                        input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml, video/mp4, video/x-m4v, video/*")
+                        img.img-upload(src='' alt='your image')
+                        .btn-upload
+                          img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                          span Upload image/video
+                        .btn-update
+                          img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                          span Upload image/video
+                        .btn-remove
+                          img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                          span Remove image/video
+                    p.format Image format: JPG, JPEG, PNG | Up to 5 MB<br>Video format: MP4 | Up to 1000 MB
+                    .block-checkbox
+                      .m-input
+                        input#autoplay.input-checkbox(type='checkbox' checked)
+                        label.checkbox-label(for='autoplay') Toggle
+                      .name-check Auto play video
+                  .module-edit
+                    .ttl Add Sponsor
+                    .m-input
+                      span.m-input_label Choose sponsor
+                      .input-area
+                        select.input.select-box(name="select" required)
+                          option(value="" disabled selected) Please choose one
+                          option(value="1") 1
+                          option(value="2") 2
+                          option(value="3") 3
+                  .module-edit
+                    .ttl Add text
+                    .m-input
+                      span.m-input_label Content
+                      .m-editor_area
+                        #editorRecpt
+                  .module-edit
+                    .ttl Add link
+                    .m-input
+                      span.m-input_label URL
+                      .input-area
+                        input.input.input-text(type="text" placeholder="https://...")

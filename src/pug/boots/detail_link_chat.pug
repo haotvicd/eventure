@@ -1,0 +1,206 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Boots'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'boots-detail'
+  -pageChild    = 'page-boots boots detail'
+  -jsID         = 'calendar'
+  -uploadJs     = ''
+  -videoJs      = ''
+  -path         = '../'
+  -hasFooter    = false
+
+block container
+  .m-boots-detail
+    .m-boots-detail_head.sp-only
+      a.btn-back-detail(href="#")
+        img(src=path+"/assets/images/boots/ico_back.svg", alt="")
+        |Back
+      a.btn.btn-primary.btn-contact(href="#" data-toggle="modal" data-target="#modalMessage")
+        span Contact Us
+    .wrapper
+      .m-boots-detail_inner
+        .m-boots-detail_banner
+          img(src=path+"/assets/images/boots/big_img2.png", alt="")
+        .m-boots-detail_content
+          .orgz_head
+            .logo.has-bg
+              img(src=path+"/assets/images/boots/big_logo2.png", alt="")
+            .des
+              span.name VP Bank
+              p.text Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+              ul.tags-l.pc-only
+                li
+                  a(href="#") Food
+                li
+                  a(href="#") drink
+                li
+                  a(href="#") coffe
+          ul.tags-l.sp-only
+            li
+              a(href="#") Food
+            li
+              a(href="#") drink
+            li
+              a(href="#") coffe
+          .orgz_port
+            ul.orgz_port-list
+              li
+                a.item(href="#") View Portfolio with a long text link 2 line
+              li
+                a.item(href="#") View Portfolio with a long text link 2 line
+              li
+                a.item(href="#") View Portfolio 3
+
+          .orgz_about
+            .contact-box
+              strong Leave Us A Message
+              p For more info about our brand please feel free to get in touch with us.
+              a.btn.btn-primary(href="#" data-toggle="modal" data-target="#modalMessage")
+                span Contact Us
+            .about-us
+              strong About Us
+              p Our story begins in 1971 along the cobblestone streets of Seattle’s historic Pike Place Market. It was here where Starbucks opened its first store, offering fresh-roasted coffee beans, tea and spices from around the world for our customers to take home. Our name was inspired by the classic tale, “Moby-Dick,” evoking the seafaring tradition of the early coffee traders.
+          .orgz_detail
+            p
+              img(src=path+"/assets/images/boots/detail_img5.jpg", alt="")
+            p.text Ten years later, a young New Yorker named Howard Schultz would walk through these doors and become captivated with Starbucks coffee from his first sip. After joining the company in 1982, a different cobblestone road would lead him to another discovery.
+            p.text It was on a trip to Milan in 1983 that Howard first experienced Italy’s coffeehouses, and he returned to Seattle inspired to bring the warmth and artistry of its coffee culture to Starbucks. By 1987, we swapped our brown aprons for green ones and embarked on our next chapter as a coffeehouse.
+            .gallery
+              div
+                img(src=path+"/assets/images/boots/detail_img2.jpg", alt="")
+              div
+                img(src=path+"/assets/images/boots/detail_img3.jpg", alt="")
+            p.text Ten years later, a young New Yorker named Howard Schultz would walk through these doors and become captivated with Starbucks coffee from his first sip. After joining the company in 1982, a different cobblestone road would lead him to another discovery.
+            p.text It was on a trip to Milan in 1983 that Howard first experienced Italy’s coffeehouses, and he returned to Seattle inspired to bring the warmth and artistry of its coffee culture to Starbucks. By 1987, we swapped our brown aprons for green ones and embarked on our next chapter as a coffeehouse.
+            p
+              img(src=path+"/assets/images/boots/detail_img4.jpg", alt="")
+
+  .chat-box.new-mess
+    a.btn-open(href="javascript:;")
+      img(src=path+"/assets/images/boots/ico_chat_box.svg", alt="")
+    .box-chat
+      .box-chat_head
+        strong Chat with us
+        p Chat or ask question to the booth exhibitor
+        a.btn-close(href="javscript:;")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .box-chat_content
+        .row-chat
+          .row-chat_ico
+            img(src=path+"/assets/images/img_avatar02.png", alt="")
+          .row-chat_content
+            .who-chat
+              span.name You
+              .time 12 mins ago
+            .who-tit
+              span.normal Job title, Emergency Medicine
+            .who-said
+              p.our-chat.is-you If you didn’t mean to set your pass sender.
+        .row-chat
+          .row-chat_ico
+            img(src=path+"/assets/images/img_avatar04.png", alt="")
+          .row-chat_content
+            .who-chat
+              span.name David Oshodi
+              .time 10 mins ago
+            .who-tit
+              span.normal Job title, Emergency Medicine
+            .who-said.has-quote
+              .quote
+                p Hey, I want to say...
+                .ppl
+                  span Michael Smith
+                  span Today at 2:41 PM
+              p.our-chat We’ll just use this to follow up if needed. No spam, promise.
+              a.btn-rep(href="javascript:;")
+                img(src=path+"/assets/images/boots/ico_rep.svg", alt="")
+        .row-chat
+          .row-chat_ico
+            img(src=path+"/assets/images/img_avatar07.png", alt="")
+          .row-chat_content
+            .who-chat
+              span.name David Adam
+              .time 1 mins ago
+            .who-tit
+              span.normal Job title, Emergency Medicine
+            .who-said
+              p.our-chat Hello 🥰
+              a.btn-rep(href="javascript:;")
+                img(src=path+"/assets/images/boots/ico_rep.svg", alt="")
+        .no-chat
+          img(src=path+"/assets/images/boots/ico_message.svg", alt="")
+          p This is the booth chat.<br>You can view and share your thought/question here.
+      .box-chat_input.has-quote
+        .box-chat_input-inner
+          .quote
+            p If you didn’t mean to set your password, just ignore this email and we’ll forget this ever happened 😉
+            .ppl
+              span Michael Smith
+              span Today at 2:41 PM
+            a.btn-close-quote(href="javscript:;")
+              img(src=path + "/assets/images/ico_close_white.svg", alt="")
+          a.btn-emo(href="javascript:;")
+            img(src=path+"/assets/images/boots/ico_emo.svg", alt="")
+          input(type="text" placeholder="Enter chat...")
+          a.button-send(href="javascript:;")  Send
+
+  #modalMessage.modalGen.modalGen--sponsor.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary Leave Us A Message
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .modal_body-col.modal_body-col--width100
+              .gr-input
+                .m-input
+                  span.m-input_label
+                    | First name
+                    small.warning *
+                  .input-area
+                    input.input.input-text(type='text' placeholder='First name')
+                .m-input
+                  span.m-input_label
+                    | Last name
+                    small.warning *
+                  .input-area
+                    input.input.input-text(type='text' placeholder='Last name')
+              .m-input
+                span.m-input_label Email
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" maxlength="50" placeholder="Enter your email")
+              .m-input
+                span.m-input_label Phone number
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Enter phone number")
+              .m-input
+                span.m-input_label Group
+                  small.warning *
+                .input-area
+                  textarea.input.input-text.input-textarea(name="", cols="30", rows="10" placeholder="Enter your opinion")
+          .modal_foot
+            a(href="#" class="btn btn-primary trans w-100" data-toggle="modal" data-target="#modalSend")
+              span Submit
+
+  #modalSend.modalEvent.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          .ico-send
+            img(src=path+"/assets/images/boots/ico_send.svg", alt="")
+          h2.ttl-primary.ttl-primary--normal Your Message has been sent!
+        .modal-wrapper
+          .modal_body
+            p.text We will get to you as soon as possible.
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-100")
+              span OK

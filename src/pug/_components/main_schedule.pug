@@ -1,0 +1,70 @@
+.m-tab-content
+  .wrapper
+    .row
+      .col-3
+        .m-asideList
+          ul.nav.nav-tabs.side-tab(role="tablist")
+            li.nav-link
+              a.active#session-tab(data-toggle="tab" href="#session") Sessions
+            li.nav-link
+              a#speaker-tab(data-toggle="tab" href="#speaker") Speakers & Hosts
+            li.nav-link
+              a#videos-tab(data-toggle="tab" href="#videos") Pre-Recorded Videos
+            li.nav-link
+              a#records-tab(data-toggle="tab" href="#records") Sessions Recording
+      .col-9
+        .tab-content
+          .tab-pane.fade.show.active#session
+            include schedule_general
+          .tab-pane.fade#speaker
+            include schedule_speaker
+          .tab-pane.fade#videos
+            include schedule_videos
+          .tab-pane.fade#records
+            include schedule_recording
+#modalViewSpeakerMain.modalGen.modalGen--sponsor.modalGen--view.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content.speaker-content
+      .modal_head
+        h2.ttl-primary View Info
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          .modal_body__block
+            p.title Information
+            .item-body
+              .item-body_user
+                .image
+                  img(src=path+"/assets/images/img_cus02.png", alt="")
+                .info
+                  .name Esther Howard
+                  .email thomas.lawrence@gmail.com
+                  .type Speaker
+              .item-body_information
+                .row-information
+                  .row
+                    .col-6
+                      .box-information
+                        small Job Title:
+                        p Mechanic
+                    .col-6
+                      .box-information
+                        small Organization:
+                        p ...
+                .row-information
+                  .row
+                    .col-6
+                      .box-information
+                        small Province/City:
+                        p Ho Chi Minh City
+                    .col-6
+                      .box-information
+                        small Country:
+                        p VietNam
+                .row-information
+                  .row
+                    .col-12
+                      .box-information
+                        small Sessions:
+                        p Session 3, Session 4

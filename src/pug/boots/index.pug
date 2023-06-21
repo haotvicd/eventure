@@ -1,0 +1,109 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Boots'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'reception'
+  -pageChild    = 'page-boots'
+  -jsID         = 'calendar'
+  -uploadJs     = ''
+  -videoJs      = ''
+  -path         = '../'
+  -hasFooter    = false
+
+block container
+  .m-boots
+    .wrapper
+      .m-boots_inner
+        .m-boots_search
+          .m-input
+            .input-a
+              .input-a_inner
+                input.input.input-text.input-search(data-search='' type='text' placeholder='Search for a booth')
+        .m-boots_filter
+          span.title Filter by Tags
+          ul.u-tags.pc-only
+            li
+              a(href="#") Entertainment
+            li
+              a(href="#") Blockchain
+            li
+              a(href="#") Food
+            li
+              a(href="#") Groundbreaking
+            li
+              a(href="#") Motivational
+            li
+              a(href="#") Leadership
+            li
+              a(href="#") Transportation
+            li
+              a(href="#") Defence
+            li
+              a(href="#") Next Generation
+          .m-input.sp-only
+            .input-area
+              select.input.select-box(name="select" required)
+                option(value="" disabled selected) Please choose tags
+                option(value="Entertainment") Entertainment
+                option(value="Blockchain") Blockchain
+                option(value="Food") Food
+                option(value="Groundbreaking") Groundbreaking
+                option(value="Motivational") Motivational
+                option(value="Leadership") Leadership
+                option(value="Transportation") Transportation
+                option(value="Defence") Defence
+                option(value="Next Generation") Next Generation
+        ul.m-boots_listEv
+          li
+            .m-boots_listEv_item
+              a.image(href="#")
+                img(src=path+"/assets/images/boots/img1.jpg", alt="")
+              a.content(href="#")
+                .content_head
+                  .logo
+                    img(src=path+"/assets/images/boots/logo1.png", alt="")
+                  span.name Bluetooth 5.0
+                p Don't know where to start? No worries! We've laid out all the steps and methods you'll need to achieve growth.
+              ul.tags-l
+                li
+                  a(href="#") Food
+                li
+                  a(href="#") Motivational
+                li
+                  a(href="#") Groundbreaking
+          li
+            .m-boots_listEv_item
+              a.image(href="#")
+                img(src=path+"/assets/images/boots/img2.jpg", alt="")
+              a.content(href="#")
+                .content_head
+                  .logo
+                    img(src=path+"/assets/images/boots/logo2.png", alt="")
+                  span.name VP Bank
+                p Of course, deeply understanding your users and their needs is the foundation of any good product. But that also means understanding all types of users...
+              ul.tags-l
+                li
+                  a(href="#") Food
+                li
+                  a(href="#") Motivational
+          li
+            .m-boots_listEv_item
+              a.image(href="#")
+                img(src=path+"/assets/images/boots/img3.jpg", alt="")
+              a.content(href="#")
+                .content_head
+                  .logo
+                    img(src=path+"/assets/images/boots/logo3.png", alt="")
+                  span.name Starbucks
+                p Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+              ul.tags-l
+                li
+                  a(href="#") Food
+                li
+                  a(href="#") drink
+                li
+                  a(href="#") coffe

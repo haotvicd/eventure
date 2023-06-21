@@ -1,0 +1,242 @@
+.m-groupColor {
+  position: relative;
+  &_list {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 9px;
+    button {
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      padding: 0;
+      position: relative;
+      &:focus {
+        box-shadow: none;
+      }
+
+      &.current {
+
+        &::before {
+          border: 4px solid;
+          border-color: var(--my-color-var);
+          position: absolute;
+          content: '';
+          width: calc(100% + 18px);
+          height: calc(100% + 18px);
+          border-radius: 100%;
+          opacity: .5;
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          background: url(../images/ico_select_color.svg) no-repeat;
+          width: 17px;
+          height: 11px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+
+.addGroup {
+  max-width: 440px;
+  .modal_head {
+    margin-bottom: 20px;
+  }
+
+  .modal_foot {
+    margin-top: 8px;
+  }
+
+  .modal_body {
+    .m-input {
+      margin-bottom: 24px;
+    }
+
+    .ttl-primary {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.pickerModal {
+  max-width: 368px;
+  padding: 24px;
+  border: 2px solid #33383F;
+  background: #1A1D1F;
+  border-radius: 16px;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  display: none;
+  transition: all 0.3s;
+
+  &.active {
+    display: block;
+  }
+
+  &_title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FCFCFC;
+  }
+
+  .modal_head {
+    border-bottom: 1px solid #6F767E;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .modal_body {
+    display: block;
+  }
+
+  &_btn {
+    border-top: 1px solid #6F767E;
+    padding-top: 24px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+}
+
+.hex {
+  min-width: 320px;
+  background: #272B30;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 1px 4px 16px;
+
+  &_title {
+    color: #6F767E;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &_code {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FCFCFC;
+    text-transform: uppercase;
+  }
+
+  .color {
+    width: 142px;
+    height: 68px;
+    background: #A4A7FF;
+    border-radius: 8px;
+  }
+}
+
+.hsl {
+  padding-bottom: 16px;
+  &_item {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      color: #6F767E;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &-number {
+      width: 44px;
+      height: 44px;
+      background: #272B30;
+      border-color: transparent;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      &.error {
+        border-color: red;
+      }
+    }
+
+    input[type='range'] {
+      width: 232px;
+      height: 4px;
+      border-radius: 17px;
+      position: relative;
+      appearance: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active,
+      &:hover:active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+      }
+
+      &::-moz-range-track {
+        appearance: none;
+        opacity: 0;
+        outline: none !important;
+      }
+
+      &::-ms-track {
+        outline: none !important;
+        appearance: none;
+        opacity: 0;
+      }
+
+      &::-webkit-slider-thumb {
+        width: 13px;
+        height: 13px;
+        background: #FCFCFC;
+        border-radius: 2em;
+        appearance: none;
+        cursor: pointer;
+        cursor: move;
+        cursor: grab;
+        cursor: -webkit-grab;
+        border: 0.4em solid currentColor;
+
+        &:active,
+        &:hover:active {
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+          transform: scale(0.975);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}
+
+.hue {
+  background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255), rgb(255, 0, 0));
+}
+
+.sat {
+  background: linear-gradient(to right, hsl(238, 0%, 82%) 0%, hsl(238, 100%, 82%) 100%);
+}
+
+.light {
+  background: linear-gradient(to right, #000 0%, hsl(238, 99%, 50%) 50%, #fff 100%)
+}

@@ -1,0 +1,669 @@
+extends _layout/default
+
+block vars
+  -title        = 'Landing Page'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'landing'
+  -jsID         = 'calendar'
+  -uploadJs     = ''
+  -videoJs      = ''
+  -path         = '.'
+
+block scripts
+  script(src=path+"/assets/js/schedule.js")
+
+block container
+  .wrapper
+    .m-landing
+      .m-landing_content
+        .ld-banner
+          img(src=path+"/assets/images/landing/image_01.png", alt="")
+        .tabs-control.js-swiper-tab
+          ul.nav.nav-tabs.swiper-wrapper
+            li.nav-link.swiper-slide
+              a.active(href="#overview") Overview
+            li.nav-link.swiper-slide
+              a(href="#schedule") Schedule
+            li.nav-link.swiper-slide
+              a(href="#speaker") Speakers
+            li.nav-link.swiper-slide
+              a(href="#host") Host
+            li.nav-link.swiper-slide
+              a(href="#sponsor") Sponsors
+        .m-content
+          .ticket_head.page-section#overview
+            .ticket_head-title
+              span Event name
+              h2.ticket-name The future of health is on your wrist
+            .ticket_wrap
+              .ticket_head-promo
+                span Event by
+                p Biffco Enterprises Ltd.
+              .share-box
+                span Share this event on:
+                ul
+                  li
+                    a.trans(href="#")
+                      img(src=path+"/assets/images/landing/ico_linkein.svg", alt="")
+                  li
+                    a.trans(href="#")
+                      img(src=path+"/assets/images/landing/ico_twitter.svg", alt="")
+                  li
+                    a.trans(href="#")
+                      img(src=path+"/assets/images/landing/ico_facebook.svg", alt="")
+                  li
+                    a.trans(href="#")
+                      img(src=path+"/assets/images/landing/ico_whatsapp.svg", alt="")
+                  li
+                    a.trans(href="#")
+                      img(src=path+"/assets/images/ico_ext_link_white.svg", alt="")
+          .ticket_footer
+            .ticket_footer-status
+              span Start time
+              .date 24 OCT - 25 OCT 2022
+              .time 10:35 - 17:30 UTC +07:00
+            .ticket_body-bl
+              .ticket_footer-status
+                span Event has
+                strong started
+            .enter-event
+              a.btn.btn-primary(href="#" data-toggle="modal" data-target="#modalRegisDetail")
+                span Enter event
+          .tab-content
+            .tab-pane.fade.show.active
+              section.ld-section.about-event
+                .wrapper-height
+                  .about-event_inner
+                    h2.sec-title ABOUT THIS EVENT
+                    p.text The best 16 passenger small group, intimate and unique, Milford Sound tour.
+                    p.text Travel in unparalleled style and comfort in a premium Mercedes van equipped with large panoramic windows, leather reclining seats, quirky on board videos, free wifi and complimentary bottled water.
+                    p.text From your accommodation enjoy the stunning scenic drive.
+                    .image
+                      img(src=path+"/assets/images/landing/image_02.png", alt="")
+                    p.text he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.
+                    p.text he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.
+                    p.text he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.
+                    p.text he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.
+                a.btn-show-more(href="javascript:;")
+                  img(src=path+"/assets/images/ico_show_more.svg", alt="")
+                  |Show more
+              section.ld-section.schedule-event.page-section#schedule
+                h2.sec-title SCHEDULE
+                .schedule-event_head
+                  .m-group
+                    span.m-group_label Group
+                    .m-group_list.swiper-container
+                      .swiper-wrapper
+                        button(class="btn trans current swiper-slide", data-name='all')
+                          span All
+                        button(class="btn trans swiper-slide", data-name='group01')
+                          span.btn_icon(data-bg='#FFC88B' class='setBg')
+                          span Crystal Waterfall
+                        button(class="btn trans swiper-slide", data-name='group02')
+                          span.btn_icon(data-bg='#B7FFE5' class='setBg')
+                          span Black Sand
+                        button(class="btn trans swiper-slide", data-name='group03')
+                          span.btn_icon(data-bg='#FEBCFF' class='setBg')
+                          span Dewdrops & Sunlight Events
+                  .m-calendar
+                    .m-calendar_inner
+                      .swiper-container.js-m-calendar
+                        .swiper-wrapper
+                          .item.swiper-slide
+                            .m-calendar_item
+                              span.m-calendar_item-label.current Tue
+                              button(class="btn trans m-calendar_item-box current")
+                                span.m-calendar_item-day 19
+                                span.m-calendar_item-month Aug
+                          .item.swiper-slide
+                            .m-calendar_item
+                              span.m-calendar_item-label Wed
+                              button(class="btn trans m-calendar_item-box")
+                                span.m-calendar_item-day 20
+                                span.m-calendar_item-month Aug
+                          .item.swiper-slide
+                            .m-calendar_item
+                              span.m-calendar_item-label Fri
+                              button(class="btn trans m-calendar_item-box")
+                                span.m-calendar_item-day 22
+                                span.m-calendar_item-month Aug
+                .js-session.swiper-container
+                  .m-sessions.swiper-wrapper
+                    .m-sessions_block.swiper-slide
+                      .m-sessions_block-time
+                        .time-point.start 08:00
+                      a.m-sessions_block-content(href="" data-toggle="modal" data-target="#modalDetailSession")
+                        .ct-head
+                          .m-group
+                            .m-group_list
+                              button(class="btn trans", data-name='group01')
+                                span.btn_icon(data-bg='#FFC88B' class='setBg')
+                                span Crystal Waterfall Event Planning
+                          .m-timeline_modal-control
+                            .duration 60 mins
+                        .ct-wrap
+                          .ct-body
+                            h2.session-title All our PRO level features at your fingertips
+                            .session-desc
+                              p Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.
+                          .ct-footer.swiper-container
+                            .swiper-wrapper
+                              .ct-footer_block.swiper-slide
+                                strong Host
+                                ul.l-mem
+                                  li.l-mem_item
+                                    .image
+                                      img(src=path+"/assets/images/img_avatar05.png", alt="")
+                                    .l-mem_info
+                                      .name Dianne Russell
+                              .ct-footer_block.swiper-slide
+                                strong Speaker
+                                ul.l-mem
+                                  li.l-mem_item
+                                    .image
+                                      img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    .l-mem_info
+                                      .name Ralph Edwards
+                                  li.l-mem_item
+                                    .image
+                                      img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    .l-mem_info
+                                      .name Floyd Miles
+                      //- .m-sessions_block-content
+                      //-   .ct-head
+                      //-     .m-group
+                      //-       .m-group_list
+                      //-         button(class="btn trans", data-name='group01')
+                      //-           span.btn_icon(data-bg='#FFC88B' class='setBg')
+                      //-           span Crystal Waterfall Event Planning
+                      //-     .m-timeline_modal-control
+                      //-       .duration 60 mins
+                      //-   .ct-wrap
+                      //-     .ct-body
+                      //-       h2.session-title All our PRO level features at your fingertips
+                      //-       p.session-desc Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.
+                      //-     .ct-footer.swiper-container
+                      //-       .swiper-wrapper
+                      //-         .ct-footer_block.swiper-slide
+                      //-           strong Host
+                      //-           ul.l-mem
+                      //-             li.l-mem_item
+                      //-               .image
+                      //-                 img(src=path+"/assets/images/img_avatar05.png", alt="")
+                      //-               .l-mem_info
+                      //-                 .name Dianne Russell
+                      //-         .ct-footer_block.swiper-slide
+                      //-           strong Speaker
+                      //-           ul.l-mem
+                      //-             li.l-mem_item
+                      //-               .image
+                      //-                 img(src=path+"/assets/images/img_avatar04.png", alt="")
+                      //-               .l-mem_info
+                      //-                 .name Ralph Edwards
+                      //-             li.l-mem_item
+                      //-               .image
+                      //-                 img(src=path+"/assets/images/img_avatar02.png", alt="")
+                      //-               .l-mem_info
+                      //-                 .name Floyd Miles
+                    .m-sessions_block.swiper-slide
+                      .m-sessions_block-time
+                        .time-point.start 10:30
+                      .m-sessions_block-content
+                        .ct-head
+                          .m-group
+                            .m-group_list
+                              button(class="btn trans", data-name='group01')
+                                span.btn_icon(data-bg='#FFC88B' class='setBg')
+                                span Crystal Waterfall Event Planning
+                              button(class="btn trans", data-name='group02')
+                                span.btn_icon(data-bg='#B7FFE5' class='setBg')
+                                span Black Sand Event Planners
+                          .m-timeline_modal-control
+                            .duration 90 mins
+                        .ct-wrap
+                          .ct-body
+                            h2.session-title All our PRO level features at your fingertips
+                            .session-desc
+                              p Lorem Ipsum</a> Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.
+                          .ct-footer.swiper-container
+                            .swiper-wrapper
+                              .ct-footer_block.swiper-slide
+                                strong Speaker
+                                ul.l-mem
+                                  li.l-mem_item
+                                    .image
+                                      img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    .l-mem_info
+                                      .name Ralph Edwards
+                                  li.l-mem_item
+                                    .image
+                                      img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    .l-mem_info
+                                      .name Floyd Miles
+                    .m-sessions_block.swiper-slide
+                      .m-sessions_block-time
+                        .time-point.start 12:00
+                      .m-sessions_block-content
+                        .ct-head
+                          .m-group
+                            .m-group_list
+                              button(class="btn trans", data-name='group01')
+                                span.btn_icon(data-bg='#FFC88B' class='setBg')
+                                span Crystal Waterfall Event Planning
+                              button(class="btn trans", data-name='group02')
+                                span.btn_icon(data-bg='#B7FFE5' class='setBg')
+                                span Black Sand Event Planners
+                              button(class="btn trans", data-name='group03')
+                                span.btn_icon(data-bg='#FEBCFF' class='setBg')
+                                span Dewdrops & Sunlight Events
+                          .m-timeline_modal-control
+                            .duration 90 mins
+                        .ct-wrap
+                          .ct-body
+                            h2.session-title Betcha can’t eat just one!
+                            .session-desc
+                              p Father Goes For Kidney Treatment – Leaves Hospital As A Women. This is Intercom: the Business Messenger you and your customers will love. If you BUY now, I’ll be sending you another mystery bonus as a token of appreciation.
+                          .ct-footer.swiper-container
+                            .swiper-wrapper
+                              .ct-footer_block.swiper-slide
+                                strong Speaker
+                                ul.l-mem
+                                  li.l-mem_item
+                                    .image
+                                      img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    .l-mem_info
+                                      .name Ralph Edwards
+                                  li.l-mem_item
+                                    .image
+                                      img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    .l-mem_info
+                                      .name Floyd Miles
+                  .swiper-pagination
+              section.ld-section.speaker-event.page-section#speaker
+                h2.sec-title Speakers
+                .speaker-content.is-mobile
+                  ul.speaker-list
+                    li
+                      .speaker-list_item
+                        .item-body
+                          .item-body_user
+                            .image
+                              img(src=path+"/assets/images/img_cus01.png", alt="")
+                            .info
+                              .name Robert Fox
+                              .email paul.morrison@gmail.com
+                              .job Cofounder & CEO, Spaktoro
+                              .type Speaker
+                              a.btn-more(href="" data-toggle="modal" data-target="#modalDetailSpeaker")
+                                span View Profile
+                          .item-body_information
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Job Title:
+                                    p Cofounder & CEO, Spaktoro
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Speaker’s biography:
+                                    p Hello! Looks like you’re enjoying our page, but you haven’t signed up for an account yet. You agree to receive automated texts to confirm your phone number.
+                    li
+                      .speaker-list_item
+                        .item-body
+                          .item-body_user
+                            .image
+                              img(src=path+"/assets/images/img_cus02.png", alt="")
+                            .info
+                              .name Esther Howard
+                              .email thomas.lawrence@gmail.com
+                              .job Cofounder & CEO, Spaktoro
+                              .type Speaker
+                              a.btn-more(href="")
+                                span View Profile
+                          .item-body_information
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Job Title:
+                                    p Cofounder & CEO, Spaktoro
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Speaker’s biography:
+                                    p Don't forget to download your files. They will be discarded automatically after 60 minutes. Welcome 👋 Enter your email to continue.
+                  ul.speaker-list
+                    li
+                      .speaker-list_item
+                        .item-body
+                          .item-body_user
+                            .image
+                              img(src=path+"/assets/images/img_cus04.png", alt="")
+                            .info
+                              .name Guy Hawkins
+                              .email alison.langdon@gmail.com
+                              .job Cofounder & CEO, Spaktoro
+                              .type Speaker
+                              a.btn-more(href="")
+                                span View Profile
+                          .item-body_information
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Job Title:
+                                    p Cofounder & CEO, Spaktoro
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Speaker’s biography:
+                                    p We’ll just use this to follow up if needed. No spam, promise. Hello! Looks like you’re enjoying our page, but you haven’t signed up for an account yet. You won't be charged if you cancel before billing starts on August 12th, 2021
+                    li
+                      .speaker-list_item
+                        .item-body
+                          .item-body_user
+                            .image
+                              img(src=path+"/assets/images/img_cus03.png", alt="")
+                            .info
+                              .name Williamson
+                              .email sean.young@gmail.com
+                              .job Cofounder & CEO, Spaktoro
+                              .type Speaker
+                              a.btn-more(href="")
+                                span View Profile
+                          .item-body_information
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Job Title:
+                                    p Cofounder & CEO, Spaktoro
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Speaker’s biography:
+                                    p We use cookies to enable essential and secure site functionality and performance. Membership fees are billed at the beginning of each period
+              section.ld-section.speaker-event.speaker-event--host.page-section#host
+                h2.sec-title HOST
+                .speaker-content.is-mobile
+                  ul.speaker-list
+                    li
+                      .speaker-list_item
+                        .item-body
+                          .item-body_user
+                            .image
+                              img(src=path+"/assets/images/img_cus06.png", alt="")
+                            .info
+                              .name Gautham Prasad
+                              .email gautham.prasad@gmail.com
+                              .job Events Marketing...,<br>Eventure Asia
+                              .type.is-host Host
+                              a.btn-more(href="")
+                                span View Profile
+                          .item-body_information
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Job Title:
+                                    p Event Marketer, Eventure Asia
+                            .row-information
+                              .row
+                                .col-12
+                                  .box-information
+                                    small Speaker’s biography:
+                                    p Hello! Looks like you’re enjoying our page, but you haven’t signed up for an account yet. You agree to receive automated texts to confirm your phone number.
+              section.ld-section.sponsor-event.page-section#sponsor
+                h2.sec-title Sponsor
+                .sponsor-ct
+                  h3.sponsor-ct_title Diamond Sponsor
+                  ul.sponsor-ct_list.sponsor-ct_list--diamond
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_godline.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_lightning.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_niras.png", alt="")
+                .sponsor-ct
+                  h3.sponsor-ct_title Golden Sponsor
+                  ul.sponsor-ct_list
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_zoo.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_velocity.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_hex.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_kanba.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_fox.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_circle.png", alt="")
+                .sponsor-ct
+                  h3.sponsor-ct_title Silver Sponsor
+                  ul.sponsor-ct_list
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_code.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_aven.png", alt="")
+                    li
+                      span
+                        img(src=path+"/assets/images/logo_earth.png", alt="")
+      .m-landing_aside
+        .m-landing_aside-inner
+          .ticket
+            .ticket_inner
+              .ticket_head
+                .ticket_head-title
+                  span Event name
+                  h2.ticket-name The future of health is on your wrist
+                .ticket_head-promo
+                  span Event by
+                  p Biffco Enterprises Ltd.
+              .ticket_body
+                .ticket_body_block
+                  span.time-label Start time
+                    small UTC +07:00
+                  .time-info.row
+                    .time-info_block.col-6
+                      span Date
+                      strong OCT 24, 2022
+                    .time-info_block.col-6
+                      span Time
+                      strong 10:35
+                .ticket_body_block
+                  span.time-label End time
+                    small UTC +07:00
+                  .time-info.row
+                    .time-info_block.col-6
+                      span Date
+                      strong OCT 25, 2022
+                    .time-info_block.col-6
+                      span Time
+                      strong 17:25
+              .ticket_footer
+                .ticket_footer-status
+                  span Event has
+                  strong started
+                a.btn.btn-primary(href="#" data-toggle="modal" data-target="#modalRegisDetail")
+                  span Enter event
+          .share-box
+            span Share this event on:
+            ul
+              li
+                a.trans(href="#")
+                  img(src=path+"/assets/images/landing/ico_linkein.svg", alt="")
+              li
+                a.trans(href="#")
+                  img(src=path+"/assets/images/landing/ico_twitter.svg", alt="")
+              li
+                a.trans(href="#")
+                  img(src=path+"/assets/images/landing/ico_facebook.svg", alt="")
+              li
+                a.trans(href="#")
+                  img(src=path+"/assets/images/landing/ico_whatsapp.svg", alt="")
+            .share-box_link
+              a.trans(href="#") https://eventure.com/4cf2-f4f734...
+              .btn-copy.trans
+                img(src=path+"/assets/images/ico_copy.svg", alt="")
+  #modalRegisDetail.modalGen.modalGen--sponsor.modalGen--regis.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary Add registration details
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_time
+            p The future of health is on your wrist
+            span OCT 24, 2022 at 10:30 UTC +07:00
+          .modal_body
+            .modal_body-col.modal_body-col--width100
+              .m-input.m-input_counter.js-counter
+                span.m-input_label Name
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" maxlength="50" placeholder="")
+                  .counter
+                    span.count-up 0
+                    |/
+                    span.count-max 200
+              .m-input.m-input_counter.js-counter
+                span.m-input_label Email
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" maxlength="50" placeholder="")
+                  .counter
+                    span.count-up 0
+                    |/
+                    span.count-max 200
+              .m-input.m-input_counter.js-counter
+                span.m-input_label Job title
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" maxlength="50" placeholder="")
+                  .counter
+                    span.count-up 0
+                    |/
+                    span.count-max 200
+              .m-input.m-input_counter.js-counter
+                span.m-input_label Organization
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" maxlength="50" placeholder="")
+                  .counter
+                    span.count-up 0
+                    |/
+                    span.count-max 200
+          .modal_body-radio
+            .title Would you like to book a test drive?
+            ul.m-radio
+              li
+                label.input-radio
+                  input(type="radio", name="test")
+                  span.label Yes
+              li
+                label.input-radio
+                  input(type="radio", name="test")
+                  span.label No
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-100")
+              span Enter Event
+
+  #modalDetailSession.modalGen.modalGen--sponsor.modalGen--regis.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary Session Detail
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .schedule-event
+            .m-sessions_block
+              .m-sessions_block-content
+                .ct-head
+                  .m-timeline_modal-time 08:00 - 09:00
+                  .m-timeline_modal-control
+                    .duration 60 mins
+                .ct-mid
+                   h2.session-title All our PRO level features at your fingertips
+                   p Crystal Waterfall, Dewdrops & Sunlight Events
+                .ct-wrap
+                  .ct-footer_non
+                    .ct-footer_block
+                      strong Host
+                      ul.l-mem
+                        li.l-mem_item
+                          .image
+                            img(src=path+"/assets/images/img_avatar05.png", alt="")
+                          .l-mem_info
+                            .name Dianne Russell
+                    .ct-footer_block
+                      strong Speaker
+                      ul.l-mem
+                        li.l-mem_item
+                          .image
+                            img(src=path+"/assets/images/img_avatar04.png", alt="")
+                          .l-mem_info
+                            .name Ralph Edwards
+                        li.l-mem_item
+                          .image
+                            img(src=path+"/assets/images/img_avatar02.png", alt="")
+                          .l-mem_info
+                            .name Floyd Miles
+                  .ct-body
+                    .session-desc
+                      strong About Session
+                      p Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.
+
+  #modalDetailSpeaker.modalGen.modalGen--sponsor.modalGen--regis.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary View info
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal-body
+            .speaker-content
+              .speaker-list_item
+                .item-body
+                  .item-body_user
+                    .image
+                      img(src=path+"/assets/images/img_cus01.png", alt="")
+                    .info
+                      .name Robert Fox
+                      .email paul.morrison@gmail.com
+                      .type Speaker
+                  .item-body_information
+                    .row-information
+                      .row
+                        .col-12
+                          .box-information
+                            small Job Title:
+                            p Cofounder & CEO, Spaktoro
+                    .row-information
+                      .row
+                        .col-12
+                          .box-information
+                            small Speaker’s biography:
+                            p Hello! Looks like you’re enjoying our page, but you haven’t signed up for an account yet. You agree to receive automated texts to confirm your phone number.

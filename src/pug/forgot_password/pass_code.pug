@@ -1,0 +1,53 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Forgot password'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'sign-up forgot-password'
+  -jsID         = 'calendar'
+  -path         = '../'
+  -hasFooter    = true
+
+block scripts
+
+block container
+  .m-sign-up
+    .side-bg
+      .logo
+        img(src=path+"/assets/images/signup/logo.png", alt="" width="187" height="48")
+      .title
+        img(src=path+"/assets/images/signup/title.png", alt="Virtual real Connection" width="344" height="130")
+      .image
+        img(src=path+"/assets/images/signup/img_side.png", alt="")
+    .signup-content.signup-content_validate-code.forgot-pass.forgot-pass--small
+      .signup-content_inner
+        h2.signup_title Forgot password
+        form.signup_form
+          .m-input
+            span.m-input_label We just send you a verify code to <br>
+              span user@fractal.vn
+              | . <br class="sp-only">Please check your inbox
+            .input-area
+              a.btn-back-clear(href="javascript:;")
+                img(src=path+"/assets/images/ico_arrow_backward.svg", alt="")
+              fieldset.number-code
+                .code-shell
+                  input.code-input(type="text" name='code' required='')
+                .code-shell
+                  input.code-input(type="text" name='code' required='')
+                .code-shell
+                  input.code-input(type="text" name='code' required='')
+                .code-shell
+                  input.code-input(type="text" name='code' required='')
+          button.btn.btn-primary.btn-submit.trans(type="submit")
+            img.loading(src=path+"/assets/images/ico_loading.svg", alt="")
+            span Continue
+          .countdown-timer Resend code in:
+            span.js-coundown
+              small 1:30
+              |s
+          .btn-resend
+            a.trans(href="javascript:;") Resend code

@@ -1,0 +1,139 @@
+.m-setting {
+  .tab-content {
+    max-width: 832px;
+  }
+}
+.bl-setting {
+  &_block {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #272B30;
+    &:last-child {
+      border: none;
+    }
+  }
+  &_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+    // &:last-child {
+    //   margin-bottom: 0;
+    //   padding-bottom: 24px;
+    //   border-bottom: 1px solid #272B30;
+    // }
+    &.is-full-width {
+      flex-wrap: wrap;
+      .m-input {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        .btn {
+          width: 110px;
+          margin-left: 12px;
+        }
+        .input {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .label-setting {
+    padding-right: 20px;
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #efefef;
+    }
+    small {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #6f767e;
+      margin-top: 4px;
+    }
+  }
+  .box-filter {
+    width: 325px;
+    right: 0;
+    .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 0;
+      color: #6f767e;
+    }
+    .l-source {
+      &_item {
+        margin-top: 16px;
+        position: relative;
+        .btn-tip {
+          position: absolute;
+          right: 18px;
+          top: 18px;
+          width: 20px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .btn {
+      width: 100%;
+      justify-content: flex-start;
+      padding-left: 16px;
+      span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+.btn-add-stream {
+  span {
+    padding-right: 32px;
+    background: url('../images/ico_select_white.svg') no-repeat right 4px center / 15px;
+  }
+}
+
+.modalGen--rtmp {
+  .modal_head {
+    margin-bottom: 18px;
+  }
+  .warning-note {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6f767e;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #272B30;
+    .icon {
+      width: 20px;
+      margin-right: 14px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .m-input {
+    .note {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      color: #6f767e;
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Sign Up'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'sign-up'
+  -jsID         = 'calendar'
+  -path         = '../'
+  -hasFooter    = true
+
+block scripts
+
+block container
+  .m-sign-up
+    .side-bg
+      .logo
+        img(src=path+"/assets/images/signup/logo.png", alt="" width="187" height="48")
+      .title
+        img(src=path+"/assets/images/signup/title.png", alt="Virtual real Connection" width="344" height="130")
+      .image
+        img(src=path+"/assets/images/signup/img_side.png", alt="")
+    .signup-content.create-account
+      .signup-content_inner
+        h2.signup_title Create your account
+        .wrap-ct
+          form.signup_form
+            .m-input
+              span.m-input_label You are signing up with the email:<br>
+                span  user@fractal.vn
+                |<p class="pc-only">.&nbsp;Please fill your information</p>
+              .input-area.column
+                input.input.input-text.input-name.js-filled(type="text" placeholder="First Name")
+                input.input.input-text.input-name.js-filled(type="text" placeholder="Last Name")
+              .input-area.pass-field.filled.failed
+                a.btn-eye(href="javascript:;")
+                  img(src=path+"/assets/images/ico_eye.svg", alt="")
+                input.input.input-text.input-password.main-pass(type="password" placeholder="Password" value="12345")
+              .input-area.pass-field.filled.failed
+                a.btn-eye(href="javascript:;")
+                  img(src=path+"/assets/images/ico_eye.svg", alt="")
+                input.input.input-text.input-password.confirm-pass(type="password" placeholder="Confirm password" value="12345")
+            .error-txt Password is not strong enough/Password do not match.
+            .subscribe
+              label.module-check
+                input.check-item(type='checkbox' name='subscribe' checked)
+                span.label I would like to receive Evanture’s news and updates on my email.
+            button.btn.btn-primary.btn-submit.trans(type="submit")
+              span Sign Up
+          p.policy-agreement By signing up, I agree to the
+            a.trans(href="#")  Privacy Policy&nbsp;
+            |and the
+            a.trans(href="#")  Terms of Use
+      .cookie-box
+        p By continuing to use this site you consent to the use of cookies.
+          a.trans(href="#")  Learn More
+        a.btn-close-box.trans(href="javascript:;")
+          img(src=path+"/assets/images/ico_close.svg", alt="")

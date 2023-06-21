@@ -1,0 +1,113 @@
+#addTicket.modal.fade(role="dialog" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered(role="document")
+    .modal-content
+      .modal_head
+        .ttl-primary.sm Add ticket
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          .m-activity_content
+            .m-activity_content-wrap
+              .m-activity_content-colum
+                .m-activity_content-title.edge Basic Information
+                .m-activity_content-row
+                  .m-input.m-input_counter.js-counter
+                    span.m-input_label Ticket Name
+                      small.warning *
+                    .input-area
+                      input.input.input-text(type="text" placeholder="Give your ticket name")
+                .m-activity_content-row.row
+                  .col-6
+                    .m-input
+                      span.m-input_label Start date
+                        small.warning *
+                      .input-area
+                        input.input.datetimepicker#iddatetimepicker-startdate(type='text' placeholder="Select date")
+                  .col-6
+                    .m-input
+                      span.m-input_label Sale start at
+                        small.warning *
+                      .input-area.area-select.js-select
+                        input.input.input-text.input-time(type="text" placeholder="Select time ")
+                        .box-select
+                          ul.l-select
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:15") 12:15
+                            li(data-value="12:30") 12:30
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+
+                .m-activity_content-row.row
+                  .col-6
+                    .m-input
+                      span.m-input_label Sale ends on
+                        small.warning *
+                      .input-area
+                        input.input.datetimepicker#id1datetimepicker-startdate(type='text' placeholder="Select date")
+                  .col-6
+                    .m-input
+                      span.m-input_label Sale ends at
+                        small.warning *
+                      .input-area.area-select.js-select
+                        input.input.input-text.input-time(type="text" placeholder="Select time ")
+                        .box-select
+                          ul.l-select
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:15") 12:15
+                            li(data-value="12:30") 12:30
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+                            li(data-value="12:00") 12:00
+
+                .m-activity_content-row
+                  .m-input
+                    span.m-input_label Price
+                      small.warning *
+                    .input-area
+                      input.input.input-text(type="text" placeholder="")
+                      .stripe
+                        a(href="#") Connect to Stripe to edit price
+                        img(src=path+"/assets/images/img_stripe.png", alt="")
+
+                .m-activity_content-row
+                  .m-input
+                    span.m-input_label Currency
+                      small.warning *
+                    .input-area
+                      select.input.select-box(name="select" required)
+                        option(value="" disabled selected) Please choose
+                        option(value="USD") USD
+                        option(value="VND") VND
+                        option(value="JPY") JPY
+
+                .m-activity_content-row
+                  .m-input
+                    span.m-input_label Quantity
+                      small.warning *
+                    .input-area
+                      input.input.input-text(type="text" placeholder="Enter Quantity")
+
+              .m-activity_content-colum
+                .m-activity_content-title.edge Additional Information
+
+                .m-activity_content-row
+                  .m-input.m-input_counter.js-counter
+                    span.m-input_label Ticket description
+                    .input-area
+                      textarea.input.input-text(name="" maxlength="1000" placeholder="Enter session description")
+                      .counter
+                        span.count-up 0
+                        |/
+                        span.count-max 1000
+
+        .modal_foot
+          button(type="submit", class="btn btn-primary trans w-220")
+            span Save

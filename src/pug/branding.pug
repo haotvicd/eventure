@@ -1,0 +1,460 @@
+extends _layout/default
+
+block vars
+  -title        = 'Homepage'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -jsID         = 'calendar'
+  -uploadJs     = 'true'
+  -videoJs      = 'true'
+  -path         = '.'
+  -hasFooter    = true
+
+block scripts
+  script(src=path+"/assets/js/schedule.js")
+  script(src=path+"/assets/js/color-picker.js")
+  script.
+    $('.js-video').mediaelementplayer({
+      hideCaptionsButtonWhenEmpty: false,
+      features: ['playpause', 'current', 'duration', 'progress', 'tracks', 'volume', 'fullscreen'],
+      timeAndDurationSeparator: '<span>  /  </span>'
+    });
+block container
+  include _modules/head_event
+  .tabs-control
+    .wrapper
+      ul.nav.nav-tabs
+        li.nav-link
+          a(href="#tab1" data-toggle="tab") General
+        li.nav-link
+          a(href="#tab2" data-toggle="tab" data-trigger='schedule') Schedule
+        li.nav-link
+          a(href="#tab3" data-toggle="tab") Registrations
+        li.nav-link
+          a.active(href="#tab4" data-toggle="tab") Branding
+        li.nav-link
+          a(href="#tab5" data-toggle="tab") Networking
+        li.nav-link
+          a(href="#tab6" data-toggle="tab") Booth
+        li.nav-link
+          a(href="#tab7" data-toggle="tab") Setting
+  .m-content
+    .tab-content
+      .tab-pane.fade#tab1
+        //- include _components/main_general
+      .tab-pane.fade#tab2
+        //- include _components/main_schedule
+      .tab-pane.fade.show.active#tab4
+        .m-tab-content
+          .wrapper
+            .row
+              .col-3
+                .m-asideList
+                  ul.nav.nav-tabs.side-tab(role="tablist")
+                    li.nav-link
+                      a#session-tab(data-toggle="tab" href="#brand_event") Event
+                    li.nav-link
+                      a#speaker-tab.active(data-toggle="tab" href="#brand_reception") Reception
+                    li.nav-link
+                      a#videos-tab(data-toggle="tab" href="#brand_stage") Stage Backdrop
+                    li.nav-link
+                      a#records-tab(data-toggle="tab" href="#brand_sponsor") Sponsor
+              .col-9
+                .tab-content
+                  .tab-pane.fade#brand_event
+                    .m-content_head
+                      div
+                        h2.title-tab Event
+                        span.description-tab Define the design, theme and branding for your event
+                    .m-content_body
+                      form.brand-event-form
+                        .m-input
+                          span.m-input_label Event logo
+                            span.m-input_desc Add your own brand logo to increase your brand engagement
+                          .input-file-wrap.is-circle
+                            input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                            img.img-upload(src='' alt='your image')
+                            .btn-upload
+                              img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                              span Click or drop image
+                            .btn-update
+                              img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                              span Upload event logo
+                            .btn-remove
+                              img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                              span Remove image
+                            p JPEG, JPG, SVG, PNG | Up to 2 MB
+                        .m-input
+                          span.m-input_label Event banner
+                            span.m-input_desc Add a banner image which will be displayed in the landing page
+                          .input-file-wrap
+                            input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                            img.img-upload(src='' alt='your image')
+                            .btn-upload
+                              img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+                            .btn-update
+                              img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                              span Upload event banner
+                            .btn-remove
+                              img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                              span Remove image
+                            p Recommended format: 1563x1040px | JPG, SVG, PNG | Up to 10 MB
+                        .m-editor
+                          span.m-input_label Description
+                          .m-editor_area
+                            #editorBranding
+                              p No spam, ever. Your address will only be used for the company news. You can easily unsubscribe any time with a single click. You must be at least eighteen years old to view this content. Are you over eighteen and willing to see adult content?
+                  .tab-pane.fade.show.active#brand_reception
+                    .m-content_head
+                      div
+                        h2.title-tab Reception
+                        span.description-tab Create a grand first impression for your attendees of the event.
+                      .m-content_head-btn
+                        a.btn.btn-sm.btn-primary.btn-edit-big.trans(href="#" data-toggle="modal" data-target="#receptionModal")
+                          small.icon
+                            svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                              path(d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+                              path(d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+                          span Edit
+                    .m-content_body
+                      .reception-box-review
+                        img(src=path+"/assets/images/img_demo.jpg", alt="")
+                  .tab-pane.fade#brand_stage
+                    .m-content_head
+                      div
+                        h2.title-tab Stage Backdrop
+                        span.description-tab Modify the backdrop of your live stage for a branded experience
+                    .m-content_body
+                      form.brand-event-form
+                        .m-input
+                          span.m-input_label Upload backdrop
+                            span.m-input_desc Add a banner which will be displayed in the lounge
+                          .input-file-wrap
+                            input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                            img.img-upload(src='' alt='your image')
+                            .btn-upload
+                              img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+                            .btn-update
+                              img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                              span Upload backdrop
+                            .btn-remove
+                              img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                              span Remove image
+                            p Recommended format: 1868x1328px | JPG, SVG, PNG | Up to 10 MB
+                  .tab-pane.fade#brand_sponsor
+                    .m-content_head
+                      div
+                        h2.title-tab Sponsor
+                        span.description-tab Manage sponsors for your event
+                      .m-content_head-btn
+                        a.btn.btn-sm.btn-tag.trans(href="#" data-toggle="modal" data-target="#groupSponsorManager")
+                          span Group Management
+                        a.btn.btn-sm.btn-primary.btn-add.trans(href="#" data-toggle="modal" data-target="#modalSponsor")
+                          span Add Sponsor
+                    .m-content_body
+                      .l-group
+                        span.ttl Group
+                        ul.list
+                          li
+                            a.trans(href="#")
+                              span 1.
+                              span Diamond Sponsor
+                          li
+                            a.trans(href="#")
+                              span 2.
+                              span Golden Sponsor
+                          li
+                            a.trans(href="#")
+                              span 3.
+                              span Silver Sponsor
+                          li
+                            a.trans(href="#")
+                              span 4.
+                              span Media Partner
+                          li
+                            a.trans(href="#")
+                              span 5.
+                              span Gift Sponsor
+                      .l-speaker-list.tbl-sponsor
+                        .tbl-head
+                          .tbl_col.col1
+                            span.tbl-head_title Position
+                              a.btn-tip(href="#")
+                                img(src=path+"/assets/images/ico_info_bg.svg", alt="")
+                          .tbl_col.col2
+                            span.tbl-head_title Name
+                          .tbl_col.col3
+                            span.tbl-head_title Website URL
+                          .tbl_col.col4
+                            span.tbl-head_title Actions
+                        .tbl-body
+                          .tbl-body_group
+                            .group-title Group 1.
+                              span Diamond Sponsor
+                            ul.group-list
+                              li.group-list_row
+                                .tbl_col.col1
+                                  .pos 1
+                                .tbl_col.col2
+                                  .name
+                                    .image
+                                      img(src=path+"/assets/images/ava_demo.png", alt="")
+                                    span Sponsor name 1
+                                .tbl_col.col3
+                                  a.link(href="#") https://linkhomepage.com
+                                .tbl_col.col4
+                                  .control
+                                    a(class='btn btn-circle trans' data-toggle="modal" data-target="#modalEditSponsor")
+                                      svg(width='18' height='18' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-edit' d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+                                        path(class='svg-edit' d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z' fill='#fff')
+                              li.group-list_row
+                                .tbl_col.col1
+                                  .pos 2
+                                .tbl_col.col2
+                                  .name
+                                    .image
+                                      img(src=path+"/assets/images/ava_demo.png", alt="")
+                                    span Sponsor name 2
+                                .tbl_col.col3
+                                  a.link(href="#") https://linkhomepage.com
+                                .tbl_col.col4
+                                  .control
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-edit' d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+                                        path(class='svg-edit' d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z' fill='#fff')
+                          .tbl-body_group
+                            .group-title Group 2.
+                              span Golden Sponsor
+                            p.no-sponsor No sponsors in Golden Sponsor
+                          .tbl-body_group
+                            .group-title Group 3.
+                              span Silver Sponsor
+                            ul.group-list
+                              li.group-list_row
+                                .tbl_col.col1
+                                  .pos 1
+                                .tbl_col.col2
+                                  .name
+                                    .image
+                                      img(src=path+"/assets/images/ava_demo.png", alt="")
+                                    span Sponsor name 3
+                                .tbl_col.col3
+                                  a.link(href="#") https://linkhomepage.com
+                                .tbl_col.col4
+                                  .control
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-edit' d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+                                        path(class='svg-edit' d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z' fill='#fff')
+                              li.group-list_row
+                                .tbl_col.col1
+                                  .pos 2
+                                .tbl_col.col2
+                                  .name
+                                    .image
+                                      img(src=path+"/assets/images/ava_demo.png", alt="")
+                                    span Sponsor name 4
+                                .tbl_col.col3
+                                  a.link(href="#") https://linkhomepage.com
+                                .tbl_col.col4
+                                  .control
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-edit' d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+                                        path(class='svg-edit' d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z' fill='#fff')
+                          .tbl-body_group
+                            .group-title Group 4.
+                              span Media Partner
+                            ul.group-list
+                              li.group-list_row
+                                .tbl_col.col1
+                                  .pos 1
+                                .tbl_col.col2
+                                  .name
+                                    .image
+                                      img(src=path+"/assets/images/ava_demo.png", alt="")
+                                    span Sponsor name 5
+                                .tbl_col.col3
+                                  a.link(href="#") https://linkhomepage.com
+                                .tbl_col.col4
+                                  .control
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-edit' d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+                                        path(class='svg-edit' d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+
+                                    a(class='btn btn-circle trans')
+                                      svg(width='18' height='18' viewbox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z' fill='#fff')
+                                        path(class='svg-trash' fill-rule='evenodd' clip-rule='evenodd' d='M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z' fill='#fff')
+                          .tbl-body_group
+                            .group-title Group 5.
+                              span Gift Sponsor
+                            p.no-sponsor No sponsors in Gift Sponsor
+
+  #receptionModal.modalRecpt.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-content_head
+          h2.title Edit page Reception
+          .m-content_head-btn
+            a.btn.btn-cancel.trans(href="#")
+              span Cancel
+            button.btn.btn-primary.btn-save.trans.btn-sm
+              span Save
+        .modal-wrapper
+          .modal-content_body
+            .view-side
+              .size Reception size:
+                span 1440px X 958px
+              .box-view
+            .control-side
+              p.desc
+                span.icon
+                  img(src=path+"/assets/images/ico_light.svg", alt="")
+                |Drag and drop objects to place on the Reception. You can then customize them in the canvas.
+              .edit-area
+                ul.nav.nav-tabs
+                  li.nav-link
+                    a.active(href="#add-block" data-toggle="tab")
+                      svg(width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M2.19287 4C2.19287 2.89543 3.0883 2 4.19287 2H12.1929C13.2974 2 14.1929 2.89543 14.1929 4V5.33333C14.1929 6.4379 13.2974 7.33333 12.1929 7.33333H4.19287C3.0883 7.33333 2.19287 6.4379 2.19287 5.33333V4ZM3.85954 4.66667C3.85954 4.29848 4.15801 4 4.5262 4H9.19287C9.56106 4 9.85954 4.29848 9.85954 4.66667C9.85954 5.03486 9.56106 5.33333 9.19287 5.33333H4.5262C4.15801 5.33333 3.85954 5.03486 3.85954 4.66667ZM11.8595 5.33333C12.2277 5.33333 12.5262 5.03486 12.5262 4.66667C12.5262 4.29848 12.2277 4 11.8595 4C11.4913 4 11.1929 4.29848 11.1929 4.66667C11.1929 5.03486 11.4913 5.33333 11.8595 5.33333Z' fill='#FCFCFC')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M2.19287 10.666C2.19287 9.56145 3.0883 8.66602 4.19287 8.66602H12.1929C13.2974 8.66602 14.1929 9.56145 14.1929 10.666V11.9993C14.1929 13.1039 13.2974 13.9993 12.1929 13.9993H4.19287C3.0883 13.9993 2.19287 13.1039 2.19287 11.9993V10.666ZM3.85954 11.3327C3.85954 10.9645 4.15801 10.666 4.5262 10.666H9.19287C9.56106 10.666 9.85954 10.9645 9.85954 11.3327C9.85954 11.7009 9.56106 11.9993 9.19287 11.9993H4.5262C4.15801 11.9993 3.85954 11.7009 3.85954 11.3327ZM11.8595 11.9993C12.2277 11.9993 12.5262 11.7009 12.5262 11.3327C12.5262 10.9645 12.2277 10.666 11.8595 10.666C11.4913 10.666 11.1929 10.9645 11.1929 11.3327C11.1929 11.7009 11.4913 11.9993 11.8595 11.9993Z' fill='#FCFCFC')
+                      |Add block
+                  li.nav-link
+                    a(href="#opt-block" data-toggle="tab")
+                      svg(width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M2 4.66667C2 4.29848 2.29848 4 2.66667 4L13.3333 4C13.7015 4 14 4.29848 14 4.66667C14 5.03486 13.7015 5.33333 13.3333 5.33333L2.66667 5.33333C2.29848 5.33333 2 5.03486 2 4.66667Z' fill='#FCFCFC')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M2 11.3327C2 10.9645 2.29848 10.666 2.66667 10.666L13.3333 10.666C13.7015 10.666 14 10.9645 14 11.3327C14 11.7009 13.7015 11.9993 13.3333 11.9993L2.66667 11.9993C2.29848 11.9993 2 11.7009 2 11.3327Z' fill='#FCFCFC')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M6.6665 13.334C7.77107 13.334 8.6665 12.4386 8.6665 11.334C8.6665 10.2294 7.77107 9.33398 6.6665 9.33398C5.56193 9.33398 4.6665 10.2294 4.6665 11.334C4.6665 12.4386 5.56193 13.334 6.6665 13.334Z' fill='#FCFCFC')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M9.3335 6.66602C10.4381 6.66602 11.3335 5.77059 11.3335 4.66602C11.3335 3.56145 10.4381 2.66602 9.3335 2.66602C8.22893 2.66602 7.3335 3.56145 7.3335 4.66602C7.3335 5.77059 8.22893 6.66602 9.3335 6.66602Z' fill='#FCFCFC')
+                      |Block Options
+                .tab-content
+                  .tab-pane.fade.show.active#add-block
+                    .drag-list
+                      .tag-drag
+                        .ic
+                          img(src=path+"/assets/images/ico_add_bg.svg", alt="")
+                        .ct
+                          strong Add background
+                          p Add a background photo for your reception on which you can place videos or link
+                      .tag-drag
+                        .ic
+                          img(src=path+"/assets/images/ico_add_image.svg", alt="")
+                        .ct
+                          strong Add image/video
+                          p Add promo image/videos to welcome attendees like product showcases, services
+                      .tag-drag
+                        .ic
+                          img(src=path+"/assets/images/ico_add_sponsor.svg", alt="")
+                        .ct
+                          strong Add Sponsor
+                          p Add Sponsor to welcome attendees like product showcases, services
+                      .tag-drag
+                        .ic
+                          img(src=path+"/assets/images/ico_add_text.svg", alt="")
+                        .ct
+                          strong Add text
+                          p Add more description areas of the event
+                      .tag-drag
+                        .ic
+                          img(src=path+"/assets/images/ico_add_link.svg", alt="")
+                        .ct
+                          strong Add link
+                          p Add transparent clickable areas which can be link to areas of the event
+                  .tab-pane.fade#opt-block
+                    .module-edit
+                      .ttl Add background
+                      .m-input
+                        span.m-input_label Choose image
+                        .input-file-wrap
+                          input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                          img.img-upload(src='' alt='your image')
+                          .btn-upload
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image
+                          .btn-update
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image
+                          .btn-remove
+                            img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                            span Remove image
+                      p.format Recommended format: 1440 x 958px | JPG, JPEG, PNG | Up to 20 MB
+                    .module-edit
+                      .ttl Add Image/Video
+                      .m-input
+                        span.m-input_label Choose image/video
+                        .input-file-wrap
+                          input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml, video/mp4, video/x-m4v, video/*")
+                          img.img-upload(src='' alt='your image')
+                          .btn-upload
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image/video
+                          .btn-update
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image/video
+                          .btn-remove
+                            img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                            span Remove image/video
+                      p.format Image format: JPG, JPEG, PNG | Up to 5 MB<br>Video format: MP4 | Up to 1000 MB
+                      .block-checkbox
+                        .m-input
+                          input#autoplay.input-checkbox(type='checkbox' checked)
+                          label.checkbox-label(for='autoplay') Toggle
+                        .name-check Auto play video
+                    .module-edit
+                      .ttl Add Sponsor
+                      .m-input
+                        span.m-input_label Choose sponsor
+                        .input-area
+                          select.input.select-box(name="select" required)
+                            option(value="" disabled selected) Please choose one
+                            option(value="1") 1
+                            option(value="2") 2
+                            option(value="3") 3
+                    .module-edit
+                      .ttl Add text
+                      .m-input
+                        span.m-input_label Content
+                        .m-editor_area
+                          #editorRecpt
+                    .module-edit
+                      .ttl Add link
+                      .m-input
+                        span.m-input_label URL
+                        .input-area
+                          input.input.input-text(type="text" placeholder="https://...")
+  include _components/modal_sponsor_edit
+  include _components/modal_sponsor_group
+  include _components/modal_sponsor_group_add
+  include _components/modal_sponsor

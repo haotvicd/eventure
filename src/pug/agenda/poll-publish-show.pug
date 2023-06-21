@@ -1,0 +1,153 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Agenda'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'agenda'
+  -jsID         = 'calendar'
+  -uploadJs     = 'true'
+  -videoJs      = 'true'
+  -path         = '../'
+  -hasFooter    = false
+
+block container
+  .layout-agenda
+    .layout-main 
+      .main-header 
+        include components/header-live
+      .main-video 
+        .box-live
+          .poll-info 
+            .poll-info-main 
+              .poll-close.btn-status-stage Close
+              .poll-info-header Poll
+                .poll-info-user 
+                  img(src=path+"/assets/images/img_avatar01.png", alt="")
+                  span Michael Smith
+              .poll-info-body 
+                .poll-info-title
+                  .poll-info-title-header Question 
+                  .poll-info-title-desc Hey there, down here 👋 Want to hear something cool? 
+                .poll-info-list 
+                  .poll-info-list-header Answers
+                    .poll-info-list-header-note 49 Vote
+                  ul.poll-info-list-main
+                    li 
+                      .poll-info-list-main-title Hmm… that email doesn't look valid
+                        .poll-info-list-main-title-note 0%
+                      .poll-info-list-main-progress 
+                        .poll-info-list-main-activated(style="width: 0") 
+                      .poll-info-list-main-note 0 Votes
+                    li 
+                      .poll-info-list-main-title Boom shakalak! Let’s get started.
+                        .poll-info-list-main-title-note 53%
+                      .poll-info-list-main-progress
+                        .poll-info-list-main-activated(style="width: 53%") 
+                      .poll-info-list-main-note 32 Votes
+                    li 
+                      .poll-info-list-main-title Not recommended on public or shared computers. 
+                        .poll-info-list-main-title-note 23%
+                      .poll-info-list-main-progress
+                        .poll-info-list-main-activated(style="width: 23%") 
+                      .poll-info-list-main-note 17 Votes
+              .poll-info-footer 
+                 button.btn.btn-primary.btn-status-stage.trans(type="button") Hide Poll from stage
+                 button.btn.btn-style6.trans(type="button") Close Poll
+            ul.box-live-thumbnail
+              li 
+                a 
+                  img(src=path+"/assets/images/agenda/live-thumbnail-user.jpg", alt="")
+                  .box-live-thumbnail-caption Michael Smith
+          .box-live-main-list
+            .box-live-main
+              img(src=path+"/assets/images/agenda/live-user1.jpg", alt="")
+              .box-live-info
+                .live-info-ticket.ticket-hot
+                  img(src=path+"/assets/images/ico_host.svg", alt="")
+                  label Host
+                .live-info-caption Michael Smith
+                .live-info-descriptions Bussiness Conference Design & Facilitation, The Art of Metting
+        .video-control 
+          include components/video-control-record
+    .layout-sidebar 
+      .tab-main.tag-js
+        .tab-header
+          include components/tab-header
+        .tab-body 
+          #tab-main1.tab-content
+            .tab-item.tag-js
+              .tab-header
+                a(attr-body="#tab-chats") Chats
+                a(attr-body="#tab-qa") Q&A
+                a.is-activated(attr-body="#tab-poll") Poll
+                a(attr-body="#tab-raised-hands") Raised Hands
+                a(attr-body="#tab-videos") Videos
+              .tab-body
+                #tab-chats.tab-content 
+                  include components/tab-chat
+                #tab-qa.tab-content 
+                  include components/tab-qa
+                #tab-poll.tab-content 
+                  .tab-item-main 
+                    form.form
+                      .form-item 
+                          .form-item-label Poll type
+                          .form-item-input.input-select
+                            input(type="text" name="select_name1")
+                            .label All
+                            ul 
+                              li(data-value="0").is-activated All 
+                              li(data-value="1") Option 1
+                              li(data-value="2") Option 2
+                    a.trans.btn-style3 
+                        span.ico-poll 
+                        label Create a Poll
+                    .tab-box-group
+                      .panel-style1 
+                        .panel-top 
+                          .panel-top-status Published
+                          .panel-top-info Michael Smith
+                            .panel-top-info-time 3 mins ago
+                          .panel-btn-delete delete 
+                        .panel-body 
+                          .panel-main-desc Hey there, down here 👋 Want to hear something cool? 
+                          form.form
+                            .form-item.form-item-style1
+                                .form-item-label Answers
+                                  .form-item-label-note 49 Vote
+                                .form-item-group
+                                  .form-item-input
+                                      .input.label Hmm… that email doesn't look valid
+                                      .form-item-note
+                                          .large 0%
+                                          .small 0
+                                  .form-item-input.input-progress
+                                      .bar-progress(style="width: 53%")
+                                      .input.label Boom shakalak! Let’s get started.
+                                      .form-item-note
+                                          .large 53%
+                                          .small 0
+                                  .form-item-input.input-progress
+                                      .bar-progress(style="width: 23%")
+                                      .input.label Not recommended on public or shared computers.
+                                      .form-item-note
+                                          .large 23%
+                                          .small 0
+                            .form-footer 
+                              button#btn-status-stage.btn.btn-style5.btn-status-stage.trans(type="button") 
+                                span.ico-laptop
+                                label Show on stage
+                              button.btn.btn-primary.trans(type="button") Close Poll
+                #tab-raised-hands.tab-content
+                  include components/tab-raised-hands
+                #tab-videos.tab-content 
+                  include components/tab-video
+          #tab-main2.tab-content 
+            include components/tab-main2
+  include ../_components/widget
+  include components/modal-play
+  include components/modal-end
+  

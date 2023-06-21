@@ -1,0 +1,441 @@
+.m-content {
+  padding-top: 25px;
+  // padding-bottom: 130px;
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    &-btn {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+  .title-tab {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.m-general {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  @media screen and (max-width: 870px){
+    flex-wrap: wrap;
+  }
+  .ttl-primary {
+    margin-bottom: 16px;
+  }
+  &_left {
+    width: 65.71%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (max-width: 870px){
+      order: 2;
+      width: 100%;
+    }
+  }
+  &_right {
+    flex: 1;
+    padding-left: 40px;
+    @media screen and (max-width: 870px){
+      order: 1;
+      padding-left: 0;
+    }
+  }
+  &_box {
+    padding: 24px;
+    background: #1A1D1F;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 24px;
+    width: 100%;
+    .link-edit {
+      position: absolute;
+      right: 24px;
+      top: 31px;
+    }
+    &--width01 {
+      width: 48.369%;
+      .media-tablet-max ({
+        width: 100%;
+      })
+    }
+  }
+}
+
+.l-schedule {
+  margin-bottom: 16px;
+  > li {
+    border-top: 1px solid #272B30;
+    &:first-child {
+      border: none;
+    }
+  }
+  &_item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    padding-left: 48px;
+    background: url('../images/ico_clock.svg') no-repeat left center;
+    .time {
+      font-size: 14px;
+      line-height: 24px;
+      color: #efefef;
+      margin-right: 28px;
+      width: 131px;
+    }
+    .duration-time {
+      width: 80px;
+    }
+    .tag-time {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      background: #8FDDFF;
+      border-radius: 4px;
+      color: #1a1d1f;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 24px;
+      font-family: 'Poppins', sans-serif;
+      &--type02 {
+        background: #ffbc99;
+      }
+    }
+    .desp {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      flex: 1;
+      padding-left: 55px;
+      word-break: break-word;
+    }
+  }
+}
+
+.l-user {
+  display: flex;
+  flex-wrap: wrap;
+  > li {
+    width: 48px;
+    margin-right: 16px;
+    margin-top: 16px;
+  }
+  &_avt {
+    img {
+      width: 48px;
+      border-radius: 50%;
+    }
+  }
+  &_sponsor {
+    > li {
+      width: 100%;
+      .btn-add-user {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        span {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          margin-left: 16px;
+        }
+      }
+      .l-user_avt {
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 16px;
+          line-height: 24px;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+.box-event {
+  margin-top: 16px;
+  &_title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    padding-left: 32px;
+    word-break: break-word;
+    .link-text {
+      font-weight: bold;
+      color: @color1;
+      margin-left: 5px;
+    }
+  }
+  .time {
+    background: url('../images/ico_calendar.svg') no-repeat top 2px left;
+  }
+  .desp {
+    background: url('../images/ico_document.svg') no-repeat top 2px left;
+  }
+  .type {
+    background: url('../images/ico_type.svg') no-repeat top 2px left;
+  }
+  .team {
+    background: url('../images/ico_building.svg') no-repeat top 2px left;
+  }
+  .mail {
+    background: url('../images/ico_mail.svg') no-repeat top 2px left;
+  }
+}
+
+.block-menu {
+  margin-bottom: 18px;
+}
+
+.l-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px -12.5px 0;
+  li {
+    width: 33.333%;
+    padding: 0 12.5px;
+    margin-bottom: 24px;
+    @media screen and (max-width: 870px){
+      width: 50%;
+    }
+  }
+  .btn {
+    background: #272b30;
+    display: block;
+    text-align: left;
+    padding-left: 68px;
+    &.ico01 {
+      background: #272b30 url('../images/ico_cloud.svg') no-repeat left 24px center;
+    }
+    &.ico02 {
+      background: #272b30 url('../images/ico_tv.svg') no-repeat left 24px center;
+    }
+    &.ico03 {
+      background: #272b30 url('../images/ico_leaderboard.svg') no-repeat left 24px center;
+    }
+    &.ico04 {
+      background: #272b30 url('../images/ico_key.svg') no-repeat left 24px center;
+    }
+    &.ico05 {
+      background: #272b30 url('../images/ico_note.svg') no-repeat left 24px center;
+    }
+    &.ico06 {
+      background: #272b30 url('../images/ico_picture.svg') no-repeat left 24px center;
+    }
+    &.ico07 {
+      background: #272b30 url('../images/ico_ticket.svg') no-repeat left 24px center;
+    }
+    &.ico08 {
+      background: #272b30 url('../images/ico_download.svg') no-repeat left 24px center;
+    }
+    &.ico09 {
+      background: #272b30 url('../images/ico_cast.svg') no-repeat left 24px center;
+    }
+  }
+}
+.modal-content {
+  max-height: 100%;
+}
+.modalGen {
+  .modal-content {
+    max-width: 100%;
+    width: 1023px;
+  }
+  .modal_body {
+    display: flex;
+    &-col {
+      width: 50%;
+      padding-left: 40px;
+      padding-top: 24px;
+      &:nth-child(odd) {
+        padding-right: 40px;
+        padding-left: 0;
+        border-right: 1px solid rgba(111, 118, 126, 0.25);
+      }
+      .ttl-col {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fcfcfc;
+        margin-bottom: 24px;
+      }
+      &--width100 {
+        width: 100%;
+        padding: 0 !important;
+        border: none !important;
+      }
+    }
+    .input-file-wrap {
+      max-width: 100%;
+    }
+  }
+  .m-input {
+   margin-bottom: 32px;
+   &:last-child {
+    margin-bottom: 0;
+   }
+  }
+  .gr-input {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -12px;
+    .m-input {
+      width: 50%;
+      padding: 0 12px;
+    }
+  }
+  .modal_head {
+    margin-bottom: 2px;
+    .btnClose {
+      background: #272B30 url('../images/ico_close_white.svg') no-repeat center / 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+    }
+  }
+  .modal_foot {
+    .btn-primary {
+      max-width: 220px;
+    }
+  }
+  &--sponsor {
+    .modal-content {
+      width: 576px;
+    }
+    .modal_head {
+      margin-bottom: 60px;
+    }
+    .modal_foot {
+      .btn {
+        max-width: 100%;
+      }
+    }
+  }
+  &--speaker {
+    .modal-content {
+      width: 803px;
+    }
+    .modal_body {
+      &-col {
+        &--col2 {
+          width: 291px;
+        }
+        &--col1 {
+          flex: 1;
+        }
+      }
+    }
+    .input-file-wrap .input-file-holder {
+      padding: 12px;
+    }
+  }
+  .gr-control {
+    padding-top: 32px;
+    border-top: 1px solid rgba(111, 118, 126, 0.25);
+    border-bottom: 1px solid rgba(111, 118, 126, 0.25);
+    &_check {
+      margin-bottom: 32px;
+      &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .title {
+      strong {
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #efefef;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #6F767E;
+      }
+    }
+    .table-count {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: #272b30;
+      margin-top: 16px;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      input {
+        background: #1a1d1f;
+      }
+    }
+  }
+}
+
+.modalEvent {
+  .ttl-primary {
+    font-size: 20px;
+  }
+  .modal-content {
+    width: 504px;
+    .start {
+      display: inline-block;
+    }
+    .pause {
+      display: none;
+    }
+    &.is-start {
+      .start {
+        display: none;
+      }
+      .pause {
+        display: inline-block;
+      }
+    }
+  }
+  .modal_body {
+    margin-top: 26px;
+  }
+  .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  .m-input {
+    &_label {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+  .modal_foot {
+    justify-content: center;
+  }
+  .btn-close {
+    min-width: 136px;
+  }
+}

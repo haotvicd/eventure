@@ -1,0 +1,74 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Agenda'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'agenda'
+  -jsID         = 'calendar'
+  -uploadJs     = 'true'
+  -videoJs      = 'true'
+  -path         = '../'
+  -hasFooter    = false
+
+block scripts
+  script.
+    $('.js-video').mediaelementplayer({
+      hideCaptionsButtonWhenEmpty: false,
+      features: ['playpause', 'current', 'duration', 'progress', 'tracks', 'volume', 'fullscreen'],
+      timeAndDurationSeparator: '<span>  /  </span>',
+      success: function(player, node) {
+          player.addEventListener('ended', function(e){
+            $('#modalEnd').modal('show');       
+          });
+      }
+    });
+
+block container
+  .layout-agenda
+    .layout-main 
+      .main-header 
+        include components/header
+      .main-video 
+        .video-player
+          a.btn.btn-secondary.btn-close.trans(data-toggle="modal" data-target="#modalClose")
+            span Close
+          .block-module
+            video#player1.js-video(preload='none' style='max-width: 100%' poster=path+'/assets/images/img_video_ol.jpg' controls='' playsinline='' webkit-playsinline='')
+              source(src='//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true' type='video/mp4')
+              track(src='dist/mediaelement.vtt' srclang='en' label='English' kind='subtitles' type='text/vtt')
+        .video-control 
+          include components/video-control
+    .layout-sidebar 
+      .tab-main.tag-js
+        .tab-header 
+          include components/tab-header
+        .tab-body 
+          #tab-main1.tab-content
+            .tab-item.tag-js
+              .tab-header
+                a(attr-body="#tab-chats") Chats
+                a(attr-body="#tab-qa") Q&A
+                a(attr-body="#tab-poll") Poll
+                a(attr-body="#tab-raised-hands") Raised Hands
+                a.is-activated(attr-body="#tab-videos") Videos
+              .tab-body
+                #tab-chats.tab-content 
+                  include components/tab-chat
+                #tab-qa.tab-content 
+                  include components/tab-qa
+                #tab-poll.tab-content 
+                  include components/tab-poll
+                #tab-raised-hands.tab-content 
+                  include components/tab-raised-hands
+                #tab-videos.tab-content 
+                  include components/tab-video
+          #tab-main2.tab-content 
+            include components/tab-main2
+  include ../_components/widget
+  include components/modal-play
+  include components/modal-end
+  include components/modal-close
+  

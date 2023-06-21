@@ -1,0 +1,566 @@
+extends _layout/default
+
+block vars
+  -title        = 'Homepage'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -jsID         = 'calendar'
+  -uploadJs     = 'true'
+  -videoJs      = 'true'
+  -path         = '.'
+  -hasFooter    = false
+
+block scripts
+  script(src=path+"/assets/js/schedule.js")
+  script(src=path+"/assets/js/color-picker.js")
+  script(src=path+"/assets/js/formbuilder.js")
+  script.
+    $('.js-video').mediaelementplayer({
+      hideCaptionsButtonWhenEmpty: false,
+      features: ['playpause', 'current', 'duration', 'progress', 'tracks', 'volume', 'fullscreen'],
+      timeAndDurationSeparator: '<span>  /  </span>'
+    });
+block container
+  include _modules/head_event
+  .m-content
+    .tab-content
+      .tab-pane.fade.show.active#tab1
+        include _components/main_general
+      .tab-pane.fade#tab2
+        include _components/main_schedule
+      .tab-pane.fade#tab3
+        include _components/main_registration
+      .tab-pane.fade#tab4
+        include _components/main_branding
+      .tab-pane.fade#tab5
+        include _components/main_networking
+      .tab-pane.fade#tab6
+        include _components/main_booth
+      .tab-pane.fade#tab7
+        include _components/main_setting
+
+  include _components/modal_upload_video
+  include _components/modal_upload_video_library
+  include _components/modal_watch_video
+  include _components/modal_speaker_schedule
+  include _components/modal_group_manager
+  include _components/modal_add_activity
+  include _components/modal_add_group
+  include _components/modal_startstop
+  include _components/modal_event
+  include _components/modal_speaker
+  include _components/modal_booth
+  include _components/modal_sponsor
+  include _components/modal_sponsor_edit
+  include _components/modal_sponsor_group
+  include _components/modal_sponsor_group_add
+  include _components/modal_reception_edit
+
+
+  #modalEditBooth.screen-1023.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary.sm Edit Booth
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .m-activity_content
+              .m-activity_content-wrap
+                .m-activity_content-colum
+                  .m-activity_content-title.edge Basic Information
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Booth Name
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="text" value='Ensure Gold' placeholder="Give your event name")
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Email booth owner
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="email" value='cskh.ensure@gmail.com' placeholder="Give your event name")
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Tags
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area
+                        .treeSelector
+                          a.btn-clear-select(href="javascript:;")
+                            img(src=path+"/assets/images/ico_clear.svg", alt="")
+                          .form-control.branch.input(data-value="" data-placeholder="Enter tags") Enter tags
+                          .custom-select-list
+                            .input-a
+                              .input-a_inner
+                                input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                            .wrap-select
+                              ul.l-multiple
+                                li(data-filter-item data-filter-name="cody fisher")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                      span Cody Fisher
+                                        small katherine.nolan@gmail.com
+                                li(data-filter-item data-filter-name="theresa webb")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                      span Theresa Webb
+                                        small amanda.clark@gmail.com
+                                li(data-filter-item data-filter-name="esther howard")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                      span Esther Howard
+                                        small paul.morrison@gmail.com
+                                li(data-filter-item data-filter-name="wade warren")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                      span Wade Warren
+                                        small tracey.langdon@gmail.com
+                                li(data-filter-item data-filter-name="dianne russell")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                      span Dianne Russell
+                                        small alison.langdon@gmail.com
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Member
+                      .input-area
+                        .treeSelector
+                          a.btn-clear-select(href="javascript:;")
+                            img(src=path+"/assets/images/ico_clear.svg", alt="")
+                          .form-control.branch.input(data-value="" data-placeholder="Enter member") Enter member
+                          .custom-select-list
+                            .input-a
+                              .input-a_inner
+                                input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                            .wrap-select
+                              ul.l-multiple
+                                li(data-filter-item data-filter-name="cody fisher")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                      span Cody Fisher
+                                        small katherine.nolan@gmail.com
+                                li(data-filter-item data-filter-name="theresa webb")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                      span Theresa Webb
+                                        small amanda.clark@gmail.com
+                                li(data-filter-item data-filter-name="esther howard")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                      span Esther Howard
+                                        small paul.morrison@gmail.com
+                                li(data-filter-item data-filter-name="wade warren")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                      span Wade Warren
+                                        small tracey.langdon@gmail.com
+                                li(data-filter-item data-filter-name="dianne russell")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                      span Dianne Russell
+                                        small alison.langdon@gmail.com
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Upload logo
+                        small.warning *
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area
+                        .input-file-wrap
+                          input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                          img.img-upload(src='' alt='your image')
+                          .btn-upload
+                            img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+                          .btn-update
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image
+                          .btn-remove
+                            img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                            span Remove image
+                          p Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Upload cover
+                        small.warning *
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area
+                        .input-file-wrap.input-file-wrap--cover
+                          input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                          img.img-upload(src='' alt='your image')
+                          .btn-upload
+                            img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+                          .btn-update
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image
+                          .btn-remove
+                            img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                            span Remove image
+                          p Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB
+
+                  .m-activity_content-row
+                    .bl-setting
+                      .bl-setting_row
+                        .label-setting
+                          span Chat
+                          small Choose whether you want to allow visitors and exhibitors to message each other
+                        .m-input
+                          input#chatchat1.input-checkbox(type='checkbox' checked)
+                          label.checkbox-label(for='chatchat1') Toggle
+
+                .m-activity_content-colum
+                  .m-activity_content-title.edge Additional Information
+                  .m-activity_content-row
+                    .bl-setting
+                      .bl-setting_row
+                        .label-setting
+                          span Public
+                        .m-input
+                          input#public.input-checkbox(type='checkbox' checked)
+                          label.checkbox-label(for='public') Toggle
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Short introduction
+                      .input-area
+                        textarea.input.input-text(name="" maxlength="1000" placeholder="Enter short introduction")
+
+                  .m-activity_content-row
+                    .m-input
+                      .m-editor
+                        span.m-input_label Description
+                        .m-editor_area
+                          #editorBoothEdit
+                            p Our couriers have a very particular set of skills. They will find you. They will deliver to you. Creators deserve to get paid for their work. Gumroad makes it easy. Say goodbye to all your helpdesk nightmares with Freshdesk!
+                            img(src=path + "/assets/images/dummy.png", alt="")
+
+                  .line
+                  .m-activity_content-title.edge Information box
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Text 1
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area.addlink
+                        input.input.input-text(type="text" value='About Us' placeholder="Input text")
+                        button(type='button' class='btn btn-black btn-add_link trans')
+                          span Add link
+                        .addUrl
+                          span.m-input_label Add URL
+                          .input-area
+                            input.input.input-text(type="text" value='https://ensure.com/about-us')
+                            button(type='button' class='btn btn-noborder trans btnClearUrl')
+                              img(src=path+"/assets/images/ico_clear.svg", alt="")
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Text 2
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area.addlink
+                        input.input.input-text(type="text" placeholder="Input text")
+                        button(type='button' class='btn btn-black btn-add_link trans')
+                          span Add link
+                        .addUrl
+                          span.m-input_label Add URL
+                          .input-area
+                            input.input.input-text(type="text" value='https://ensure.com/about-us')
+                            button(type='button' class='btn btn-noborder trans btnClearUrl')
+                              img(src=path+"/assets/images/ico_clear.svg", alt="")
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Text 3
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area.addlink
+                        input.input.input-text(type="text" placeholder="Input text")
+                        button(type='button' class='btn btn-black btn-add_link trans')
+                          span Add link
+                        .addUrl
+                          span.m-input_label Add URL
+                          .input-area
+                            input.input.input-text(type="text" value='https://ensure.com/about-us')
+                            button(type='button' class='btn btn-noborder trans btnClearUrl')
+                              img(src=path+"/assets/images/ico_clear.svg", alt="")
+
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-220")
+              span Save
+
+  #modalAddBooth.screen-1023.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary.sm Add Booth
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .m-activity_content
+              .m-activity_content-wrap
+                .m-activity_content-colum
+                  .m-activity_content-title.edge Basic Information
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Booth Name
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="text" placeholder="Give your event name")
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Email booth owner
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="email" placeholder="Give your event name")
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Tags
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area
+                        .treeSelector
+                          a.btn-clear-select(href="javascript:;")
+                            img(src=path+"/assets/images/ico_clear.svg", alt="")
+                          .form-control.branch.input(data-value="" data-placeholder="Enter tags") Enter tags
+                          .custom-select-list
+                            .input-a
+                              .input-a_inner
+                                input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                            .wrap-select
+                              ul.l-multiple
+                                li(data-filter-item data-filter-name="cody fisher")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                      span Cody Fisher
+                                        small katherine.nolan@gmail.com
+                                li(data-filter-item data-filter-name="theresa webb")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                      span Theresa Webb
+                                        small amanda.clark@gmail.com
+                                li(data-filter-item data-filter-name="esther howard")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                      span Esther Howard
+                                        small paul.morrison@gmail.com
+                                li(data-filter-item data-filter-name="wade warren")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                      span Wade Warren
+                                        small tracey.langdon@gmail.com
+                                li(data-filter-item data-filter-name="dianne russell")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                      span Dianne Russell
+                                        small alison.langdon@gmail.com
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Member
+                      .input-area
+                        .treeSelector
+                          a.btn-clear-select(href="javascript:;")
+                            img(src=path+"/assets/images/ico_clear.svg", alt="")
+                          .form-control.branch.input(data-value="" data-placeholder="Enter member") Enter member
+                          .custom-select-list
+                            .input-a
+                              .input-a_inner
+                                input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                            .wrap-select
+                              ul.l-multiple
+                                li(data-filter-item data-filter-name="cody fisher")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                      span Cody Fisher
+                                        small katherine.nolan@gmail.com
+                                li(data-filter-item data-filter-name="theresa webb")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                      span Theresa Webb
+                                        small amanda.clark@gmail.com
+                                li(data-filter-item data-filter-name="esther howard")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                      span Esther Howard
+                                        small paul.morrison@gmail.com
+                                li(data-filter-item data-filter-name="wade warren")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                      span Wade Warren
+                                        small tracey.langdon@gmail.com
+                                li(data-filter-item data-filter-name="dianne russell")
+                                  label.module-check
+                                    input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                    span.label
+                                      img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                      span Dianne Russell
+                                        small alison.langdon@gmail.com
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Upload logo
+                        small.warning *
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area
+                        .input-file-wrap
+                          input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                          img.img-upload(src='' alt='your image')
+                          .btn-upload
+                            img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+                          .btn-update
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image
+                          .btn-remove
+                            img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                            span Remove image
+                          p Recommended format: 480x480px <br> JPG, SVG, PNG | Up to 5 MB
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Upload cover
+                        small.warning *
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area
+                        .input-file-wrap.input-file-wrap--cover
+                          input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                          img.img-upload(src='' alt='your image')
+                          .btn-upload
+                            img(src=path+"/assets/images/btn_upload_video_image.png", alt="Click or drop image")
+                          .btn-update
+                            img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                            span Upload image
+                          .btn-remove
+                            img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                            span Remove image
+                          p Image format: 1280x720px | JPG, SVG, PNG | Up to 2MB<br>Video format: 16:9 | MP4
+
+                  .m-activity_content-row
+                    .bl-setting
+                      .bl-setting_row
+                        .label-setting
+                          span Chat
+                          small Choose whether you want to allow visitors and exhibitors to message each other
+                        .m-input
+                          input#chatchat.input-checkbox(type='checkbox' checked)
+                          label.checkbox-label(for='chatchat') Toggle
+
+                .m-activity_content-colum
+                  .m-activity_content-title.edge Additional Information
+                  .m-activity_content-row
+                    .bl-setting
+                      .bl-setting_row
+                        .label-setting
+                          span Public
+                        .m-input
+                          input#public1.input-checkbox(type='checkbox' checked)
+                          label.checkbox-label(for='public1') Toggle
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Short introduction
+                      .input-area
+                        textarea.input.input-text(name="" maxlength="1000" placeholder="Enter short introduction")
+
+                  .m-activity_content-row
+                    .m-input
+                      .m-editor
+                        span.m-input_label Description
+                        .m-editor_area
+                          #editorBooth
+
+                  .line
+                  .m-activity_content-title.edge Information box
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Text 1
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area.addlink
+                        input.input.input-text(type="text" placeholder="Input text")
+                        button(type='button' class='btn btn-black btn-add_link trans')
+                          span Add link
+                        .addUrl
+                          span.m-input_label Add URL
+                          .input-area
+                            input.input.input-text(type="text" value='https://ensure.com/about-us')
+                            button(type='button' class='btn btn-noborder trans btnClearUrl')
+                              img(src=path+"/assets/images/ico_clear.svg", alt="")
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Text 2
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area.addlink
+                        input.input.input-text(type="text" placeholder="Input text")
+                        button(type='button' class='btn btn-black btn-add_link trans')
+                          span Add link
+                        .addUrl
+                          span.m-input_label Add URL
+                          .input-area
+                            input.input.input-text(type="text" value='https://ensure.com/about-us')
+                            button(type='button' class='btn btn-noborder trans btnClearUrl')
+                              img(src=path+"/assets/images/ico_clear.svg", alt="")
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Text 3
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .input-area.addlink
+                        input.input.input-text(type="text" placeholder="Input text")
+                        button(type='button' class='btn btn-black btn-add_link trans')
+                          span Add link
+                        .addUrl
+                          span.m-input_label Add URL
+                          .input-area
+                            input.input.input-text(type="text" value='https://ensure.com/about-us')
+                            button(type='button' class='btn btn-noborder trans btnClearUrl')
+                              img(src=path+"/assets/images/ico_clear.svg", alt="")
+
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-220")
+              span Save

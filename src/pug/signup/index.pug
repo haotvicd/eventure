@@ -1,0 +1,63 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Sign Up'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'sign-up'
+  -jsID         = 'calendar'
+  -path         = '../'
+  -hasFooter    = true
+
+block scripts
+
+block container
+  .m-sign-up
+    .side-bg
+      .logo
+        img(src=path+"/assets/images/signup/logo.png", alt="" width="187" height="48")
+      .title
+        img(src=path+"/assets/images/signup/title.png", alt="Virtual real Connection" width="344" height="130")
+      .image
+        img(src=path+"/assets/images/signup/img_side.png", alt="")
+    .signup-content
+      .signup-content_inner
+        h2.signup_title Sign up
+        form.signup_form
+          .m-input
+            span.m-input_label Create a new account with email address
+            .input-area
+              a.btn-back-clear(href="javascript:;")
+                img(src=path+"/assets/images/ico_arrow_backward.svg", alt="")
+              input.input.input-text.input-email.js-mail-validate(type="text" placeholder="Your email")
+          button.btn.btn-primary.btn-submit.trans(type="submit")
+            span Continue
+        .other-options
+          span.m-input_label Or log in to an existing account
+          a.btn-google.trans(href="#")
+            img(src=path+"/assets/images/ico_google.svg", alt="Google")
+            |Google
+          ul.l-social
+            li
+              a.btn-social.apple.trans(href="#")
+                img(src=path+"/assets/images/ico_apple.svg", alt="Apple")
+            li
+              a.btn-social.facebook.trans(href="#")
+                img(src=path+"/assets/images/ico_fb_circle.svg", alt="Facebook")
+            li
+              a.btn-social.twitter.trans(href="#")
+                img(src=path+"/assets/images/ico_twitter_white.svg", alt="Twitter")
+            li
+              a.btn-social.linkin.trans(href="#")
+                img(src=path+"/assets/images/ico_linkin_white.svg", alt="Linked In")
+        p.policy-agreement By signing up, I agree to the
+          a.trans(href="#")  Privacy Policy&nbsp;
+          |and the
+          a.trans(href="#")  Terms of Use
+      .cookie-box
+        p By continuing to use this site you consent to the use of cookies.
+          a.trans(href="#")  Learn More
+        a.btn-close-box.trans(href="javascript:;")
+          img(src=path+"/assets/images/ico_close.svg", alt="")

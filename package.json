@@ -1,0 +1,31 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "System html code",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "VietSy",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.3",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-pug": "^5.0.0",
+    "merge-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-import-less": "^0.9.0",
+    "gulp-less": "^5.0.0",
+    "gulp-less-sourcemap": "^1.4.4",
+    "gulp-sourcemap": "^1.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "terser-webpack-plugin": "^5.3.6",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^5.74.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="charset" content="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=".">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Homepage</title>
+    <link rel="icon" href=".assets/images/favicon.ico">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin="">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/libs/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+  </head>
+  <body class="homepage">
+    <div class="homepage">
+      <header class="m-header">
+        <div class="wrapper">
+          <div class="m-header_inner">
+            <h1 class="m-header_logo"><a class="trans" href="#"><img class="pc-only" src="./assets/images/logo_head.svg" alt="eventure" width="187"><img class="sp-only" src="./assets/images/logo_sp.png" alt="eventure" width="52"></a></h1>
+            <nav class="nav">
+              <div class="nav_head sp-only"><a class="close-nav" href="javascript:;"><img src="./assets/images/ico_close_white.svg" alt=""></a>
+                <div class="nav-logo"><img src="./assets/images/logo_head.svg" alt="eventure" width="156"></div>
+              </div>
+              <div class="nav_body"><a class="nav_link pc-only trans" href="#">Support</a>
+                <div class="nav_user">
+                  <div class="nav_user_wrap"><a class="nav_user_icon" href="javascript:;"><img src="./assets/images/ico_avatar.png" alt=""></a>
+                    <div class="user-info sp-only">
+                      <div class="user-name">Eleanor Pena</div>
+                      <div class="user-since">Member since Mar 15, 2022</div>
+                    </div>
+                  </div>
+                  <div class="nav_user-menu">
+                    <div class="nav_user-menu_inner">
+                      <ul class="user-menu">
+                        <li><a class="active" href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12ZM12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5588 19.5488C20.6672 17.7154 22 15.0134 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.0134 3.33284 17.7154 5.44116 19.5488C7.19693 21.0756 9.49052 22 12 22C14.4162 22 16.6323 21.143 18.3609 19.7165C18.4276 19.6614 18.4936 19.6055 18.5588 19.5488ZM12.2579 19.9959C12.1723 19.9986 12.0863 20 12 20C11.9914 20 11.9827 20 11.9741 20C11.8937 19.9997 11.8135 19.9983 11.7337 19.9956C10.3914 19.9517 9.13273 19.5772 8.03655 18.9508C8.95181 17.7632 10.3882 17 12 17C13.6118 17 15.0482 17.7632 15.9634 18.9508C14.865 19.5785 13.6033 19.9533 12.2579 19.9959ZM17.5624 17.7498C16.2832 16.0781 14.2675 15 12 15C9.73249 15 7.7168 16.0781 6.43759 17.7498C4.93447 16.2953 4 14.2568 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 14.2568 19.0655 16.2953 17.5624 17.7498Z" fill="#6F767E"></path>
+                            </svg>My Profile</a></li>
+                        <li><a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C7.58172 5 4 8.58172 4 13C4 15.2122 4.89659 17.2131 6.34862 18.6623C6.73952 19.0525 6.74012 19.6856 6.34998 20.0765C5.95983 20.4674 5.32666 20.468 4.93576 20.0779C3.12321 18.2688 2 15.7646 2 13C2 7.47715 6.47715 3 12 3C17.5228 3 22 7.47715 22 13C22 15.7611 20.8796 18.2625 19.0711 20.0711C18.6805 20.4616 18.0474 20.4616 17.6569 20.0711C17.2663 19.6805 17.2663 19.0474 17.6569 18.6569C19.1057 17.208 20 15.2094 20 13C20 8.58172 16.4183 5 12 5Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 9.70711C17.0976 9.31658 17.0976 8.68342 16.7071 8.29289C16.3166 7.90237 15.6834 7.90237 15.2929 8.29289L13.2934 10.2924C12.9018 10.105 12.4631 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16C13.6569 16 15 14.6569 15 13C15 12.5369 14.895 12.0982 14.7076 11.7066L16.7071 9.70711ZM11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13Z" fill="#6F767E"></path>
+                            </svg>Dashboard</a></li>
+                        <li class="is-logout"><a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17.7071 7.79289C17.3166 7.40237 16.6834 7.40237 16.2929 7.79289C15.9024 8.18342 15.9024 8.81658 16.2929 9.20711L18.0858 11H9C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13H18.0858L16.2929 14.7929C15.9024 15.1834 15.9024 15.8166 16.2929 16.2071C16.6834 16.5976 17.3166 16.5976 17.7071 16.2071L20.5 13.4142C21.2811 12.6332 21.281 11.3668 20.5 10.5858L17.7071 7.79289Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 3.34315 4.34315 2 6 2H12C13.6569 2 15 3.34315 15 5V6C15 6.55228 14.5523 7 14 7C13.4477 7 13 6.55228 13 6V5C13 4.44772 12.5523 4 12 4H6C5.44772 4 5 4.44772 5 5V19C5 19.5523 5.44772 20 6 20H12C12.5523 20 13 19.5523 13 19V18C13 17.4477 13.4477 17 14 17C14.5523 17 15 17.4477 15 18V19C15 20.6569 13.6569 22 12 22H6C4.34315 22 3 20.6569 3 19V5Z" fill="#6F767E"></path>
+                            </svg>Log out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div><a class="nav_link sp-only trans" href="#"><span>Support</span></a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="wrapper">
+          <div class="block-module">
+            <div class="m-input"><span class="m-input_label">Event Name<small class="warning">*</small>
+                <button class="btn-tooltip" type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></button></span>
+              <div class="input-area">
+                <input class="input input-text" type="text" placeholder="Give your event name ">
+              </div>
+            </div>
+          </div>
+          <div class="block-module">
+            <div class="m-input m-input_counter js-counter"><span class="m-input_label">Event organizer’s name</span>
+              <div class="input-area">
+                <input class="input input-text" type="text" maxlength="50" placeholder="Event organizer’s name ">
+                <div class="counter"><span class="count-up">0</span>/<span class="count-max">50</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="block-module">
+            <div class="m-input"><span class="m-input_label">Start date<small class="warning">*</small></span>
+              <div class="input-area">
+                <input class="input datetimepicker" id="datetimepicker-default" type="text" placeholder="Select date">
+              </div>
+            </div>
+          </div>
+          <div class="block-module">
+            <div class="m-input">
+              <input class="input-checkbox" id="checkbox" type="checkbox">
+              <label class="checkbox-label" for="checkbox">Toggle</label>
+            </div>
+          </div>
+          <div class="block-module">
+            <div class="m-input"><span class="m-input_label">Start date<small class="warning">*</small></span>
+              <div class="input-area">
+                <select class="input select-box" name="select" required>
+                  <option value="" disabled selected>Please choose Category</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="block-module">
+            <h2 class="ttl-primary">Schedule<span>(10 activities)</span></h2>
+          </div>
+          <div class="block-module">
+            <div class="m-input"><span class="m-input_label">Start time<small class="warning">*</small></span>
+              <div class="input-area area-select js-select">
+                <input class="input input-text input-time" type="text" placeholder="Select time ">
+                <div class="box-select">
+                  <ul class="l-select">
+                    <li data-value="12:00">12:00</li>
+                    <li data-value="12:15">12:15</li>
+                    <li data-value="12:30">12:30</li>
+                    <li data-value="12:00">12:00</li>
+                    <li data-value="12:00">12:00</li>
+                    <li data-value="12:00">12:00</li>
+                    <li data-value="12:00">12:00</li>
+                    <li data-value="12:00">12:00</li>
+                    <li data-value="12:00">12:00</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-module">
+            <div class="m-input"><span class="m-input_label">Counter<small class="warning">*</small></span>
+              <div class="input-area area-select js-number">
+                <div class="number"><span class="minus"><img src="./assets/images/ico_minus.svg" alt=""></span>
+                  <input class="input input-number" type="number" value="1"><span class="plus"><img src="./assets/images/ico_add.svg" alt=""></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-module">
+            <div class="m-editor"><span class="m-input_label">Description</span>
+              <div class="m-editor_area">
+                <div id="editorDemo">
+                  <p>Hello world!!!</p>
+                  <p>Type something</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-module">
+            <div class="m-input treeSelector"><a class="btn-clear-select" href="javascript:;"><img src="./assets/images/ico_clear.svg" alt=""></a>
+              <div class="form-control branch input" data-value="" data-placeholder="Enter speaker">Enter speaker</div>
+              <div class="custom-select-list">
+                <div class="input-a">
+                  <div class="input-a_inner">
+                    <input class="input input-text input-search" data-search type="text" placeholder="Search speaker "><a class="btn-clear trans" href="javascript:;">⌘&nbsp;F&nbsp;</a>
+                  </div>
+                </div>
+                <div class="wrap-select">
+                  <ul class="l-multiple">
+                    <li data-filter-item data-filter-name="cody fisher">
+                      <label class="module-check">
+                        <input class="form-checkbox" type="checkbox" name="type[]" value="Cody Fisher"><span class="label"><img src="./assets/images/img_avatar01.png" alt=""><span>Cody Fisher<small>katherine.nolan@gmail.com</small></span></span>
+                      </label>
+                    </li>
+                    <li data-filter-item data-filter-name="theresa webb">
+                      <label class="module-check">
+                        <input class="form-checkbox" type="checkbox" name="type[]" value="Theresa Webb"><span class="label"><img src="./assets/images/img_avatar02.png" alt=""><span>Theresa Webb<small>amanda.clark@gmail.com</small></span></span>
+                      </label>
+                    </li>
+                    <li data-filter-item data-filter-name="esther howard">
+                      <label class="module-check">
+                        <input class="form-checkbox" type="checkbox" name="type[]" value="Esther Howard"><span class="label"><img src="./assets/images/img_avatar03.png" alt=""><span>Esther Howard<small>paul.morrison@gmail.com</small></span></span>
+                      </label>
+                    </li>
+                    <li data-filter-item data-filter-name="wade warren">
+                      <label class="module-check">
+                        <input class="form-checkbox" type="checkbox" name="type[]" value="Wade Warren"><span class="label"><img src="./assets/images/img_avatar04.png" alt=""><span>Wade Warren<small>tracey.langdon@gmail.com</small></span></span>
+                      </label>
+                    </li>
+                    <li data-filter-item data-filter-name="dianne russell">
+                      <label class="module-check">
+                        <input class="form-checkbox" type="checkbox" name="type[]" value="Dianne Russell"><span class="label"><img src="./assets/images/img_avatar06.png" alt=""><span>Dianne Russell<small>alison.langdon@gmail.com</small></span></span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="block-module">
+              <div class="m-input">
+                <div class="input-file-wrap">
+                  <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                  <div class="btn-upload"><img src="./assets/images/btn_upload.png" alt="Click or drop image"></div>
+                  <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image</span></div>
+                  <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                  <p>Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB</p>
+                </div>
+              </div>
+            </div>
+            <div class="block-module">
+              <div class="m-input">
+                <div class="input-file-wrap is-circle">
+                  <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                  <div class="btn-upload"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Click or drop image</span></div>
+                  <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image</span></div>
+                  <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                  <p>JPEG, JPG, SVG, PNG | Up to 10 MB</p>
+                </div>
+              </div>
+            </div>
+            <div class="block-module">
+              <video class="js-video" id="player1" width="640" height="360" preload="none" style="max-width: 100%" poster="./assets/images/img_video_ol.jpg" controls="" playsinline="" webkit-playsinline="">
+                <source src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" type="video/mp4">
+                <track src="dist/mediaelement.vtt" srclang="en" label="English" kind="subtitles" type="text/vtt">
+              </video>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="m-footer">
+        <div class="wrapper">
+          <div class="m-footer_upper"><a class="m-footer_logo trans" href="#"><img src="./assets/images/logo_footer.png" alt="eventure" width="132" height="34"></a>
+            <div class="m-footer_nav">
+              <ul class="links">
+                <li><a class="trans" href="#">Privacy Policy</a></li>
+                <li><a class="trans" href="#">Terms of User</a></li>
+              </ul>
+              <div class="community"><span>JOIN OUR COMMUNITY</span>
+                <ul>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_facebook.svg" alt="Facebook"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_twitter.svg" alt="Twitter"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_linkin.svg" alt="Linked In"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div><small class="copy-right">Copyright © 2022 Fractal. All rights reserved</small>
+        </div>
+      </footer>
+    </div>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/js/libs/moment-with-locales.js"></script>
+    <script src="./assets/js/libs/bootstrap-datetimepicker.min.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="./assets/js/libs/jquery.ezdz.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelement-and-player.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script>
+      $('.js-video').mediaelementplayer({
+        hideCaptionsButtonWhenEmpty: false,
+        features: ['playpause', 'current', 'duration', 'progress', 'tracks', 'volume', 'fullscreen'],
+        timeAndDurationSeparator: '<span>  /  </span>'
+      });
+      
+    </script>
+  </body>
+</html>

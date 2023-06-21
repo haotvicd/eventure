@@ -1,0 +1,102 @@
+.m-tab-content.m-setting
+  .wrapper
+    .tab-content
+      .m-content_head
+        div
+          h2.title-tab Setting
+      .m-content_body
+        .bl-setting
+          .bl-setting_block
+            .bl-setting_row
+              .label-setting
+                span Pre-event Entry
+                small Allow people to enter the event before it opens so they can network and agenda meetings
+              .m-input
+                input#pre-event.input-checkbox(type='checkbox' checked)
+                label.checkbox-label(for='pre-event') Toggle
+            .bl-setting_row
+              .label-setting
+                span Event Replay
+                small Keep your event open after it has ended for people to watch the recordings
+              .m-input
+                input#replay.input-checkbox(type='checkbox' checked)
+                label.checkbox-label(for='replay') Toggle
+            .bl-setting_row
+              .label-setting
+                span Live Stream
+                small Add now to enable streaming out to 3rd party platforms
+              a.btn.btn-primary.btn-add-stream.trans.js-popup(href="javascript:;" data-popup="sourceBox")
+                span Add stream destination
+              .box-filter.js-box-popup#sourceBox(data-hidden="true")
+                .title Please choose source
+                ul.l-source
+                  li.l-source_item
+                    a.btn.btn-black.btn-icon.trans(href="#")
+                      img(src=path+"/assets/images/ico_youtube.svg", alt="")
+                      span Youtube Channel
+                  li.l-source_item
+                    a.btn.btn-black.btn-icon.trans(href="#" data-toggle="modal" data-target="#modalAddRtmp")
+                      img(src=path+"/assets/images/ico_rtmp.svg", alt="")
+                      span Custom RTMP
+                    a.btn-tip.trans(href="#")
+                      img(src=path+"/assets/images/ico_info_bg.svg", alt="")
+                  li.l-source_item
+                    a.btn.btn-black.btn-icon.trans(href="#")
+                      img(src=path+"/assets/images/ico_fb.svg", alt="")
+                      span Facebook Page
+                  li.l-source_item
+                    a.btn.btn-black.btn-icon.trans(href="#")
+                      img(src=path+"/assets/images/ico_fb.svg", alt="")
+                      span Facebook Profile
+          .bl-setting_block
+            .bl-setting_row.is-full-width
+              .label-setting
+                span Custom Domain
+                small Add the domain name you want to customize
+              .m-input
+                input.input.input-text(type="text" placeholder="Domain name")
+                a.btn.btn-primary.btn-add.trans(href="#")
+                  span Add
+
+  #modalAddRtmp.modalGen.modalGen--sponsor.modalGen--rtmp.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary Add a RTMP stream destination
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .modal_body-col.modal_body-col--width100
+              p.warning-note
+                span.icon
+                  svg(width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M14.6667 7.9987C14.6667 11.6806 11.6819 14.6654 8 14.6654C4.3181 14.6654 1.33334 11.6806 1.33334 7.9987C1.33334 4.3168 4.3181 1.33203 8 1.33203C11.6819 1.33203 14.6667 4.3168 14.6667 7.9987ZM8 7.33203C8.36819 7.33203 8.66667 7.63051 8.66667 7.9987V11.3326C8.66667 11.7008 8.36819 11.9993 8 11.9993C7.63181 11.9993 7.33334 11.7008 7.33334 11.3326V7.9987C7.33334 7.63051 7.63181 7.33203 8 7.33203ZM8 5.9987C8.36819 5.9987 8.66667 5.70022 8.66667 5.33203C8.66667 4.96384 8.36819 4.66536 8 4.66536C7.63181 4.66536 7.33334 4.96384 7.33334 5.33203C7.33334 5.70022 7.63181 5.9987 8 5.9987Z' fill='#FFD88D')
+                |You need an RTMP server URL and stream key of your destination.<br>We recommend doing a quick web search on how to find “your destination’s” stream key.
+              .m-input.m-input_counter
+                span.m-input_label Streaming/server URL
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Enter a streaming URL")
+                  .note Your streaming URL is a unique web address, which carries your live stream every time you have an ongoing session
+              .m-input.m-input_counter
+                span.m-input_label Stream Key
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Enter a stream key")
+                  .note Stream key is a code that “your destination” will use to indentify the live stream via Eventure.
+              .m-input.m-input_counter
+                span.m-input_label Live stream page URL
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Enter the destination page URL")
+                  .note This is the page URL where the live stream will be broadcasted. Everyone who uses this link can view the live broadcast.
+              .m-input.m-input_counter
+                span.m-input_label Destination Nickname
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Enter a destination nickname")
+                  .note A nickname helps you to easily find the RTMP stream destination on Eventure.
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-100")
+              span Save

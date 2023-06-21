@@ -1,0 +1,77 @@
+.widget 
+  .widget-row 
+    .widget-close Close
+    .header 
+      .caption Alerts
+      .description Event wide announcements and notifications
+    .body
+      .notification-sound
+        .notification-sound-label Notification sounds 
+        .notification-sound-input
+          input#pre-event.input-checkbox(type='checkbox' checked)
+          label.checkbox-label(for='pre-event') Toggle
+      .notification-main
+        a.btn.btn-create-notification.trans(data-toggle="modal" data-target="#modalCreateNotification") 
+          span.ico-alert-inline
+          | Create Notification 
+
+#modalCreateNotification.modal.modal-confirm.fade(tabindex='-1' role='dialog' aria-labelledby='createNotification' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal_head
+        h2.title Create Announcement
+      .modal-wrapper
+        .modal_body
+          form.form
+            .form-item 
+              .form-item-label.required Message
+              .form-item-input 
+                textarea.textarea Hey there, down here 👋 Want to hear something cool? 
+                .form-item-count 
+                  .count 0
+                  .limit /300
+            .form-item 
+              .form-item-input 
+                .reception-group-action 
+                  button.btn.btn-style7.btn-receptions-action
+                    label + Add an action (optional)
+                  div.form-item-warning 
+                    span.ico-warning
+                    | Where do you want attendees to go
+                .receptions-type 
+                  .form-item-label Add an action
+                  .receptions-type-main
+                    .receptions-type-txt 
+                    a.btn-clear-reception
+                      span.ico-close
+                .external-link
+                  .form-item-label.required External link
+                  .form-item-input 
+                    input(type="text" placeholder="Search")
+                .receptions-action
+                  .form-search 
+                    button 
+                      span.ico-search
+                    input(type="text" placeholder="Search")
+                  .form-list 
+                    .title Suggestions
+                    ul#receptions-options
+                      li 
+                        a.active Reception
+                      li 
+                        a Agenda
+                      li 
+                        a Networking
+                      li 
+                        a Booths
+                      li 
+                        a External link
+
+            .form-item.no-border 
+              .form-item-input 
+                a.btn-reception-preview 
+                  span.ico-eye-inline 
+                  | Show Preview
+            .form-footer 
+              button.btn.btn-deny.trans(type="button" data-dismiss="modal") Cancel
+              button.btn.btn-primary.trans(type="button") Send

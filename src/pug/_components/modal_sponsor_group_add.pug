@@ -1,0 +1,28 @@
+#addGroupSponsorModal.modalGrMngAdd.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-wrapper
+        .modal_head
+          a(href='#' class="btn-back trans") BACK
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .addGroup
+          .modal_body
+            .ttl-primary.sm Add sponsor group
+            .m-input
+              span.m-input_label Group name
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" placeholder="Enter group name")
+            .m-input.js-count
+              span.m-input_label Description
+              .input-area
+                input.input.input-text(type="text" maxlength="50" placeholder="Enter group description")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 50
+
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-100")
+              span Save

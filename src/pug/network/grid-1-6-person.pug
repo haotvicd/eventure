@@ -1,0 +1,107 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Network'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'network'
+  -jsID         = 'calendar'
+  -uploadJs     = ''
+  -videoJs      = ''
+  -path         = '../'
+  -hasFooter    = false
+
+block container
+  .layout-basic.page-network
+    .layout-inner 
+      include _component_list
+  include ../_components/widget
+  #modalNetworkJoin.modal.fade(tabindex='-1' role='dialog' aria-labelledby='networkJoin' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal-wrapper
+          .modal_head
+            .header-info 
+              span.header-table Logo 
+              span.header-table-name Table name 1
+            .header-control 
+              button.btn.btn-full-screen-network(type="button")
+                span.ico-screen 
+              button.btn.btn-close(data-dismiss="modal" type="button")
+                span.ico-close 
+          .modal_body
+            .network-meet
+              include _component_network_host_full
+              .modal-network-list.network-2row-large 
+                .modal-network-row
+                  .modal-network-item.network-item-host.network-avatar-full-disabled.network-mic-disabled
+                    .modal-network-avatar
+                      img.avatar-small(src=path+"/assets/images/img_cus06.png", alt="")
+                      img.avatar-full(src=path+"/assets/images/network/person2.png", alt="")
+                    .modal-network-info 
+                      .modal-network-info-name Michael Smith
+                      span.ico-rec
+                  .modal-network-item.network-avatar-full-disabled.network-mic-disabled
+                    .modal-network-avatar
+                      img.avatar-small(src=path+"/assets/images/img_cus05.png", alt="")
+                    .modal-network-info 
+                      .modal-network-info-name Eleanor Pena
+                      span.ico-rec
+                  .modal-network-item
+                    .modal-network-status
+                      span.ico-hot-circe
+                    .modal-network-avatar
+                      img.avatar-full(src=path+"/assets/images/network/person1.png", alt="")
+                    .modal-network-info 
+                      .modal-network-info-name Eleanor Pena
+                      span.ico-rec
+                .modal-network-row
+                  .modal-network-item
+                    .modal-network-avatar
+                      img.avatar-full(src=path+"/assets/images/network/person2.png", alt="")
+                    .modal-network-info 
+                      .modal-network-info-name David Oshodi
+                      span.ico-rec
+                  .modal-network-item
+                    .modal-network-avatar
+                      img.avatar-full(src=path+"/assets/images/network/person2.png", alt="")
+                    .modal-network-info 
+                      .modal-network-info-name David Oshodi
+                      span.ico-rec
+                  .modal-network-item.network-avatar-full-disabled.network-mic-disabled
+                    .modal-network-avatar
+                      img.avatar-small(src=path+"/assets/images/img_cus04.png", alt="")
+                    .modal-network-info 
+                      .modal-network-info-name David Oshodi
+                      span.ico-rec
+
+            .modal-network-control 
+              ul.network-control-left 
+                li 
+                  button.btn.btn-network-card.is-activated(type="button") 
+                    span.ico-view-card
+                li 
+                  button.btn.btn-network-list(type="button") 
+                    span.ico-view-list 
+                li 
+                  button.btn.btn-network-user(type="button")  
+                    span.ico-user1
+              ul.network-control-center 
+                li 
+                  button.btn.btn-network-video.is-disabled(type="button") 
+                    span.ico-video-inline
+                li 
+                  button.btn.btn-network-mic.is-disabled(type="button") 
+                    span.ico-mic-inline 
+                li 
+                  button.btn.btn-network-share(type="button") 
+                    span.ico-share-inline
+                li.panel 
+                  button.btn.btn-network-menu(type="button") 
+                    span.ico-menu-inline
+              ul.network-control-right 
+                li 
+                  button.btn.btn-network-comment(type="button")
+                    span.ico-comment

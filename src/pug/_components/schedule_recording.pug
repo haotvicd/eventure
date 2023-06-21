@@ -1,0 +1,162 @@
+.m-content_head
+  div
+    h2.title-tab Sessions Recording
+    span.description-tab Manage all your session recordings from one place
+
+.m-allvideo
+  .m-allvideo_head
+    h3.m-allvideo_head-title All video
+    button.btn.btn-sm.btn-secondary.btn-delete.trans
+      span Delete
+  .m-allvideo_table.js-checkAll
+    .m-allvideo_table-head
+      .m-allvideo_table-th.col1
+        label.module-check
+          input.form-checkbox.checkAll(type="checkbox", name="speakers[]")
+          span.label Check
+      .m-allvideo_table-th.col7
+        span.txt Video name
+      .m-allvideo_table-th.col3
+        span.txt Duration
+      .m-allvideo_table-th.col4
+        span.txt Sessions
+      .m-allvideo_table-th.col5
+        span.txt Time
+      .m-allvideo_table-th.col8
+        span.txt Date Recorded
+    .m-allvideo_table-body
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.form-checkbox.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col7
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video01.png", alt="What describes you best?")
+          span.txt.trimString What describes you best? What describes you best?
+        .m-allvideo_table-td.col3
+          span.txt 00:12:00
+        .m-allvideo_table-td.col4
+          span.txt Sessions 2
+        .m-allvideo_table-td.col5
+          span.txt 11:00
+        .m-allvideo_table-td.col8.col-download
+          span.txt 15 Aug 2022
+          button.btn.trans.btn-noborder
+            svg(width='24' height='24' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3358 6.66634C17.3358 5.92996 16.7389 5.33301 16.0025 5.33301C15.2661 5.33301 14.6692 5.92996 14.6692 6.66634V17.448L10.9453 13.7241C10.4246 13.2034 9.58035 13.2034 9.05965 13.7241C8.53895 14.2448 8.53895 15.089 9.05965 15.6097L14.1169 20.667C15.1583 21.7084 16.8467 21.7084 17.8881 20.667L22.9428 15.6123C23.4635 15.0916 23.4635 14.2474 22.9428 13.7267C22.4221 13.206 21.5779 13.206 21.0572 13.7267L17.3358 17.448V6.66634Z' fill='#83BF6E')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M5.33333 18.667C6.06971 18.667 6.66667 19.2639 6.66667 20.0003V22.667C6.66667 23.4034 7.26362 24.0003 8 24.0003H24C24.7364 24.0003 25.3333 23.4034 25.3333 22.667V20.0003C25.3333 19.2639 25.9303 18.667 26.6667 18.667C27.403 18.667 28 19.2639 28 20.0003V22.667C28 24.8761 26.2091 26.667 24 26.667H8C5.79086 26.667 4 24.8761 4 22.667V20.0003C4 19.2639 4.59695 18.667 5.33333 18.667Z' fill='#83BF6E')
+
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.form-checkbox.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col7
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video02.png", alt="What describes you best?")
+          span.txt.trimString Melts in your mouth, not in Melts in your mouth, not in
+        .m-allvideo_table-td.col3
+          span.txt 00:03:07
+        .m-allvideo_table-td.col4
+          span.txt Sessions 1
+        .m-allvideo_table-td.col5
+          span.txt 12:00
+        .m-allvideo_table-td.col8.col-download
+          span.txt 15 Aug 2022
+          button.btn.trans.btn-noborder
+            svg(width='24' height='24' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3358 6.66634C17.3358 5.92996 16.7389 5.33301 16.0025 5.33301C15.2661 5.33301 14.6692 5.92996 14.6692 6.66634V17.448L10.9453 13.7241C10.4246 13.2034 9.58035 13.2034 9.05965 13.7241C8.53895 14.2448 8.53895 15.089 9.05965 15.6097L14.1169 20.667C15.1583 21.7084 16.8467 21.7084 17.8881 20.667L22.9428 15.6123C23.4635 15.0916 23.4635 14.2474 22.9428 13.7267C22.4221 13.206 21.5779 13.206 21.0572 13.7267L17.3358 17.448V6.66634Z' fill='#83BF6E')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M5.33333 18.667C6.06971 18.667 6.66667 19.2639 6.66667 20.0003V22.667C6.66667 23.4034 7.26362 24.0003 8 24.0003H24C24.7364 24.0003 25.3333 23.4034 25.3333 22.667V20.0003C25.3333 19.2639 25.9303 18.667 26.6667 18.667C27.403 18.667 28 19.2639 28 20.0003V22.667C28 24.8761 26.2091 26.667 24 26.667H8C5.79086 26.667 4 24.8761 4 22.667V20.0003C4 19.2639 4.59695 18.667 5.33333 18.667Z' fill='#83BF6E')
+
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.form-checkbox.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col7
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video03.png", alt="What describes you best?")
+          span.txt.trimString I accept the  Terms of use I accept the  Terms of use
+        .m-allvideo_table-td.col3
+          span.txt 00:04:23
+        .m-allvideo_table-td.col4
+          span.txt Sessions 3
+        .m-allvideo_table-td.col5
+          span.txt 11:00
+        .m-allvideo_table-td.col8.col-download
+          span.txt 15 Aug 2022
+          button.btn.trans.btn-noborder
+            svg(width='24' height='24' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3358 6.66634C17.3358 5.92996 16.7389 5.33301 16.0025 5.33301C15.2661 5.33301 14.6692 5.92996 14.6692 6.66634V17.448L10.9453 13.7241C10.4246 13.2034 9.58035 13.2034 9.05965 13.7241C8.53895 14.2448 8.53895 15.089 9.05965 15.6097L14.1169 20.667C15.1583 21.7084 16.8467 21.7084 17.8881 20.667L22.9428 15.6123C23.4635 15.0916 23.4635 14.2474 22.9428 13.7267C22.4221 13.206 21.5779 13.206 21.0572 13.7267L17.3358 17.448V6.66634Z' fill='#83BF6E')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M5.33333 18.667C6.06971 18.667 6.66667 19.2639 6.66667 20.0003V22.667C6.66667 23.4034 7.26362 24.0003 8 24.0003H24C24.7364 24.0003 25.3333 23.4034 25.3333 22.667V20.0003C25.3333 19.2639 25.9303 18.667 26.6667 18.667C27.403 18.667 28 19.2639 28 20.0003V22.667C28 24.8761 26.2091 26.667 24 26.667H8C5.79086 26.667 4 24.8761 4 22.667V20.0003C4 19.2639 4.59695 18.667 5.33333 18.667Z' fill='#83BF6E')
+
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.form-checkbox.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col7
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video04.png", alt="What describes you best?")
+          span.txt.trimString You can change or cancel You can change or cancel
+        .m-allvideo_table-td.col3
+          span.txt 00:20:17
+        .m-allvideo_table-td.col4
+          span.txt Sessions 4
+        .m-allvideo_table-td.col5
+          span.txt 11:00
+        .m-allvideo_table-td.col8.col-download
+          span.txt 15 Aug 2022
+          button.btn.trans.btn-noborder
+            svg(width='24' height='24' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M17.3358 6.66634C17.3358 5.92996 16.7389 5.33301 16.0025 5.33301C15.2661 5.33301 14.6692 5.92996 14.6692 6.66634V17.448L10.9453 13.7241C10.4246 13.2034 9.58035 13.2034 9.05965 13.7241C8.53895 14.2448 8.53895 15.089 9.05965 15.6097L14.1169 20.667C15.1583 21.7084 16.8467 21.7084 17.8881 20.667L22.9428 15.6123C23.4635 15.0916 23.4635 14.2474 22.9428 13.7267C22.4221 13.206 21.5779 13.206 21.0572 13.7267L17.3358 17.448V6.66634Z' fill='#83BF6E')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M5.33333 18.667C6.06971 18.667 6.66667 19.2639 6.66667 20.0003V22.667C6.66667 23.4034 7.26362 24.0003 8 24.0003H24C24.7364 24.0003 25.3333 23.4034 25.3333 22.667V20.0003C25.3333 19.2639 25.9303 18.667 26.6667 18.667C27.403 18.667 28 19.2639 28 20.0003V22.667C28 24.8761 26.2091 26.667 24 26.667H8C5.79086 26.667 4 24.8761 4 22.667V20.0003C4 19.2639 4.59695 18.667 5.33333 18.667Z' fill='#83BF6E')
+
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+.m-norecording
+  .m-norecording_title No recordings yet!
+  .m-norecording_txt Recordings will be available once the session has ended.

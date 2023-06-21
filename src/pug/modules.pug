@@ -1,0 +1,180 @@
+extends _layout/default
+
+block vars
+  -title        = 'Homepage'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -jsID         = 'calendar'
+  -uploadJs     = 'true'
+  -videoJs      = 'true'
+  -path         = '.'
+  -hasFooter    = true
+
+block scripts
+  script.
+    $('.js-video').mediaelementplayer({
+      hideCaptionsButtonWhenEmpty: false,
+      features: ['playpause', 'current', 'duration', 'progress', 'tracks', 'volume', 'fullscreen'],
+      timeAndDurationSeparator: '<span>  /  </span>'
+    });
+
+block container
+  .wrapper
+    .block-module
+      .m-input
+        span.m-input_label Event Name
+          small.warning *
+          button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+        .input-area
+          input.input.input-text(type="text" placeholder="Give your event name ")
+    .block-module
+      .m-input.m-input_counter.js-counter
+        span.m-input_label Event organizer’s name
+        .input-area
+          input.input.input-text(type="text" maxlength="50" placeholder="Event organizer’s name ")
+          .counter
+            span.count-up 0
+            |/
+            span.count-max 50
+    .block-module
+      .m-input
+        span.m-input_label Start date
+          small.warning *
+        .input-area
+          input.input.datetimepicker#datetimepicker-default(type='text' placeholder="Select date")
+    .block-module
+      .m-input
+        input#checkbox.input-checkbox(type='checkbox')
+        label.checkbox-label(for='checkbox') Toggle
+    .block-module
+      .m-input
+        span.m-input_label Start date
+          small.warning *
+        .input-area
+          select.input.select-box(name="select" required)
+            option(value="" disabled selected) Please choose Category
+            option(value="1") 1
+            option(value="2") 2
+            option(value="3") 3
+    .block-module
+      h2.ttl-primary Schedule
+        span (10 activities)
+    .block-module
+      .m-input
+        span.m-input_label Start time
+          small.warning *
+        .input-area.area-select.js-select
+          input.input.input-text.input-time(type="text" placeholder="Select time ")
+          .box-select
+            ul.l-select
+              li(data-value="12:00") 12:00
+              li(data-value="12:15") 12:15
+              li(data-value="12:30") 12:30
+              li(data-value="12:00") 12:00
+              li(data-value="12:00") 12:00
+              li(data-value="12:00") 12:00
+              li(data-value="12:00") 12:00
+              li(data-value="12:00") 12:00
+              li(data-value="12:00") 12:00
+    .block-module
+      .m-input
+        span.m-input_label Counter
+          small.warning *
+        .input-area.area-select.js-number
+          .number
+            span.minus
+              img(src=path+"/assets/images/ico_minus.svg", alt="")
+            input.input.input-number(type='number' value='1')
+            span.plus
+              img(src=path+"/assets/images/ico_add.svg", alt="")
+    .block-module
+      .m-editor
+        span.m-input_label Description
+        .m-editor_area
+          #editorDemo
+            p Hello world!!!
+            p Type something
+    .block-module
+      .m-input.treeSelector
+        a.btn-clear-select(href="javascript:;")
+          img(src=path+"/assets/images/ico_clear.svg", alt="")
+        .form-control.branch.input(data-value="" data-placeholder="Enter speaker") Enter speaker
+        .custom-select-list
+          .input-a
+            .input-a_inner
+              input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+              a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+          .wrap-select
+            ul.l-multiple
+              li(data-filter-item data-filter-name="cody fisher")
+                label.module-check
+                  input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                  span.label
+                    img(src=path+"/assets/images/img_avatar01.png", alt="")
+                    span Cody Fisher
+                      small katherine.nolan@gmail.com
+              li(data-filter-item data-filter-name="theresa webb")
+                label.module-check
+                  input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                  span.label
+                    img(src=path+"/assets/images/img_avatar02.png", alt="")
+                    span Theresa Webb
+                      small amanda.clark@gmail.com
+              li(data-filter-item data-filter-name="esther howard")
+                label.module-check
+                  input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                  span.label
+                    img(src=path+"/assets/images/img_avatar03.png", alt="")
+                    span Esther Howard
+                      small paul.morrison@gmail.com
+              li(data-filter-item data-filter-name="wade warren")
+                label.module-check
+                  input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                  span.label
+                    img(src=path+"/assets/images/img_avatar04.png", alt="")
+                    span Wade Warren
+                      small tracey.langdon@gmail.com
+              li(data-filter-item data-filter-name="dianne russell")
+                label.module-check
+                  input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                  span.label
+                    img(src=path+"/assets/images/img_avatar06.png", alt="")
+                    span Dianne Russell
+                      small alison.langdon@gmail.com
+      .block-module
+        .m-input
+          .input-file-wrap
+            input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+            img.img-upload(src='' alt='your image')
+            //- .input-file-holder
+            .btn-upload
+              img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+            .btn-update
+              img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+              span Upload image
+            .btn-remove
+              img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+              span Remove image
+            p Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB
+      .block-module
+        .m-input
+          .input-file-wrap.is-circle
+            input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+            img.img-upload(src='' alt='your image')
+            .btn-upload
+              img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+              span Click or drop image
+            .btn-update
+              img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+              span Upload image
+            .btn-remove
+              img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+              span Remove image
+            p JPEG, JPG, SVG, PNG | Up to 10 MB
+      .block-module
+        video#player1.js-video(width='640' height='360' preload='none' style='max-width: 100%' poster=path+'/assets/images/img_video_ol.jpg' controls='' playsinline='' webkit-playsinline='')
+          source(src='//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true' type='video/mp4')
+          track(src='dist/mediaelement.vtt' srclang='en' label='English' kind='subtitles' type='text/vtt')

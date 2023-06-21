@@ -1,0 +1,116 @@
+.reception,
+.reception_alert {
+  .main {
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-image: url('../images/reception/banner.jpg');
+    background-size: contain;
+    background-position: top;
+    overflow: auto;
+    @media screen and (max-width: 890px) {
+      padding-bottom: 60px;
+      background-image: url('../images/reception/bg_sp.png');
+      background-size: cover;
+      background-position: center center;
+    }
+    .media-phone({
+      padding-bottom: 163px;
+    });
+
+    .banner-sp {
+      display: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      margin-top: 10%;
+      @media screen and (max-width: 890px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.reception,
+.agenda-session,
+.boots-detail {
+  .m-header {
+    // &_inner {
+    //   flex-wrap: wrap;
+    // }
+    @media screen and (max-width: 920px) {
+      .btn-edit-big {
+        span {
+          display: none;
+        }
+      }
+      .btn-schedule-view {
+        text-indent: -9999px;
+        padding-right: 10px;
+      }
+    }
+    @media screen and (max-width: 890px) {
+      .nav-main {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #1a1d1f;
+        padding-bottom: 12px;
+        ul {
+          justify-content: center;
+        }
+      }
+
+    }
+  }
+  .media-phone ({
+    padding-top: 67px;
+    padding-bottom: 100px;
+    .nav_link:last-of-type {
+      border-right: none;
+    }
+    .m-header {
+      padding: 17px 10px 17px 22px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      &_logo {
+        img {
+          width: 36px;
+        }
+      }
+    }
+
+  })
+}
+
+.boots-detail {
+  .media-phone ({
+    padding-top: 82px;
+  })
+}
+
+#modalCreateNotification {
+  .modal-wrapper.active {
+    .receptions-action {
+      display: block;
+    }
+  }
+  .modal-wrapper.active-choose {
+    .reception-group-action {
+      display: none;
+    }
+    .receptions-type {
+      display: block;
+    }
+  }
+  .modal-wrapper.active-external-link {
+    .reception-group-action {
+      display: none;
+    }
+    .external-link {
+      display: block;
+    }
+  }
+}

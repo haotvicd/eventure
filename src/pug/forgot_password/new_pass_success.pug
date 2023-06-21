@@ -1,0 +1,42 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Set new password'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'sign-up forgot-password'
+  -jsID         = 'calendar'
+  -path         = '../'
+  -hasFooter    = true
+
+block scripts
+
+block container
+  .m-sign-up
+    .side-bg
+      .logo
+        img(src=path+"/assets/images/signup/logo.png", alt="" width="187" height="48")
+      .title
+        img(src=path+"/assets/images/signup/title.png", alt="Virtual real Connection" width="344" height="130")
+      .image
+        img(src=path+"/assets/images/signup/img_side.png", alt="")
+    .signup-content.create-account.forgot-pass.forgot-pass--small
+      .signup-content_inner
+        h2.signup_title Set new password
+        .wrap-ct
+          form.signup_form.new-pass
+            .m-input
+              span.m-input_label You should create a strong password that uses uppercase and lowercase letters, numbers, symbols.
+              .input-area.pass-field.is-filled.is-success
+                a.btn-eye(href="javascript:;")
+                  img(src=path+"/assets/images/ico_eye.svg", alt="")
+                input.input.input-text.input-password.main-pass(type="password" placeholder="New Password" value="12345")
+              .input-area.pass-field.is-filled.is-success
+                a.btn-eye(href="javascript:;")
+                  img(src=path+"/assets/images/ico_eye.svg", alt="")
+                input.input.input-text.input-password.confirm-pass(type="password" placeholder="Re-type New password" value="12345")
+            button.btn.btn-primary.btn-submit.success.is-active.trans(type="submit")
+              img(src=path+"/assets/images/ico_btn_success.svg", alt="")
+              span Password reset successfull

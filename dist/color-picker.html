@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="charset" content="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=".">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Color Picker Demo</title>
+    <link rel="icon" href=".assets/images/favicon.ico">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin="">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+  </head>
+  <body>
+    <div>
+      <header class="m-header m-header_signin">
+        <div class="m-header_inner">
+          <h1 class="m-header_logo"><a class="trans" href="#"><img class="pc-only" src="./assets/images/logo_head.svg" alt="eventure" width="187"><img class="sp-only" src="./assets/images/logo_sp.png" alt="eventure" width="52"></a></h1>
+          <p class="sign-in-page">Already a member?<a class="trans" href="#">Sign in</a></p>
+        </div>
+      </header>
+      <main class="main">
+        <div class="m-head-event">
+          <div class="wrapper"><a class="btn-back trans" href="#">BACK</a>
+            <div class="m-head-event_inner">
+              <div class="m-head-event_info">
+                <div class="m-head-event_title">
+                  <h2 class="title">Event-led Growth Summit</h2><span class="tag">Upcoming</span>
+                </div>
+                <div class="m-head-event_time">Start 19 Aug 2022, 11:00 - End 22 Aug 2022, 17:00</div>
+              </div>
+              <ul class="m-head-event_control">
+                <li><a class="btn btn-black btn-share trans" href="#"><span>Share</span></a></li>
+                <li><a class="btn btn-primary btn-start trans" href="#" data-toggle="modal" data-target="#modalStartStop"><span>Start Event</span></a></li>
+                <li><a class="btn btn-secondary btn-close trans" href="#" data-toggle="modal" data-target="#modalCloseEvent"><span>Close Event</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabs-control">
+            <div class="wrapper">
+              <ul class="nav nav-tabs">
+                <li class="nav-link"><a class="active" href="#tab1" data-toggle="tab">General</a></li>
+                <li class="nav-link"><a href="#tab2" data-toggle="tab">Agenda</a></li>
+                <li class="nav-link"><a href="#tab3" data-toggle="tab">Registrations</a></li>
+                <li class="nav-link"><a href="#tab4" data-toggle="tab">Branding</a></li>
+                <li class="nav-link"><a href="#tab5" data-toggle="tab">Networking</a></li>
+                <li class="nav-link"><a href="#tab6" data-toggle="tab">Booth</a></li>
+                <li class="nav-link"><a href="#tab7" data-toggle="tab">Setting</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addGroupModal">Open Modal</button>
+        <div class="modal fade" id="addGroupModal" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-wrapper">
+                <div class="addGroup">
+                  <div class="modal_head"><a class="btn-back trans" href="#">BACK</a>
+                    <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="./assets/images/ico_close_white.svg" alt=""></button>
+                  </div>
+                  <div class="modal_body">
+                    <div class="ttl-primary">Add group</div>
+                    <div class="m-input"><span class="m-input_label">Group name<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="Enter group name">
+                      </div>
+                    </div>
+                    <div class="m-input m-input_counter js-counter"><span class="m-input_label">Description</span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" maxlength="50" placeholder="Enter group description">
+                        <div class="counter"><span class="count-up">0</span>/<span class="count-max">50</span></div>
+                      </div>
+                    </div>
+                    <div class="m-groupColor"><span class="m-input_label">Choose color</span>
+                      <div class="m-groupColor_list">
+                        <button class="btn" type="button" value="#FFC88B" style="background: #FFC88B"></button>
+                        <button class="btn" type="button" value="#B7FFE5" style="background: #B7FFE5"></button>
+                        <button class="btn" type="button" value="#FFE3F1" style="background: #FFE3F1"></button>
+                        <button class="btn" type="button" value="#FFF6D8" style="background: #FFF6D8"></button>
+                        <button class="btn" type="button" value="#FDFFAB" style="background: #FDFFAB"></button>
+                        <button class="btn" type="button" value="#D8FFF6" style="background: #D8FFF6"></button>
+                        <button class="btn" type="button" value="#BCD7FF" style="background: #BCD7FF"></button>
+                        <button class="btn" type="button" value="#C5BCFF" style="background: #C5BCFF"></button>
+                        <button class="btn" type="button" value="#FEBCFF" style="background: #FEBCFF"></button>
+                        <button class="btn" type="button" value="" id="pickerButton"><img src="./assets/images/ico_hsl.png" alt=""></button>
+                      </div>
+                      <div class="pickerModal">
+                        <div class="modal_head">
+                          <div class="pickerModal_title">Choose group color</div>
+                          <button class="btn btn-circle trans" type="button" id="pickerButtonClose"><img src="./assets/images/ico_close_white.svg" alt=""></button>
+                        </div>
+                        <div class="modal_body">
+                          <div class="hex">
+                            <div class="hex_wrap">
+                              <div class="hex_title">Hex code</div>
+                              <div class="hex_code showHex">#A4A7FF</div>
+                            </div>
+                            <div class="color"></div>
+                          </div>
+                          <div class="hsl">
+                            <div class="hsl_item"><span class="hsl_item-title">H</span>
+                              <input type="range" step="1" oninput="renderbgColor()" min="0" max="360" id="hue" value="238">
+                              <input class="hsl_item-number showHue" type="text" oninput="handleChange()" value="238">
+                            </div>
+                            <div class="hsl_item"><span class="hsl_item-title">S</span>
+                              <input type="range" step="1" oninput="renderbgColor()" min="0" max="100" id="sat" value="99">
+                              <input class="hsl_item-number showSat" type="text" oninput="handleChange()" value="99">
+                            </div>
+                            <div class="hsl_item"><span class="hsl_item-title">L</span>
+                              <input type="range" step="1" oninput="renderbgColor()" min="0" max="100" id="light" value="82">
+                              <input class="hsl_item-number showLight" type="text" oninput="handleChange()" value="82">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal_foot line justify-content-end">
+                          <button class="btn btn-primary trans" type="submit"><span>Cancel</span></button>
+                          <button class="btn btn-primary trans" type="submit"><span>Apply</span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal_foot">
+                    <button class="btn btn-primary trans w-100" type="submit"><span>Save</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="m-footer">
+        <div class="wrapper">
+          <div class="m-footer_upper"><a class="m-footer_logo trans" href="#"><img src="./assets/images/logo_footer.png" alt="eventure" width="132" height="34"></a>
+            <div class="m-footer_nav">
+              <ul class="links">
+                <li><a class="trans" href="#">Privacy Policy</a></li>
+                <li><a class="trans" href="#">Terms of User</a></li>
+              </ul>
+              <div class="community"><span>JOIN OUR COMMUNITY</span>
+                <ul>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_facebook.svg" alt="Facebook"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_twitter.svg" alt="Twitter"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_linkin.svg" alt="Linked In"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div><small class="copy-right">Copyright © 2022 Fractal. All rights reserved</small>
+        </div>
+      </footer>
+    </div>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/color-picker.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+extends _layout/default
+
+block vars
+  -title        = 'My profile'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'profile'
+  -jsID         = 'calendar'
+  -uploadJs     = ''
+  -videoJs      = ''
+  -path         = '.'
+  -hasFooter    = true
+
+block scripts
+
+block container
+  .profile
+    .profile_cover
+      img(src=path + "/assets/images/profile/cover.jpg", alt="")
+      button(type='button' class='btn btn-black btn-edit-big btn-sm trans')
+        small.icon
+          svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+            path(d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+
+
+        span Edit cover
+    .wrapper
+      .profile_content
+        .profile_content-head
+          .profile_avatar
+            .profile_avatar_head
+              .profile_avatar-thumb
+                img(src=path + "/assets/images/profile/avatar.jpg", alt="")
+              a.pc-only(href="#" class='profile_avatar-update') Update avatar
+              a.sp-only(href="#" class='profile_avatar-update') Update
+            .profile_avatar_body
+              .profile_avatar-name Eleanor Pena
+              ul.profile_avatar-sns
+                li
+                  a(href="#" class='trans')
+                    img(src=path+"/assets/images/profile/ico_twitter.svg", alt="")
+                li
+                  a(href="#" class='trans')
+                    img(src=path+"/assets/images/profile/ico_instagram.svg", alt="")
+                li
+                  a(href="#" class='trans')
+                    img(src=path+"/assets/images/profile/ico_facebook.svg", alt="")
+              .profile_avatar-createdAt Member since Mar 15, 2022
+
+          .profile_about
+            .profile_about-head
+              h3.profile_about-title About me
+              button(type='button' class='btn btn-primary btn-edit-big btn-sm trans' data-toggle="modal" data-target="#modalEditProfile")
+                small.icon.pc-only
+                  svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z' fill='#fff')
+                    path(d='M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z' fill='#fff')
+                small.icon.sp-only
+                  svg(width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M12.6131 3.17303C13.5894 2.19672 15.1723 2.19672 16.1486 3.17303L17.3271 4.35154C18.3034 5.32785 18.3034 6.91076 17.3271 7.88707L8.66669 16.5475C8.55035 16.6638 8.40219 16.7431 8.24086 16.7754L3.82145 17.6593C3.23834 17.7759 2.72424 17.2618 2.84086 16.6787L3.72475 12.2593C3.75701 12.098 3.83631 11.9498 3.95264 11.8335L12.6131 3.17303ZM14.9701 4.35154L16.1486 5.53005C16.474 5.85549 16.474 6.38313 16.1486 6.70856L14.9701 7.88708L12.6131 5.53005L13.7916 4.35154C14.117 4.0261 14.6447 4.0261 14.9701 4.35154ZM11.4346 6.70857L5.30957 12.8336L4.72031 15.7798L7.66659 15.1906L13.7916 9.06559L11.4346 6.70857Z' fill='#BBB2E9')
+                span Edit your profile
+
+            p.profile_about-des
+              |Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+
+            dl.profile_about-info
+              dt
+                img(src=path + "/assets/images/profile/ico_briefcase.svg", alt="")
+                |Job title:
+              dd Business Head
+            dl.profile_about-info
+              dt
+                img(src=path + "/assets/images/profile/ico_location.svg", alt="")
+                |Location:
+              dd Auckland, New Zealand
+            dl.profile_about-info
+              dt
+                img(src=path + "/assets/images/profile/ico_organization.svg", alt="")
+                |Organization:
+              dd Fractal Company
+
+        .profile_content-events
+          .profile_content-events--head
+            .profile_content-events--search
+              h3.ttl-primary.xs Events
+              .m-input
+                .input-a
+                  .input-a_inner
+                    input.input.input-text.input-search(data-search type="text" placeholder="Search event name")
+                    a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+            .profile_content-events--showing
+              span Showing
+              .profile_content-events--button
+                button(type='button' class='btn trans current')
+                  span All
+                button(type='button' class='btn trans')
+                  span Upcoming
+                button(type='button' class='btn trans')
+                  span Ongoing
+                button(type='button' class='btn trans')
+                  span Paused
+                button(type='button' class='btn trans')
+                  span Completed
+          .m-EventsTable
+            .m-EventsTable_thead
+              .m-EventsTable_tr
+                .m-EventsTable_th.col1 Event Name
+                .m-EventsTable_th.col2 Status
+                .m-EventsTable_th.col3 Action
+            .m-EventsTable_tbody
+              .m-EventsTable_tr
+                .m-EventsTable_td.col1
+                  img(src=path + "/assets/images/profile/event01.jpg", alt="", class='m-EventsTable_td-thumb')
+                  div
+                    span.txt_label.upcoming.sp-only Upcoming
+                    h4.m-EventsTable_td-title
+                      |Save Money, Without Thinking About it
+                    .m-EventsTable_td-calendar
+                      img(src=path+"/assets/images/ico_calendar.svg", alt="")
+                      span Wed 24 Aug 2022 - Wed 7 Sep 2022
+                    .m-EventsTable_td-clock
+                      img(src=path+"/assets/images/ico_clock.svg", alt="")
+                      span 10:53 AM - 11:30 AM
+                .m-EventsTable_td.col2.pc-only
+                  span.txt_label.upcoming Upcoming
+                .m-EventsTable_td.col3
+                  button(type='button' class='btn trans btn-sm btn-remind')
+                    span Remind me
+              .m-EventsTable_tr
+                .m-EventsTable_td.col1
+                  img(src=path + "/assets/images/profile/event02.jpg", alt="", class='m-EventsTable_td-thumb')
+                  div
+                    span.txt_label.live.sp-only LIVE
+                    h4.m-EventsTable_td-title
+                      |The Best or Nothing
+                    .m-EventsTable_td-calendar
+                      img(src=path+"/assets/images/ico_calendar.svg", alt="")
+                      span Wed 24 Aug 2022 - Wed 7 Sep 2022
+                    .m-EventsTable_td-clock
+                      img(src=path+"/assets/images/ico_clock.svg", alt="")
+                      span 10:53 AM - 11:30 AM
+                .m-EventsTable_td.col2.pc-only
+                  span.txt_label.live LIVE
+                .m-EventsTable_td.col3
+                  button(type='button' class='btn trans btn-sm btn-primary btn-join')
+                    span Join event
+              .m-EventsTable_tr
+                .m-EventsTable_td.col1
+                  img(src=path + "/assets/images/profile/event03.jpg", alt="", class='m-EventsTable_td-thumb')
+                  div
+                    span.txt_label.pause.sp-only Paused
+                    h4.m-EventsTable_td-title
+                      |All membership packages come with...
+                    .m-EventsTable_td-calendar
+                      img(src=path+"/assets/images/ico_calendar.svg", alt="")
+                      span Wed 24 Aug 2022 - Wed 7 Sep 2022
+                    .m-EventsTable_td-clock
+                      img(src=path+"/assets/images/ico_clock.svg", alt="")
+                      span 10:53 AM - 11:30 AM
+                .m-EventsTable_td.col2.pc-only
+                  span.txt_label.pause Paused
+                .m-EventsTable_td.col3
+              .m-EventsTable_tr
+                .m-EventsTable_td.col1
+                  img(src=path + "/assets/images/profile/event03.jpg", alt="", class='m-EventsTable_td-thumb')
+                  div
+                    span.txt_label.completed.sp-only Completed
+                    h4.m-EventsTable_td-title
+                      |Save Money, Without Thinking About it
+                    .m-EventsTable_td-calendar
+                      img(src=path+"/assets/images/ico_calendar.svg", alt="")
+                      span Wed 24 Aug 2022 - Wed 7 Sep 2022
+                    .m-EventsTable_td-clock
+                      img(src=path+"/assets/images/ico_clock.svg", alt="")
+                      span 10:53 AM - 11:30 AM
+                .m-EventsTable_td.col2.pc-only
+                  span.txt_label.completed Completed
+                .m-EventsTable_td.col3
+                  button(type='button' class='btn trans btn-sm btn-primary btn-replay')
+                    span Replay
+
+            .m-dataTable_empty(style='display: none')
+              h3 Nothing to see here!
+              p You haven't been part of any events yet. Explore and be part of some of our upcoming events.
+              button(type='button' class='btn btn-primary btn-sm trans')
+                span Explore events
+
+  include _components/modal_edit_profile
+
+
+

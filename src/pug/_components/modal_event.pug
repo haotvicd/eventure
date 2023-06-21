@@ -1,0 +1,138 @@
+#modalEvent.modalGen.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    form.modal-content
+      .modal_head
+        h2.ttl-primary Event detail
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          .modal_body-col
+            h3.ttl-col Basic Information
+            .m-input
+              span.m-input_label Event Name
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" placeholder="Give your event name ")
+            .gr-input
+              .m-input
+                span.m-input_label Start date
+                  small.warning *
+                .input-area
+                  input.input.datetimepicker#datetimepicker-start(type='text' placeholder="Select date")
+              .m-input
+                span.m-input_label End date
+                  small.warning *
+                .input-area
+                  input.input.datetimepicker#datetimepicker-end(type='text' placeholder="Select date")
+            .gr-input
+              .m-input
+                span.m-input_label Start time
+                  small.warning *
+                .input-area.area-select.js-select
+                  input.input.input-text.input-time(type="text" placeholder="Select time ")
+                  .box-select
+                    ul.l-select
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:15") 12:15
+                      li(data-value="12:30") 12:30
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+              .m-input
+                span.m-input_label End time
+                  small.warning *
+                .input-area.area-select.js-select
+                  input.input.input-text.input-time(type="text" placeholder="Select time ")
+                  .box-select
+                    ul.l-select
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:15") 12:15
+                      li(data-value="12:30") 12:30
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+                      li(data-value="12:00") 12:00
+            .m-input
+              span.m-input_label Category
+                small.warning *
+              .input-area
+                select.input.select-box(name="select" required)
+                  option(value="" disabled selected) Please choose Category
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+          .modal_body-col
+            h3.ttl-col Additional Information
+            .m-input
+              .m-editor
+                span.m-input_label Description
+                .m-editor_area
+                  #editorEvent
+                    p
+                    p
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Event organizer’s name
+              .input-area
+                input.input.input-text(type="text" maxlength="50" placeholder="Event organizer’s name ")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 50
+            .m-input
+              span.m-input_label Email
+              .input-area
+                input.input.input-text(type="text" placeholder="Your email")
+            .m-groupColor
+              span.m-input_label Choose main color
+              .m-groupColor_list
+                button(type='button' value='#857DB1' class='btn' style='background: #857DB1; --my-color-var: #857DB1; ')
+                button(type='button' value='#FF0000' class='btn' style='background: #FF0000; --my-color-var: #FF0000; ')
+                button(type='button' value='#FF6600' class='btn' style='background: #FF6600; --my-color-var: #FF6600; ')
+                button(type='button' value='#FF9900' class='btn' style='background: #FF9900; --my-color-var: #FF9900; ')
+                button(type='button' value='#FFCC00' class='btn' style='background: #FFCC00; --my-color-var: #FFCC00; ')
+                button(type='button' value='#FFFF00' class='btn' style='background: #FFFF00; --my-color-var: #FFFF00; ')
+                button(type='button' value='#66CC00' class='btn' style='background: #66CC00; --my-color-var: #66CC00; ')
+                button(type='button' value='#009900' class='btn' style='background: #009900; --my-color-var: #009900; ')
+                button(type='button' value='#006600' class='btn' style='background: #006600; --my-color-var: #006600; ')
+                button(type='button' value='' class='btn pickerButton')
+                  img(src=path + "/assets/images/ico_hsl.png", alt="")
+              .pickerModal
+                .modal_head
+                  .pickerModal_title Choose group color
+                  button(type='button' class="btn btn-circle trans pickerButtonClose")
+                    img(src=path + "/assets/images/ico_close_white.svg", alt="")
+
+                .modal_body
+                  .hex
+                    .hex_wrap
+                      .hex_title Hex code
+                      .hex_code.showHex #A4A7FF
+                    .color
+                  .hsl
+                    .hsl_item
+                      span.hsl_item-title H
+                      input(type="range" step="1" min="0" max="360" class="hue" value="238")
+                      input(type="text" class='hsl_item-number showHue' value='238')
+                    .hsl_item
+                      span.hsl_item-title S
+                      input(type="range" step="1" min="0" max="100" class="sat" value="99")
+                      input(type="text" class='hsl_item-number showSat' value='99')
+                    .hsl_item
+                      span.hsl_item-title L
+                      input(type="range" step="1" min="0" max="100" class="light" value="82")
+                      input(type="text" class='hsl_item-number showLight' value='82')
+
+                .modal_foot.line.justify-content-end
+                  button(type="submit", class="btn btn-primary trans")
+                    span Cancel
+                  button(type="submit", class="btn btn-primary trans")
+                    span Apply
+        .modal_foot
+          button(type="submit", class="btn btn-primary trans w-100")
+            span Save

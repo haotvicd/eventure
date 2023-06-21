@@ -1,0 +1,18 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Recaption'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'reception'
+  -jsID         = 'calendar'
+  -uploadJs     = ''
+  -videoJs      = ''
+  -path         = '../'
+  -hasFooter    = false
+
+block container
+  img.banner-sp(src=path+"/assets/images/reception/banner_sp.png", alt="")
+  include ../_components/widget_create

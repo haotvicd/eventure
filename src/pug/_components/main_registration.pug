@@ -1,0 +1,24 @@
+.m-tab-content
+  .wrapper
+    .row
+      .col-3
+        .m-asideList
+          ul.nav.nav-tabs.side-tab(role="tablist")
+            li.nav-link
+              a.active#participant-tab(data-toggle="tab" href="#participant") Participants List
+            li.nav-link
+              a#event_entry-tab(data-toggle="tab" href="#event_entry") Event Entry
+            li.nav-link
+              a#ticket-tab(data-toggle="tab" href="#ticket") Ticketing
+
+      .col-9
+        .tab-content
+          .tab-pane.fade.show.active#participant
+            include registration_participant
+          .tab-pane.fade#event_entry
+            include registration_event
+          .tab-pane.fade#ticket
+            include registration_ticket
+
+  include modal_clear_fields
+  include modal_add_ticket

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="charset" content="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=".">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Landing Page</title>
+    <link rel="icon" href=".assets/images/favicon.ico">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin="">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/libs/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+  </head>
+  <body class="landing">
+    <div class="landing">
+      <header class="m-header">
+        <div class="wrapper">
+          <div class="m-header_inner">
+            <h1 class="m-header_logo"><a class="trans" href="#"><img class="pc-only" src="./assets/images/logo_head.svg" alt="eventure" width="187"><img class="sp-only" src="./assets/images/logo_sp.png" alt="eventure" width="52"></a></h1><a class="btn-menu sp-only" href="javascript:;"><img src="./assets/images/ico_head_menu.svg" alt=""></a>
+            <nav class="nav">
+              <div class="nav_head sp-only"><a class="close-nav" href="javascript:;"><img src="./assets/images/ico_close_white.svg" alt=""></a>
+                <div class="nav-logo"><img src="./assets/images/logo_head.svg" alt="eventure" width="156"></div>
+              </div>
+              <div class="nav_body"><a class="nav_link pc-only trans" href="#">Support</a>
+                <div class="nav_user">
+                  <div class="nav_user_wrap"><a class="nav_user_icon" href="javascript:;"><img src="./assets/images/ico_avatar.png" alt=""></a>
+                    <div class="user-info sp-only">
+                      <div class="user-name">Eleanor Pena</div>
+                      <div class="user-since">Member since Mar 15, 2022</div>
+                    </div>
+                  </div>
+                  <div class="nav_user-menu">
+                    <div class="nav_user-menu_inner">
+                      <ul class="user-menu">
+                        <li><a class="active" href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12ZM12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5588 19.5488C20.6672 17.7154 22 15.0134 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.0134 3.33284 17.7154 5.44116 19.5488C7.19693 21.0756 9.49052 22 12 22C14.4162 22 16.6323 21.143 18.3609 19.7165C18.4276 19.6614 18.4936 19.6055 18.5588 19.5488ZM12.2579 19.9959C12.1723 19.9986 12.0863 20 12 20C11.9914 20 11.9827 20 11.9741 20C11.8937 19.9997 11.8135 19.9983 11.7337 19.9956C10.3914 19.9517 9.13273 19.5772 8.03655 18.9508C8.95181 17.7632 10.3882 17 12 17C13.6118 17 15.0482 17.7632 15.9634 18.9508C14.865 19.5785 13.6033 19.9533 12.2579 19.9959ZM17.5624 17.7498C16.2832 16.0781 14.2675 15 12 15C9.73249 15 7.7168 16.0781 6.43759 17.7498C4.93447 16.2953 4 14.2568 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 14.2568 19.0655 16.2953 17.5624 17.7498Z" fill="#6F767E"></path>
+                            </svg>My Profile</a></li>
+                        <li><a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C7.58172 5 4 8.58172 4 13C4 15.2122 4.89659 17.2131 6.34862 18.6623C6.73952 19.0525 6.74012 19.6856 6.34998 20.0765C5.95983 20.4674 5.32666 20.468 4.93576 20.0779C3.12321 18.2688 2 15.7646 2 13C2 7.47715 6.47715 3 12 3C17.5228 3 22 7.47715 22 13C22 15.7611 20.8796 18.2625 19.0711 20.0711C18.6805 20.4616 18.0474 20.4616 17.6569 20.0711C17.2663 19.6805 17.2663 19.0474 17.6569 18.6569C19.1057 17.208 20 15.2094 20 13C20 8.58172 16.4183 5 12 5Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 9.70711C17.0976 9.31658 17.0976 8.68342 16.7071 8.29289C16.3166 7.90237 15.6834 7.90237 15.2929 8.29289L13.2934 10.2924C12.9018 10.105 12.4631 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16C13.6569 16 15 14.6569 15 13C15 12.5369 14.895 12.0982 14.7076 11.7066L16.7071 9.70711ZM11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13Z" fill="#6F767E"></path>
+                            </svg>Dashboard</a></li>
+                        <li class="is-logout"><a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17.7071 7.79289C17.3166 7.40237 16.6834 7.40237 16.2929 7.79289C15.9024 8.18342 15.9024 8.81658 16.2929 9.20711L18.0858 11H9C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13H18.0858L16.2929 14.7929C15.9024 15.1834 15.9024 15.8166 16.2929 16.2071C16.6834 16.5976 17.3166 16.5976 17.7071 16.2071L20.5 13.4142C21.2811 12.6332 21.281 11.3668 20.5 10.5858L17.7071 7.79289Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 3.34315 4.34315 2 6 2H12C13.6569 2 15 3.34315 15 5V6C15 6.55228 14.5523 7 14 7C13.4477 7 13 6.55228 13 6V5C13 4.44772 12.5523 4 12 4H6C5.44772 4 5 4.44772 5 5V19C5 19.5523 5.44772 20 6 20H12C12.5523 20 13 19.5523 13 19V18C13 17.4477 13.4477 17 14 17C14.5523 17 15 17.4477 15 18V19C15 20.6569 13.6569 22 12 22H6C4.34315 22 3 20.6569 3 19V5Z" fill="#6F767E"></path>
+                            </svg>Log out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div><a class="nav_link sp-only trans" href="#"><span>Support</span></a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="wrapper">
+          <div class="m-landing">
+            <div class="m-landing_content">
+              <div class="ld-banner"><img src="./assets/images/landing/image_01.png" alt=""></div>
+              <div class="tabs-control">
+                <ul class="nav nav-tabs">
+                  <li class="nav-link"><a class="active" href="#tab1" data-toggle="tab">Overview</a></li>
+                  <li class="nav-link"><a href="#tab2" data-toggle="tab">Schedule</a></li>
+                  <li class="nav-link"><a href="#tab3" data-toggle="tab">Speakers</a></li>
+                  <li class="nav-link"><a href="#tab4" data-toggle="tab">Host</a></li>
+                  <li class="nav-link"><a href="#tab5" data-toggle="tab">Sponsors</a></li>
+                </ul>
+              </div>
+              <div class="m-content">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tab1">
+                    <section class="ld-section about-event">
+                      <div class="wrapper-height">
+                        <div class="about-event_inner">
+                          <h2 class="sec-title">ABOUT THIS EVENT</h2>
+                          <p class="text">The best 16 passenger small group, intimate and unique, Milford Sound tour.</p>
+                          <p class="text">Travel in unparalleled style and comfort in a premium Mercedes van equipped with large panoramic windows, leather reclining seats, quirky on board videos, free wifi and complimentary bottled water.</p>
+                          <p class="text">From your accommodation enjoy the stunning scenic drive.</p>
+                          <div class="image"><img src="./assets/images/landing/image_02.png" alt=""></div>
+                          <p class="text">he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.</p>
+                          <p class="text">he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.</p>
+                          <p class="text">he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.</p>
+                          <p class="text">he best 16 passenger small group, intimate and unique, Milford Sound tour. Travel in unparalleled style and comfort in a premium Mercedes.</p>
+                        </div>
+                      </div><a class="btn-show-more" href="javascript:;"><img src="./assets/images/ico_show_more.svg" alt="">Show more</a>
+                    </section>
+                    <section class="ld-section schedule-event">
+                      <h2 class="sec-title">SCHEDULE</h2>
+                      <div class="schedule-event_head">
+                        <div class="m-group"><span class="m-group_label">Group</span>
+                          <div class="m-group_list">
+                            <button class="btn trans current" data-name="all"><span>All</span></button>
+                            <button class="btn trans" data-name="group01"><span class="btn_icon setBg" data-bg="#FFC88B"></span><span>Crystal Waterfall</span></button>
+                            <button class="btn trans" data-name="group02"><span class="btn_icon setBg" data-bg="#B7FFE5"></span><span>Black Sand</span></button>
+                            <button class="btn trans" data-name="group03"><span class="btn_icon setBg" data-bg="#FEBCFF"></span><span>Dewdrops & Sunlight Events</span></button>
+                          </div>
+                        </div>
+                        <div class="m-calendar">
+                          <div class="m-calendar_inner">
+                            <div class="swiper-container js-m-calendar">
+                              <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                  <div class="m-calendar_item"><span class="m-calendar_item-label current">Tue</span>
+                                    <button class="btn trans m-calendar_item-box current"><span class="m-calendar_item-day">19</span><span class="m-calendar_item-month">Aug</span></button>
+                                  </div>
+                                </div>
+                                <div class="item swiper-slide">
+                                  <div class="m-calendar_item"><span class="m-calendar_item-label">Wed</span>
+                                    <button class="btn trans m-calendar_item-box"><span class="m-calendar_item-day">20</span><span class="m-calendar_item-month">Aug</span></button>
+                                  </div>
+                                </div>
+                                <div class="item swiper-slide">
+                                  <div class="m-calendar_item"><span class="m-calendar_item-label">Fri</span>
+                                    <button class="btn trans m-calendar_item-box"><span class="m-calendar_item-day">22</span><span class="m-calendar_item-month">Aug</span></button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="m-sessions">
+                        <div class="m-sessions_block">
+                          <div class="m-sessions_block-time">
+                            <div class="time-point start">08:00</div>
+                          </div>
+                          <div class="m-sessions_block-content">
+                            <div class="ct-head">
+                              <div class="m-group">
+                                <div class="m-group_list">
+                                  <button class="btn trans" data-name="group01"><span class="btn_icon setBg" data-bg="#FFC88B"></span><span>Crystal Waterfall Event Planning</span></button>
+                                </div>
+                              </div>
+                              <div class="m-timeline_modal-control">
+                                <div class="duration">60 mins</div>
+                              </div>
+                            </div>
+                            <div class="ct-wrap">
+                              <div class="ct-body">
+                                <h2 class="session-title">All our PRO level features at your fingertips</h2>
+                                <p class="session-desc">Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.</p>
+                              </div>
+                              <div class="ct-footer swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="ct-footer_block swiper-slide"><strong>Host</strong>
+                                    <ul class="l-mem">
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar05.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Dianne Russell</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="ct-footer_block swiper-slide"><strong>Speaker</strong>
+                                    <ul class="l-mem">
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar04.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Ralph Edwards</div>
+                                        </div>
+                                      </li>
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar02.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Floyd Miles</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="m-sessions_block-content">
+                            <div class="ct-head">
+                              <div class="m-group">
+                                <div class="m-group_list">
+                                  <button class="btn trans" data-name="group01"><span class="btn_icon setBg" data-bg="#FFC88B"></span><span>Crystal Waterfall Event Planning</span></button>
+                                </div>
+                              </div>
+                              <div class="m-timeline_modal-control">
+                                <div class="duration">60 mins</div>
+                              </div>
+                            </div>
+                            <div class="ct-wrap">
+                              <div class="ct-body">
+                                <h2 class="session-title">All our PRO level features at your fingertips</h2>
+                                <p class="session-desc">Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.</p>
+                              </div>
+                              <div class="ct-footer swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="ct-footer_block swiper-slide"><strong>Host</strong>
+                                    <ul class="l-mem">
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar05.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Dianne Russell</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="ct-footer_block swiper-slide"><strong>Speaker</strong>
+                                    <ul class="l-mem">
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar04.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Ralph Edwards</div>
+                                        </div>
+                                      </li>
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar02.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Floyd Miles</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="m-sessions_block">
+                          <div class="m-sessions_block-time">
+                            <div class="time-point start">10:30</div>
+                          </div>
+                          <div class="m-sessions_block-content">
+                            <div class="ct-head">
+                              <div class="m-group">
+                                <div class="m-group_list">
+                                  <button class="btn trans" data-name="group01"><span class="btn_icon setBg" data-bg="#FFC88B"></span><span>Crystal Waterfall Event Planning</span></button>
+                                  <button class="btn trans" data-name="group02"><span class="btn_icon setBg" data-bg="#B7FFE5"></span><span>Black Sand Event Planners</span></button>
+                                </div>
+                              </div>
+                              <div class="m-timeline_modal-control">
+                                <div class="duration">90 mins</div>
+                              </div>
+                            </div>
+                            <div class="ct-wrap">
+                              <div class="ct-body">
+                                <h2 class="session-title">All our PRO level features at your fingertips</h2>
+                                <p class="session-desc">Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.</p>
+                              </div>
+                              <div class="ct-footer swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="ct-footer_block swiper-slide"><strong>Speaker</strong>
+                                    <ul class="l-mem">
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar04.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Ralph Edwards</div>
+                                        </div>
+                                      </li>
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar02.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Floyd Miles</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="m-sessions_block">
+                          <div class="m-sessions_block-time">
+                            <div class="time-point start">12:00</div>
+                          </div>
+                          <div class="m-sessions_block-content">
+                            <div class="ct-head">
+                              <div class="m-group">
+                                <div class="m-group_list">
+                                  <button class="btn trans" data-name="group01"><span class="btn_icon setBg" data-bg="#FFC88B"></span><span>Crystal Waterfall Event Planning</span></button>
+                                  <button class="btn trans" data-name="group02"><span class="btn_icon setBg" data-bg="#B7FFE5"></span><span>Black Sand Event Planners</span></button>
+                                  <button class="btn trans" data-name="group03"><span class="btn_icon setBg" data-bg="#FEBCFF"></span><span>Dewdrops & Sunlight Events</span></button>
+                                </div>
+                              </div>
+                              <div class="m-timeline_modal-control">
+                                <div class="duration">90 mins</div>
+                              </div>
+                            </div>
+                            <div class="ct-wrap">
+                              <div class="ct-body">
+                                <h2 class="session-title">Betcha can’t eat just one!</h2>
+                                <p class="session-desc">Father Goes For Kidney Treatment – Leaves Hospital As A Women. This is Intercom: the Business Messenger you and your customers will love. If you BUY now, I’ll be sending you another mystery bonus as a token of appreciation.</p>
+                              </div>
+                              <div class="ct-footer swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="ct-footer_block swiper-slide"><strong>Speaker</strong>
+                                    <ul class="l-mem">
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar04.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Ralph Edwards</div>
+                                        </div>
+                                      </li>
+                                      <li class="l-mem_item">
+                                        <div class="image"><img src="./assets/images/img_avatar02.png" alt=""></div>
+                                        <div class="l-mem_info">
+                                          <div class="name">Floyd Miles</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="ld-section speaker-event">
+                      <h2 class="sec-title">Speakers</h2>
+                      <div class="speaker-content">
+                        <ul class="speaker-list">
+                          <li>
+                            <div class="speaker-list_item">
+                              <div class="item-body">
+                                <div class="item-body_user">
+                                  <div class="image"><img src="./assets/images/img_cus01.png" alt=""></div>
+                                  <div class="info">
+                                    <div class="name">Robert Fox</div>
+                                    <div class="email">paul.morrison@gmail.com</div>
+                                    <div class="type">Speaker</div>
+                                  </div>
+                                </div>
+                                <div class="item-body_information">
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Job Title:</small>
+                                          <p>Cofounder & CEO, Spaktoro</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Speaker’s biography:</small>
+                                          <p>Hello! Looks like you’re enjoying our page, but you haven’t signed up for an account yet. You agree to receive automated texts to confirm your phone number.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="speaker-list_item">
+                              <div class="item-body">
+                                <div class="item-body_user">
+                                  <div class="image"><img src="./assets/images/img_cus02.png" alt=""></div>
+                                  <div class="info">
+                                    <div class="name">Esther Howard</div>
+                                    <div class="email">thomas.lawrence@gmail.com</div>
+                                    <div class="type">Speaker</div>
+                                  </div>
+                                </div>
+                                <div class="item-body_information">
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Job Title:</small>
+                                          <p>Cofounder & CEO, Spaktoro</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Speaker’s biography:</small>
+                                          <p>Don't forget to download your files. They will be discarded automatically after 60 minutes. Welcome 👋 Enter your email to continue.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="speaker-list">
+                          <li>
+                            <div class="speaker-list_item">
+                              <div class="item-body">
+                                <div class="item-body_user">
+                                  <div class="image"><img src="./assets/images/img_cus04.png" alt=""></div>
+                                  <div class="info">
+                                    <div class="name">Guy Hawkins</div>
+                                    <div class="email">alison.langdon@gmail.com</div>
+                                    <div class="type">Speaker</div>
+                                  </div>
+                                </div>
+                                <div class="item-body_information">
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Job Title:</small>
+                                          <p>Cofounder & CEO, Spaktoro</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Speaker’s biography:</small>
+                                          <p>We’ll just use this to follow up if needed. No spam, promise. Hello! Looks like you’re enjoying our page, but you haven’t signed up for an account yet. You won't be charged if you cancel before billing starts on August 12th, 2021</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="speaker-list_item">
+                              <div class="item-body">
+                                <div class="item-body_user">
+                                  <div class="image"><img src="./assets/images/img_cus03.png" alt=""></div>
+                                  <div class="info">
+                                    <div class="name">Williamson</div>
+                                    <div class="email">sean.young@gmail.com</div>
+                                    <div class="type">Speaker</div>
+                                  </div>
+                                </div>
+                                <div class="item-body_information">
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Job Title:</small>
+                                          <p>Cofounder & CEO, Spaktoro</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Speaker’s biography:</small>
+                                          <p>We use cookies to enable essential and secure site functionality and performance. Membership fees are billed at the beginning of each period</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="ld-section speaker-event speaker-event--host">
+                      <h2 class="sec-title">HOST</h2>
+                      <div class="speaker-content">
+                        <ul class="speaker-list">
+                          <li>
+                            <div class="speaker-list_item">
+                              <div class="item-body">
+                                <div class="item-body_user">
+                                  <div class="image"><img src="./assets/images/img_cus06.png" alt=""></div>
+                                  <div class="info">
+                                    <div class="name">Gautham Prasad</div>
+                                    <div class="email">gautham.prasad@gmail.com</div>
+                                    <div class="type is-host">Host</div>
+                                  </div>
+                                </div>
+                                <div class="item-body_information">
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Job Title:</small>
+                                          <p>Event Marketer, Eventure Asia</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row-information">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="box-information"><small>Speaker’s biography:</small>
+                                          <p>Hello! Looks like you’re enjoying our page, but you haven’t signed up for an account yet. You agree to receive automated texts to confirm your phone number.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="ld-section sponsor-event">
+                      <h2 class="sec-title">Sponsor</h2>
+                      <div class="sponsor-ct">
+                        <h3 class="sponsor-ct_title">Diamond Sponsor</h3>
+                        <ul class="sponsor-ct_list sponsor-ct_list--diamond">
+                          <li><span><img src="./assets/images/logo_godline.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_lightning.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_niras.png" alt=""></span></li>
+                        </ul>
+                      </div>
+                      <div class="sponsor-ct">
+                        <h3 class="sponsor-ct_title">Golden Sponsor</h3>
+                        <ul class="sponsor-ct_list">
+                          <li><span><img src="./assets/images/logo_zoo.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_velocity.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_hex.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_kanba.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_fox.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_circle.png" alt=""></span></li>
+                        </ul>
+                      </div>
+                      <div class="sponsor-ct">
+                        <h3 class="sponsor-ct_title">Silver Sponsor</h3>
+                        <ul class="sponsor-ct_list">
+                          <li><span><img src="./assets/images/logo_code.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_aven.png" alt=""></span></li>
+                          <li><span><img src="./assets/images/logo_earth.png" alt=""></span></li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m-landing_aside">
+              <div class="m-landing_aside-inner">
+                <div class="ticket">
+                  <div class="ticket_inner">
+                    <div class="ticket_head">
+                      <div class="ticket_head-title"><span>Event name</span>
+                        <h2 class="ticket-name">The future of health is on your wrist</h2>
+                      </div>
+                      <div class="ticket_head-promo"><span>Event by</span>
+                        <p>Biffco Enterprises Ltd.</p>
+                      </div>
+                    </div>
+                    <div class="ticket_body">
+                      <div class="ticket_body_block"><span class="time-label">Start time<small>UTC +07:00</small></span>
+                        <div class="time-info row">
+                          <div class="time-info_block col-6"><span>Date</span><strong>OCT 24, 2022</strong></div>
+                          <div class="time-info_block col-6"><span>Time</span><strong>10:35</strong></div>
+                        </div>
+                      </div>
+                      <div class="ticket_body_block"><span class="time-label">End time<small>UTC +07:00</small></span>
+                        <div class="time-info row">
+                          <div class="time-info_block col-6"><span>Date</span><strong>OCT 25, 2022</strong></div>
+                          <div class="time-info_block col-6"><span>Time</span><strong>17:25</strong></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ticket_footer">
+                      <div class="ticket_footer-status"><span>Event has</span><strong>started</strong></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalSignin"><span>Enter event</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="share-box"><span>Share this event on:</span>
+                  <ul>
+                    <li><a class="trans" href="#"><img src="./assets/images/landing/ico_linkein.svg" alt=""></a></li>
+                    <li><a class="trans" href="#"><img src="./assets/images/landing/ico_twitter.svg" alt=""></a></li>
+                    <li><a class="trans" href="#"><img src="./assets/images/landing/ico_facebook.svg" alt=""></a></li>
+                    <li><a class="trans" href="#"><img src="./assets/images/landing/ico_whatsapp.svg" alt=""></a></li>
+                  </ul>
+                  <div class="share-box_link"><a class="trans" href="#">https://eventure.com/4cf2-f4f734...</a>
+                    <div class="btn-copy trans"><img src="./assets/images/ico_copy.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modalGen modalGen--sponsor modalGen--login modal fade" id="modalSignin" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content m-sign-up m-sign-in">
+              <div class="modal_head">
+                <h2 class="signup_title">Sign in</h2>
+                <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="./assets/images/ico_close_white.svg" alt=""></button>
+              </div>
+              <div class="modal-wrapper">
+                <div class="signup-content">
+                  <div class="signup-content_inner">
+                    <form class="signup_form">
+                      <div class="m-input"><span class="m-input_label">Sign in with email address</span>
+                        <div class="input-area"><a class="btn-back-clear" href="javascript:;"><img src="./assets/images/ico_arrow_backward.svg" alt=""></a>
+                          <input class="input input-text input-email js-mail-validate" type="text" placeholder="Your email">
+                        </div>
+                        <div class="input-area pass-field"><a class="btn-eye" href="javascript:;"><img src="./assets/images/ico_eye.svg" alt=""></a>
+                          <input class="input input-text input-password main-pass" type="password" placeholder="Password">
+                        </div>
+                      </div>
+                      <button class="btn btn-primary btn-submit trans" type="button"><span>Sign In</span></button>
+                    </form><a class="link forgot" href="#">Forgot password?</a>
+                    <div class="other-options"><span class="m-input_label">Or continue with Open accounts</span><a class="btn-google trans" href="#"><img src="./assets/images/ico_google.svg" alt="Google">Google</a>
+                      <ul class="l-social">
+                        <li><a class="btn-social apple trans" href="#"><img src="./assets/images/ico_apple.svg" alt="Apple"></a></li>
+                        <li><a class="btn-social facebook trans" href="#"><img src="./assets/images/ico_fb_circle.svg" alt="Facebook"></a></li>
+                        <li><a class="btn-social twitter trans" href="#"><img src="./assets/images/ico_twitter_white.svg" alt="Twitter"></a></li>
+                        <li><a class="btn-social linkin trans" href="#"><img src="./assets/images/ico_linkin_white.svg" alt="Linked In"></a></li>
+                      </ul>
+                    </div>
+                    <p class="policy-agreement">By signing up, I agree to the<a class="trans" href="#"> Privacy Policy </a>and the<a class="trans" href="#"> Terms of Use</a></p>
+                    <p class="policy-agreement">Don’t have an account?<a class="trans" href="#"> Sign Up</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="m-footer">
+        <div class="wrapper">
+          <div class="m-footer_upper"><a class="m-footer_logo trans" href="#"><img src="./assets/images/logo_footer.png" alt="eventure" width="132" height="34"></a>
+            <div class="m-footer_nav">
+              <ul class="links">
+                <li><a class="trans" href="#">Privacy Policy</a></li>
+                <li><a class="trans" href="#">Terms of User</a></li>
+              </ul>
+              <div class="community"><span>JOIN OUR COMMUNITY</span>
+                <ul>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_facebook.svg" alt="Facebook"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_twitter.svg" alt="Twitter"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_linkin.svg" alt="Linked In"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div><small class="copy-right">Copyright © 2022 Fractal. All rights reserved</small>
+        </div>
+      </footer>
+    </div>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/js/libs/moment-with-locales.js"></script>
+    <script src="./assets/js/libs/bootstrap-datetimepicker.min.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/schedule.js"></script>
+  </body>
+</html>

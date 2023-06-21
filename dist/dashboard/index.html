@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="charset" content="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="../">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Dashboard</title>
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin="">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="..//assets/css/libs/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" href="..//assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+  </head>
+  <body class="dashboard">
+    <div class="dashboard">
+      <header class="m-header">
+        <div class="m-header_inner">
+          <div class="m-header_side">
+            <h1 class="m-header_logo"><a class="trans" href="#"><img src="..//assets/images/logo_head.svg" alt="eventure"></a></h1>
+          </div>
+          <nav class="nav"><a class="nav_link trans" href="#">Support</a>
+            <div class="nav_user"><a class="nav_user_icon" href="javascript:;"><img src="..//assets/images/ico_avatar.png" alt=""></a></div>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <div class="m-dash">
+          <div class="m-dash_side">
+            <ul class="nav nav-tabs">
+              <li class="nav-link"><a class="events active" href="#events-tab" data-toggle="tab">Events</a></li>
+              <li class="nav-link"><a class="team" href="#team-tab" data-toggle="tab">Team</a></li>
+            </ul><a class="link-help trans" href="#"><img src="..//assets/images/ico_help.svg" alt="">Help Center</a>
+          </div>
+          <div class="m-content m-dash_content">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="events-tab">
+                <div class="m-content_head">
+                  <div>
+                    <h2 class="title-tab">My Events</h2>
+                  </div>
+                  <div class="m-content_head-btn"><a class="btn btn-primary btn-add trans" href="#" data-toggle="modal" data-target="#modalEventCreate"><span>Create Event</span></a></div>
+                </div>
+                <div class="m-content_body">
+                  <div class="filter-block">
+                    <div class="m-input">
+                      <div class="input-a">
+                        <div class="input-a_inner js-search-box">
+                          <input class="input input-text input-search" data-search="" type="text" placeholder="Search event name">
+                          <div class="box-select speaker-result" style="display: none;">
+                            <p class="ttl">Recent search</p>
+                            <ul>
+                              <li>
+                                <div class="box-event-item">
+                                  <div class="image"><img src="..//assets/images/dashboard/img_event_01.jpg" alt=""></div>
+                                  <div class="info">
+                                    <div class="box-event_title">Save Money, Without Thin...</div>
+                                  </div>
+                                </div><a class="remove" href="javascript:;"><img src="..//assets/images/ico_close_gray.svg" alt=""></a>
+                              </li>
+                              <li>
+                                <div class="box-event-item">
+                                  <div class="image"><img src="..//assets/images/dashboard/img_event_03.jpg" alt=""></div>
+                                  <div class="info">
+                                    <div class="box-event_title">All membership packages com...</div>
+                                  </div>
+                                </div><a class="remove" href="javascript:;"><img src="..//assets/images/ico_close_gray.svg" alt=""></a>
+                              </li>
+                            </ul>
+                          </div><a class="btn-clear act trans" href="javascript:;"><img src="..//assets/images/ico_close.svg" alt=""></a><a class="btn-clear arrow act trans" href="javascript:;"><img src="..//assets/images/ico_arrow_backward.svg" alt=""></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-group"><span class="m-group_label">Showing</span>
+                      <div class="m-group_list">
+                        <button class="btn trans current" data-name="all"><span>All</span></button>
+                        <button class="btn trans" data-name="group01"><span>Upcoming</span></button>
+                        <button class="btn trans" data-name="group02"><span>Ongoing</span></button>
+                        <button class="btn trans" data-name="group03"><span>Paused</span></button>
+                        <button class="btn trans" data-name="group04"><span>Completed</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-event">
+                    <div class="box-event_head"><span class="title w01">Event Name</span><span class="title w02">Status</span><span class="title w03">Action</span></div>
+                    <div class="box-event_body">
+                      <div class="box-event_item">
+                        <div class="box-event_cols w01">
+                          <div class="information">
+                            <div class="image"><img src="..//assets/images/dashboard/img_event_01.jpg" alt=""></div>
+                            <div class="info">
+                              <div class="box-event_title">Save Money, Without Thin...</div>
+                              <p class="text time">Wed 24 Aug 2022 - Wed 7 Sep 2022</p>
+                              <p class="text clock">10:53 AM - 11:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-event_cols w02">
+                          <div class="tag"><span class="tag_label is-coming">Upcoming</span></div>
+                        </div>
+                        <div class="box-event_cols w03">
+                          <div class="control"><a class="btn btn-black trans" href="#"><span>View details</span></a><a class="btn-control trans" href="#">
+                              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z" fill="#fff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z" fill="#fff"></path>
+                              </svg></a><a class="btn-control trans" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z" fill="white"></path>
+                                <path d="M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z" fill="white"></path>
+                                <path d="M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z" fill="white"></path>
+                              </svg></a></div>
+                        </div>
+                      </div>
+                      <div class="box-event_item">
+                        <div class="box-event_cols w01">
+                          <div class="information">
+                            <div class="image"><img src="..//assets/images/dashboard/img_event_02.jpg" alt=""></div>
+                            <div class="info">
+                              <div class="box-event_title">The Best or Nothing</div>
+                              <p class="text time">Wed 24 Aug 2022 - Wed 7 Sep 2022</p>
+                              <p class="text clock">10:53 AM - 11:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-event_cols w02">
+                          <div class="tag"><span class="tag_label is-live">LIVE</span></div>
+                        </div>
+                        <div class="box-event_cols w03">
+                          <div class="control"><a class="btn btn-black trans" href="#"><span>View details</span></a><a class="btn-control trans" href="#">
+                              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z" fill="#fff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z" fill="#fff"></path>
+                              </svg></a><a class="btn-control trans" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z" fill="white"></path>
+                                <path d="M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z" fill="white"></path>
+                                <path d="M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z" fill="white"></path>
+                              </svg></a></div>
+                        </div>
+                      </div>
+                      <div class="box-event_item">
+                        <div class="box-event_cols w01">
+                          <div class="information">
+                            <div class="image"><img src="..//assets/images/dashboard/img_event_03.jpg" alt=""></div>
+                            <div class="info">
+                              <div class="box-event_title">All membership packages com...</div>
+                              <p class="text time">Wed 24 Aug 2022 - Wed 7 Sep 2022</p>
+                              <p class="text clock">10:53 AM - 11:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-event_cols w02">
+                          <div class="tag"><span class="tag_label is-pause">Paused</span></div>
+                        </div>
+                        <div class="box-event_cols w03">
+                          <div class="control"><a class="btn btn-black trans" href="#"><span>View details</span></a><a class="btn-control trans" href="#">
+                              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z" fill="#fff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z" fill="#fff"></path>
+                              </svg></a><a class="btn-control trans" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z" fill="white"></path>
+                                <path d="M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z" fill="white"></path>
+                                <path d="M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z" fill="white"></path>
+                              </svg></a></div>
+                        </div>
+                      </div>
+                      <div class="box-event_item">
+                        <div class="box-event_cols w01">
+                          <div class="information">
+                            <div class="image"><img src="..//assets/images/dashboard/img_event_03.jpg" alt=""></div>
+                            <div class="info">
+                              <div class="box-event_title">All membership packages com...</div>
+                              <p class="text time">Wed 24 Aug 2022 - Wed 7 Sep 2022</p>
+                              <p class="text clock">10:53 AM - 11:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-event_cols w02">
+                          <div class="tag"><span class="tag_label is-complete">Completed</span></div>
+                        </div>
+                        <div class="box-event_cols w03">
+                          <div class="control"><a class="btn btn-black trans" href="#"><span>View details</span></a><a class="btn-control trans" href="#">
+                              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z" fill="#fff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z" fill="#fff"></path>
+                              </svg></a><a class="btn-control trans" href="#">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z" fill="white"></path>
+                                <path d="M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z" fill="white"></path>
+                                <path d="M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z" fill="white"></path>
+                              </svg></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pagination-nav">
+                    <ul class="pagination-list">
+                      <li class="page-item"><a class="pages prev trans" href="#"><img src="..//assets/images/ico_pag_back.svg" alt="">Previous</a></li>
+                      <li class="page-item"><a class="pages trans" href="#">1</a></li>
+                      <li class="page-item"><span class="current pages">2</span></li>
+                      <li class="page-item"><a class="pages trans" href="#">3</a></li>
+                      <li class="page-item"><a class="dots trans" href="#">...</a></li>
+                      <li class="page-item"><a class="pages trans" href="#">22</a></li>
+                      <li class="page-item"><a class="pages next trans" href="#">Next<img src="..//assets/images/ico_pag_next.svg" alt=""></a></li>
+                    </ul>
+                  </div>
+                  <div class="m-norecording">
+                    <div class="m-norecording_title">Nothing to see here!</div>
+                    <div class="m-norecording_txt">You haven't been part of any events yet. Explore and be part of some of our upcoming events.</div>
+                    <div class="m-noredcording_btn"><a class="btn btn-primary trans"><span>Create events</span></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="team-tab">
+                <div class="m-content_head">
+                  <div>
+                    <h2 class="title-tab">Team<span class="count-member">Active member: 03</span></h2><span class="description-tab">A team can consist of Community manager and multiple Event managers. <br>Together they form the organizing team.</span>
+                  </div>
+                  <div class="m-content_head-btn"><a class="btn btn-primary btn-add trans" href="#" data-toggle="modal" data-target="#modalAddCo"><span>Create team member</span></a></div>
+                </div>
+                <div class="m-content_body">
+                  <div class="row-member">
+                    <div class="block-member">
+                      <div class="block-member_user">
+                        <div class="image"><img src="..//assets/images/img_cus03.png" alt=""></div>
+                        <div class="info">
+                          <div class="info_name">Robert Fox</div>
+                          <div class="info_email">paul.morrison@gmail.com</div>
+                        </div>
+                      </div>
+                      <div class="block-member_type">
+                        <div class="tag-type">
+                          <div class="ico"><img src="..//assets/images/ico_profile_circle.svg" alt=""></div>Organizer
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-member">
+                    <div class="block-member">
+                      <div class="block-member_user">
+                        <div class="image"><img src="..//assets/images/img_cus05.png" alt=""></div>
+                        <div class="info">
+                          <div class="info_name">Sukriye Efil</div>
+                          <div class="info_email">xcartwright@gmail.com</div>
+                        </div>
+                      </div>
+                      <div class="block-member_type">
+                        <div class="tag-type is-coop">Co-Organizer</div><a class="btn btn-circle trans" data-toggle="modal" data-target="#modalDeleteCo">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#FF6A55"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#FF6A55"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#FF6A55"></path>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="block-member">
+                      <div class="block-member_user">
+                        <div class="image"><img src="..//assets/images/img_cus04.png" alt=""></div>
+                        <div class="info">
+                          <div class="info_name">Selahattin Kuzucu</div>
+                          <div class="info_email">conn.carson@hoppe.com</div>
+                        </div>
+                      </div>
+                      <div class="block-member_type">
+                        <div class="tag-type is-coop">Co-Organizer</div><a class="btn btn-circle trans" data-toggle="modal" data-target="#modalDeleteCo">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#FF6A55"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#FF6A55"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#FF6A55"></path>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modalGen modal fade" id="modalEventCreate" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+              <div class="modal_head">
+                <h2 class="ttl-primary">Create Event</h2>
+                <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="..//assets/images/ico_close_white.svg" alt=""></button>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <div class="modal_body-col">
+                    <h3 class="ttl-col">Basic Information</h3>
+                    <div class="m-input"><span class="m-input_label">Event Name<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="Give your event name ">
+                      </div>
+                    </div>
+                    <div class="gr-input">
+                      <div class="m-input"><span class="m-input_label">Start date<small class="warning">*</small></span>
+                        <div class="input-area">
+                          <input class="input datetimepicker" id="datetimepicker-start" type="text" placeholder="Select date">
+                        </div>
+                      </div>
+                      <div class="m-input"><span class="m-input_label">End date<small class="warning">*</small></span>
+                        <div class="input-area">
+                          <input class="input datetimepicker" id="datetimepicker-end" type="text" placeholder="Select date">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gr-input">
+                      <div class="m-input"><span class="m-input_label">Start time<small class="warning">*</small></span>
+                        <div class="input-area area-select js-select">
+                          <input class="input input-text input-time" type="text" placeholder="Select time ">
+                          <div class="box-select">
+                            <ul class="l-select">
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:15">12:15</li>
+                              <li data-value="12:30">12:30</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="m-input"><span class="m-input_label">End time<small class="warning">*</small></span>
+                        <div class="input-area area-select js-select">
+                          <input class="input input-text input-time" type="text" placeholder="Select time ">
+                          <div class="box-select">
+                            <ul class="l-select">
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:15">12:15</li>
+                              <li data-value="12:30">12:30</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                              <li data-value="12:00">12:00</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-input"><span class="m-input_label">Category<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <select class="input select-box" name="select" required>
+                          <option value="" disabled selected>Please choose Category</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal_body-col">
+                    <h3 class="ttl-col">Additional Information</h3>
+                    <div class="m-input">
+                      <div class="m-editor"><span class="m-input_label">About this event</span>
+                        <div class="m-editor_area">
+                          <div id="editorEventCreate">
+                            <p></p>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-input m-input_counter js-counter"><span class="m-input_label">Event organizer’s name</span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" maxlength="100" placeholder="Event organizer’s name">
+                        <div class="counter"><span class="count-up">0</span>/<span class="count-max">50</span></div>
+                      </div>
+                    </div>
+                    <div class="m-input"><span class="m-input_label">Email</span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="Your email">
+                      </div>
+                    </div>
+                    <div class="m-groupColor"><span class="m-input_label">Choose color</span>
+                      <div class="m-groupColor_list">
+                        <button class="btn" type="button" value="#857DB1" style="background: #857DB1; --my-color-var: #857DB1; "></button>
+                        <button class="btn" type="button" value="#FF0000" style="background: #FF0000; --my-color-var: #FF0000; "></button>
+                        <button class="btn" type="button" value="#FF6600" style="background: #FF6600; --my-color-var: #FF6600; "></button>
+                        <button class="btn" type="button" value="#FF9900" style="background: #FF9900; --my-color-var: #FF9900; "></button>
+                        <button class="btn" type="button" value="#FFCC00" style="background: #FFCC00; --my-color-var: #FFCC00; "></button>
+                        <button class="btn" type="button" value="#FFFF00" style="background: #FFFF00; --my-color-var: #FFFF00; "></button>
+                        <button class="btn" type="button" value="#66CC00" style="background: #66CC00; --my-color-var: #66CC00; "></button>
+                        <button class="btn" type="button" value="#009900" style="background: #009900; --my-color-var: #009900; "></button>
+                        <button class="btn" type="button" value="#006600" style="background: #006600; --my-color-var: #006600; "></button>
+                        <button class="btn" type="button" value="" id="pickerButton"><img src="..//assets/images/ico_hsl.png" alt=""></button>
+                      </div>
+                      <div class="pickerModal">
+                        <div class="modal_head">
+                          <div class="pickerModal_title">Choose group color</div>
+                          <button class="btn btn-circle trans" type="button" id="pickerButtonClose"><img src="..//assets/images/ico_close_white.svg" alt=""></button>
+                        </div>
+                        <div class="modal_body">
+                          <div class="hex">
+                            <div class="hex_wrap">
+                              <div class="hex_title">Hex code</div>
+                              <div class="hex_code showHex">#A4A7FF</div>
+                            </div>
+                            <div class="color"></div>
+                          </div>
+                          <div class="hsl">
+                            <div class="hsl_item"><span class="hsl_item-title">H</span>
+                              <input type="range" step="1" oninput="renderbgColor()" min="0" max="360" id="hue" value="238">
+                              <input class="hsl_item-number showHue" type="text" oninput="handleChange()" value="238">
+                            </div>
+                            <div class="hsl_item"><span class="hsl_item-title">S</span>
+                              <input type="range" step="1" oninput="renderbgColor()" min="0" max="100" id="sat" value="99">
+                              <input class="hsl_item-number showSat" type="text" oninput="handleChange()" value="99">
+                            </div>
+                            <div class="hsl_item"><span class="hsl_item-title">L</span>
+                              <input type="range" step="1" oninput="renderbgColor()" min="0" max="100" id="light" value="82">
+                              <input class="hsl_item-number showLight" type="text" oninput="handleChange()" value="82">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal_foot line justify-content-end">
+                          <button class="btn btn-primary trans" type="submit"><span>Cancel</span></button>
+                          <button class="btn btn-primary trans" type="submit"><span>Apply</span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_foot">
+                  <button class="btn btn-primary trans w-100" type="submit"><span>Create Event</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modalGen modalGen--sponsor modal fade" id="modalAddCo" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+              <div class="modal_head">
+                <h2 class="ttl-primary">Add Co-Organizer</h2>
+                <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="..//assets/images/ico_close_white.svg" alt=""></button>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <div class="gr-input">
+                    <div class="m-input"><span class="m-input_label">First name<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="First name">
+                      </div>
+                    </div>
+                    <div class="m-input"><span class="m-input_label">Last name<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="Last name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-input"><span class="m-input_label">Team member email<small class="warning">*</small></span>
+                    <div class="input-area">
+                      <input class="input input-text" type="text" placeholder="Enter the email address to invite your team member">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_foot">
+                  <button class="btn btn-primary trans w-100" type="submit"><span>Send Invitation</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modalEvent modal fade" id="modalDeleteCo" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+              <div class="modal_head">
+                <h2 class="ttl-primary ttl-primary--normal">Delete Team</h2>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <p class="text">Are you sure you want to delete [Co-Ordanizer name]?</p>
+                </div>
+                <div class="modal_foot"><a class="btn btn-black trans" href="#"><span>Cancel</span></a>
+                  <button class="btn btn-primary trans" type="submit"><span>Confirm</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="m-footer">
+        <div class="wrapper">
+          <div class="m-footer_upper"><a class="m-footer_logo trans" href="#"><img src="..//assets/images/logo_footer.png" alt="eventure" width="132" height="34"></a>
+            <div class="m-footer_nav">
+              <ul class="links">
+                <li><a class="trans" href="#">Privacy Policy</a></li>
+                <li><a class="trans" href="#">Terms of User</a></li>
+              </ul>
+              <div class="community"><span>JOIN OUR COMMUNITY</span>
+                <ul>
+                  <li><a class="trans" href="#"><img src="..//assets/images/ico_facebook.svg" alt="Facebook"></a></li>
+                  <li><a class="trans" href="#"><img src="..//assets/images/ico_twitter.svg" alt="Twitter"></a></li>
+                  <li><a class="trans" href="#"><img src="..//assets/images/ico_linkin.svg" alt="Linked In"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div><small class="copy-right">Copyright © 2022 Fractal. All rights reserved</small>
+        </div>
+      </footer>
+    </div>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="..//assets/js/libs/moment-with-locales.js"></script>
+    <script src="..//assets/js/libs/bootstrap-datetimepicker.min.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="..//assets/js/common.js"></script>
+  </body>
+</html>

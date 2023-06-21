@@ -1,0 +1,61 @@
+.tab-item-main 
+    .tab-panel 
+        a.btn-close Close 
+        .tab-panel-header Create Poll
+        .tab-panel-body 
+            form.form
+                .form-item 
+                    .form-item-label Question
+                    .form-item-input.form-item-length 
+                        textarea.textarea
+                        .form-item-count 
+                            .count 0
+                            .limit /300
+                .form-item 
+                    .form-item-label.form-item-answers Enter answers
+                    .form-item-group
+                        .form-item-inline 
+                            .form-item-input.input-checkbox
+                                label(for="checkbox1") 
+                                    input#checkbox1(type="checkbox")
+                                    span.checkmark
+                            .form-item-input 
+                                input.input.count-input
+                                .form-item-count.count-input
+                                    .count 0
+                                    .limit /120
+                        .form-item-inline 
+                            .form-item-input.input-checkbox
+                                label(for="checkbox2") 
+                                    input#checkbox2(type="checkbox")
+                                    span.checkmark
+                            .form-item-input 
+                                input.input.count-input
+                                .form-item-count.count-input
+                                    .count 0
+                                    .limit /120
+                        .form-item-input 
+                            button.btn.btn-style4
+                                label + Add answers
+                        .form-item-input.input-checkbox
+                            label(for="allow-multiple") Allow multiple answers
+                                input#allow-multiple(type="checkbox")
+                                span.checkmark
+                .form-item 
+                    .form-item-label Show results to attendees after voting?
+                    .form-item-group
+                        .form-item-input.input-radio
+                            label(for="option1") Show poll results instanly
+                                input#option1(type="radio" name="option")
+                                span.checkmark
+                        .form-item-input.input-radio
+                            label(for="option2") Show poll results only after poll has ended
+                                input#option2(type="radio" name="option")
+                                span.checkmark
+                        .form-item-input.input-radio
+                            label(for="option3") Don’t show poll results
+                                input#option3(type="radio" name="option")
+                                span.checkmark
+                .form-footer 
+                    button.btn.btn-deny.trans(type="button") Save Draft
+                    button.btn.btn-primary.trans(type="button") Publish

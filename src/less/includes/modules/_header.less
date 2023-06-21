@@ -1,0 +1,505 @@
+.m-header {
+  background: #1A1D1F;
+  padding: 12px 0;
+  position: relative;
+  z-index: 22;
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_signin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 40px 24px 24px;
+    background: none;
+    z-index: 1;
+    .m-header_logo {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .sign-in-page {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: #6f767e;
+      .sign-in & {
+        opacity: 0;
+        visibility: hidden;
+      }
+      a {
+        color: @color1;
+        margin-left: 5px;
+      }
+    }
+    .media-phone({
+      position: relative;
+      padding-top: 28px;
+      padding-bottom: 0;
+      background: #1a1d1f;
+      .m-header_logo {
+        opacity: 1;
+        visibility: visible;
+      }
+    })
+  }
+  .left-control {
+    display: flex;
+    align-items: center;
+    .ico-back {
+      display: block;
+      margin-right: 32px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      padding-right: 24px;
+      margin-right: 24px;
+      border-right: 1px solid #33383F;
+      .logo {
+        width: 48px;
+        flex-shrink: 0;
+        margin-right: 12px;
+      }
+    }
+    .media-phone ({
+      .ico-back {
+        display: none;
+      }
+      .brand {
+        margin: 0;
+        padding: 0;
+        border: none;
+        span {
+          display: none;
+        }
+      }
+      .btn-schedule-view {
+        display: none;
+      }
+    })
+  }
+  .nav {
+    .media-phone({
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background: #111315;
+      z-index: 99;
+      display: block;
+      transition: .5s ease;
+      &.active {
+        right: 0;
+      }
+      &_head {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        background: #1A1D1F;
+        box-shadow: inset 0px -1px 0px #111315;
+        padding: 28px 16px 28px 28px;
+      }
+      &_body {
+        padding: 24px 17px;
+        height: calc(100% - 95px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+      }
+      &_link {
+        &:last-of-type {
+          text-align: center;
+          padding: 19px 0 0 !important;
+          border-top: 1px solid #272B30 !important;
+          border-right: none;
+          margin: 0;
+          span {
+            padding-left: 34px;
+            background: url(../images/ico_hotline.png) no-repeat left center / 24px;
+          }
+        }
+
+      }
+      &_user {
+        padding: 0;
+        background: none;
+        position: unset;
+        &_icon {
+          width: 48px;
+          height: 48px;
+          flex-shrink: 0;
+        }
+        .user-info {
+          flex: 1;
+          padding-left: 12px;
+        }
+        .user-name {
+          color: #fcfcfc;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .user-since {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          color: #6f767e;
+        }
+        &_wrap {
+          display: flex;
+          align-items: center;
+          padding: 12px;
+          background: #272B30;
+          box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.02), inset 0px -1px 1px rgba(0, 0, 0, 0.04);
+          border-radius: 12px;
+          position: absolute;
+          width: calc(100% - 34px);
+          bottom: 92px;
+          left: 17px;
+        }
+        &-menu {
+          opacity: 1;
+          visibility: visible;
+          position: relative;
+          width: 100%;
+          top: auto;
+          padding-top: 0;
+          &_inner {
+            background: none;
+            border: none;
+            padding: 0;
+          }
+          .user-menu {
+            li {
+              margin-bottom: 8px;
+            }
+            a {
+              font-size: 16px;
+              padding: 16px 14px;
+              border-radius: 12px;
+              &.active {
+                background: #272b30;
+                color: #efefef;
+                svg {
+                  path {
+                    fill:#efefef;
+                  }
+
+                }
+              }
+            }
+          }
+
+        }
+      }
+    })
+  }
+}
+
+.nav-main {
+  ul {
+    display: flex;
+    li {
+      position: relative;
+      &.activated {
+        &::after {
+          content: '';
+          position: absolute;
+          width: calc(100% - 24px);
+          height: 2px;
+          background-color: #fff;
+          bottom: -12px;
+          left: 12px;
+        }
+        a {
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+      a {
+        color: #6F767E;
+        font-size: 16px;
+        padding: 12px;
+        display: block;
+      }
+    }
+  }
+  .media-phone ({
+    padding-top: 17px;
+    ul {
+      justify-content: space-around !important;
+      li {
+        a {
+          padding-top: 32px;
+          font-size: 12px;
+          line-height: 20px;
+          background-repeat: no-repeat;
+          background-position: top center;
+          &.recp {
+            background-image: url(../images/reception/ico_tv.svg);
+          }
+          &.agenda {
+            background-image: url(../images/reception/ico_schedule.svg);
+          }
+          &.network {
+            background-image: url(../images/reception/ico_light.svg);
+          }
+          &.booth {
+            background-image: url(../images/reception/ico_building.svg);
+          }
+        }
+        &.activated {
+          &::after {
+            display: none;
+          }
+          a {
+            color: #bbb2e9;
+            &.recp {
+              background-image: url(../images/reception/ico_tv_active.svg);
+            }
+            &.agenda {
+              background-image: url(../images/reception/ico_schedule_active.svg);
+            }
+            &.network {
+              background-image: url(../images/reception/ico_light_active.svg);
+            }
+            &.booth {
+              background-image: url(../images/reception/ico_building_active.svg);
+            }
+          }
+
+        }
+      }
+    }
+  })
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  border: none;
+  position: sticky;
+  top: 220px;
+  &_link {
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 12px;
+    &:first-of-type {
+      border-right: 1px solid #33383F;
+      padding-right: 24px;
+      margin-right: 24px;
+    }
+    .reception & {
+      &:last-of-type {
+        border-right: 1px solid #33383F;
+        padding-right: 24px;
+        margin-right: 24px;
+        padding-left: 24px;
+      }
+      &:first-of-type {
+        border: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+    .boots-detail & {
+      &:last-of-type {
+        border-right: 1px solid #33383F;
+        padding-right: 24px;
+        margin-right: 24px;
+        padding-left: 24px;
+      }
+      &:first-of-type {
+        border: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  &_body {
+    display: flex;
+  }
+  &_icon {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #6F767E;
+    &:hover {
+      span {
+        &::before {
+          background-color: #fff;
+        }
+      }
+    }
+    &.activated {
+      color: #fff;
+      span {
+        &::before {
+          background-color: #fff;
+        }
+      }
+    }
+    &.new {
+      span {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: #FF6A55;
+          top: 2px;
+          right: 2px;
+          width: 8px;
+          height: 8px;
+          border-radius: 8px;
+        }
+      }
+    }
+    span {
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: #6F767E;
+        -webkit-mask-position:center;
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        transition: 0.3s ease-in-out;
+      }
+    }
+    .ico_notification {
+      &::before {
+        -webkit-mask-image: url('../images/ico_notification.svg');
+      }
+    }
+    .ico_messages {
+      &::before {
+        -webkit-mask-image: url('../images/ico_messages.svg');
+      }
+    }
+  }
+  &_user {
+    padding-right: 20px;
+    background: url('../images/ico_arrow_down.svg') no-repeat right center;
+    position: relative;
+    &:hover {
+      .nav_user-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &_icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+    &-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding-top: 10px;
+      z-index: 9;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s ease;
+      width: 190px;
+      &_inner {
+        background: #1A1D1F;
+        border: 2px solid #33383F;
+        border-radius: 16px;
+        padding: 16px;
+      }
+      .user-menu {
+        a {
+          display: flex;
+          align-items: center;
+          padding: 12px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          color: #6f767e;
+          border-radius: 4px;
+
+          svg {
+            margin-right: 14px;
+            path {
+              transition: .3s ease;
+            }
+
+          }
+          &:hover {
+            color: #efefef;
+            background: #272b30;
+            svg {
+              path {
+                fill: #EFEFEF;
+              }
+            }
+          }
+        }
+        .is-logout {
+          a {
+            color: #ff6a55;
+            svg {
+              path {
+                fill: #ff6a55;;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  .m-header_logo {
+    border-right: 1px solid #33383F;
+    padding-right: 24px;
+    margin-right: 24px;
+  }
+
+}
+
+.nav-icon {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    > li {
+      width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}

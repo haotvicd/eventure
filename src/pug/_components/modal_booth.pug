@@ -1,0 +1,84 @@
+#modalBooth.modalGen.modalGen--sponsor.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    form.modal-content
+      .modal_head
+        h2.ttl-primary.sm Add Booth
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          .modal_body-col.modal_body-col--width100
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Booth name
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" maxlength="200")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 200
+            .m-input
+              span.m-input_label Booth logo
+                small.warning *
+                button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+              .input-file-wrap
+                input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                img.img-upload(src='' alt='your image')
+                .btn-upload
+                  img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+                .btn-update
+                  img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                  span Upload image
+                .btn-remove
+                  img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                  span Remove image
+                p Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Tags
+              .input-area
+                input.input.input-text(type="text" maxlength="24")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 24
+            .m-input
+              span.m-input_label Member
+              .input-area
+                input.input.input-text(type="text")
+            .gr-control
+              .gr-control_check
+                .gr-control_check-inner
+                  .title
+                    strong Chat
+                    p Can exhibitors and visitors message to each other?
+                  .check-box
+                    input#checkbox.input-checkbox(type='checkbox' checked)
+                    label.checkbox-label(for='checkbox') Toggle
+              .gr-control_check
+                .gr-control_check-inner
+                  .title
+                    strong Tables
+                    p Can visitors join the tables and chat with exhibitors?
+                  .check-box
+                    input#checkbox1.input-checkbox(type='checkbox' checked)
+                    label.checkbox-label(for='checkbox1') Toggle
+                .table-count.m-input
+                  p Number of tables
+                  .input-area.area-select.js-number
+                    .number
+                      span.minus
+                        img(src=path+"/assets/images/ico_minus.svg", alt="")
+                      input.input.input-number(type='number' value='1')
+                      span.plus
+                        img(src=path+"/assets/images/ico_add.svg", alt="")
+              .gr-control_check
+                .gr-control_check-inner
+                  .title
+                    strong Live Stream
+                    p Can exhibitors show live video to visitors?
+                  .check-box
+                    input#checkbox2.input-checkbox(type='checkbox')
+                    label.checkbox-label(for='checkbox2') Toggle
+        .modal_foot
+          button(type="submit", class="btn btn-primary trans w-100")
+            span Save

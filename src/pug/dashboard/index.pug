@@ -1,0 +1,442 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Dashboard'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'dashboard'
+  -jsID         = 'calendar'
+  -path         = '../'
+  -hasFooter    = true
+
+block scripts
+
+block container
+  .m-dash
+    .m-dash_side
+      ul.nav.nav-tabs
+        li.nav-link
+          a.events.active(href="#events-tab" data-toggle="tab") Events
+        li.nav-link
+          a.team(href="#team-tab" data-toggle="tab") Team
+      a.link-help.trans(href="#")
+        img(src=path+"/assets/images/ico_help.svg", alt="")
+        |Help Center
+    .m-content.m-dash_content
+      .tab-content
+        .tab-pane.fade.show.active#events-tab
+          .m-content_head
+            div
+              h2.title-tab My Events
+            .m-content_head-btn
+              a.btn.btn-primary.btn-add.trans(href="#" data-toggle="modal" data-target="#modalEventCreate")
+                span Create Event
+          .m-content_body
+            .filter-block
+              .m-input
+                .input-a
+                  .input-a_inner.js-search-box
+                    input.input.input-text.input-search(data-search='' type='text' placeholder='Search event name')
+                    .box-select.speaker-result(style='display: none;')
+                      p.ttl Recent search
+                      ul
+                        li
+                          .box-event-item
+                            .image
+                              img(src=path+"/assets/images/dashboard/img_event_01.jpg", alt="")
+                            .info
+                              .box-event_title Save Money, Without Thin...
+                          a.remove(href='javascript:;')
+                            img(src=path+'/assets/images/ico_close_gray.svg' alt='')
+                        li
+                          .box-event-item
+                            .image
+                              img(src=path+"/assets/images/dashboard/img_event_03.jpg", alt="")
+                            .info
+                              .box-event_title All membership packages com...
+                          a.remove(href='javascript:;')
+                            img(src=path+'/assets/images/ico_close_gray.svg' alt='')
+                    a.btn-clear.act.trans(href='javascript:;')
+                      img(src=path+'/assets/images/ico_close.svg' alt='')
+                    a.btn-clear.arrow.act.trans(href='javascript:;')
+                      img(src=path+'/assets/images/ico_arrow_backward.svg' alt='')
+              .m-group
+                span.m-group_label Showing
+                .m-group_list
+                  button.btn.trans.current(data-name='all')
+                    span All
+                  button.btn.trans(data-name='group01')
+                    span Upcoming
+                  button.btn.trans(data-name='group02')
+                    span Ongoing
+                  button.btn.trans(data-name='group03')
+                    span Paused
+                  button.btn.trans(data-name='group04')
+                    span Completed
+            .box-event
+              .box-event_head
+                span.title.w01 Event Name
+                span.title.w02 Status
+                span.title.w03 Action
+              .box-event_body
+                .box-event_item
+                  .box-event_cols.w01
+                    .information
+                      .image
+                        img(src=path+"/assets/images/dashboard/img_event_01.jpg", alt="")
+                      .info
+                        .box-event_title Save Money, Without Thin...
+                        p.text.time Wed 24 Aug 2022 - Wed 7 Sep 2022
+                        p.text.clock 10:53 AM - 11:30 AM
+                  .box-event_cols.w02
+                    .tag
+                      span.tag_label.is-coming Upcoming
+                  .box-event_cols.w03
+                    .control
+                      a.btn.btn-black.trans(href="#")
+                        span View details
+                      a.btn-control.trans(href="#")
+                        svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z' fill='#fff')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z' fill='#fff')
+                      a.btn-control.trans(href="#")
+                        svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z' fill='white')
+                          path(d='M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z' fill='white')
+                          path(d='M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z' fill='white')
+                .box-event_item
+                  .box-event_cols.w01
+                    .information
+                      .image
+                        img(src=path+"/assets/images/dashboard/img_event_02.jpg", alt="")
+                      .info
+                        .box-event_title The Best or Nothing
+                        p.text.time Wed 24 Aug 2022 - Wed 7 Sep 2022
+                        p.text.clock 10:53 AM - 11:30 AM
+                  .box-event_cols.w02
+                    .tag
+                      span.tag_label.is-live LIVE
+                  .box-event_cols.w03
+                    .control
+                      a.btn.btn-black.trans(href="#")
+                        span View details
+                      a.btn-control.trans(href="#")
+                        svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z' fill='#fff')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z' fill='#fff')
+                      a.btn-control.trans(href="#")
+                        svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z' fill='white')
+                          path(d='M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z' fill='white')
+                          path(d='M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z' fill='white')
+                .box-event_item
+                  .box-event_cols.w01
+                    .information
+                      .image
+                        img(src=path+"/assets/images/dashboard/img_event_03.jpg", alt="")
+                      .info
+                        .box-event_title All membership packages com...
+                        p.text.time Wed 24 Aug 2022 - Wed 7 Sep 2022
+                        p.text.clock 10:53 AM - 11:30 AM
+                  .box-event_cols.w02
+                    .tag
+                      span.tag_label.is-pause Paused
+                  .box-event_cols.w03
+                    .control
+                      a.btn.btn-black.trans(href="#")
+                        span View details
+                      a.btn-control.trans(href="#")
+                        svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z' fill='#fff')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z' fill='#fff')
+                      a.btn-control.trans(href="#")
+                        svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z' fill='white')
+                          path(d='M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z' fill='white')
+                          path(d='M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z' fill='white')
+                .box-event_item
+                  .box-event_cols.w01
+                    .information
+                      .image
+                        img(src=path+"/assets/images/dashboard/img_event_03.jpg", alt="")
+                      .info
+                        .box-event_title All membership packages com...
+                        p.text.time Wed 24 Aug 2022 - Wed 7 Sep 2022
+                        p.text.clock 10:53 AM - 11:30 AM
+                  .box-event_cols.w02
+                    .tag
+                      span.tag_label.is-complete Completed
+                  .box-event_cols.w03
+                    .control
+                      a.btn.btn-black.trans(href="#")
+                        span View details
+                      a.btn-control.trans(href="#")
+                        svg(width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5001 17C16.6121 17 19.0866 13.933 20.1831 12.1047C20.2081 12.063 20.215 12.0278 20.215 12C20.215 11.9722 20.2081 11.937 20.1831 11.8953C19.0866 10.067 16.6121 7 12.5001 7C8.38802 7 5.91349 10.067 4.81706 11.8953C4.79201 11.937 4.78516 11.9722 4.78516 12C4.78516 12.0278 4.79201 12.063 4.81706 12.1047C5.91349 13.933 8.38801 17 12.5001 17ZM21.8983 13.1334C20.71 15.1148 17.7151 19 12.5001 19C7.28504 19 4.29014 15.1148 3.10186 13.1334C2.67959 12.4292 2.67959 11.5708 3.10186 10.8666C4.29014 8.88521 7.28504 5 12.5001 5C17.7151 5 20.71 8.88521 21.8983 10.8666C22.3205 11.5708 22.3205 12.4292 21.8983 13.1334Z' fill='#fff')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M12.5 13C13.0523 13 13.5 12.5523 13.5 12C13.5 11.4477 13.0523 11 12.5 11C11.9477 11 11.5 11.4477 11.5 12C11.5 12.5523 11.9477 13 12.5 13ZM12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z' fill='#fff')
+                      a.btn-control.trans(href="#")
+                        svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          path(d='M11.6666 5.00004C11.6666 5.92052 10.9205 6.66671 9.99998 6.66671C9.07951 6.66671 8.33331 5.92052 8.33331 5.00004C8.33331 4.07957 9.07951 3.33337 9.99998 3.33337C10.9205 3.33337 11.6666 4.07957 11.6666 5.00004Z' fill='white')
+                          path(d='M11.6666 10C11.6666 10.9205 10.9205 11.6667 9.99998 11.6667C9.07951 11.6667 8.33331 10.9205 8.33331 10C8.33331 9.07957 9.07951 8.33337 9.99998 8.33337C10.9205 8.33337 11.6666 9.07957 11.6666 10Z' fill='white')
+                          path(d='M11.6666 15C11.6666 15.9205 10.9205 16.6667 9.99998 16.6667C9.07951 16.6667 8.33331 15.9205 8.33331 15C8.33331 14.0796 9.07951 13.3334 9.99998 13.3334C10.9205 13.3334 11.6666 14.0796 11.6666 15Z' fill='white')
+            .pagination-nav
+              ul.pagination-list
+                li.page-item
+                  a.pages.prev.trans(href="#")
+                    img(src=path+"/assets/images/ico_pag_back.svg", alt="")
+                    | Previous
+                li.page-item
+                  a.pages.trans(href="#") 1
+                li.page-item
+                  span.current.pages 2
+                li.page-item
+                  a.pages.trans(href="#") 3
+                li.page-item
+                  a.dots.trans(href="#") ...
+                li.page-item
+                  a.pages.trans(href="#") 22
+                li.page-item
+                  a.pages.next.trans(href="#") Next
+                    img(src=path+"/assets/images/ico_pag_next.svg", alt="")
+            .m-norecording
+              .m-norecording_title Nothing to see here!
+              .m-norecording_txt You haven't been part of any events yet. Explore and be part of some of our upcoming events.
+              .m-noredcording_btn
+                a(class="btn btn-primary trans")
+                  span Create events
+        .tab-pane.fade#team-tab
+          .m-content_head
+            div
+              h2.title-tab Team
+                span.count-member Active member: 03
+              span.description-tab A team can consist of Community manager and multiple Event managers. <br>Together they form the organizing team.
+            .m-content_head-btn
+              a.btn.btn-primary.btn-add.trans(href="#" data-toggle="modal" data-target="#modalAddCo")
+                span Create team member
+          .m-content_body
+            .row-member
+              .block-member
+                .block-member_user
+                  .image
+                    img(src=path+'/assets/images/img_cus03.png' alt='')
+                  .info
+                    .info_name Robert Fox
+                    .info_email paul.morrison@gmail.com
+                .block-member_type
+                  .tag-type
+                    .ico
+                      img(src=path+"/assets/images/ico_profile_circle.svg", alt="")
+                    |Organizer
+            .row-member
+              .block-member
+                .block-member_user
+                  .image
+                    img(src=path+'/assets/images/img_cus05.png' alt='')
+                  .info
+                    .info_name Sukriye Efil
+                    .info_email xcartwright@gmail.com
+                .block-member_type
+                  .tag-type.is-coop Co-Organizer
+                  a.btn.btn-circle.trans(data-toggle="modal" data-target="#modalDeleteCo")
+                    svg(width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path.svg-trash(fill-rule='evenodd' clip-rule='evenodd' d='M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z' fill='#FF6A55')
+                      path.svg-trash(fill-rule='evenodd' clip-rule='evenodd' d='M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z' fill='#FF6A55')
+                      path.svg-trash(fill-rule='evenodd' clip-rule='evenodd' d='M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z' fill='#FF6A55')
+              .block-member
+                .block-member_user
+                  .image
+                    img(src=path+'/assets/images/img_cus04.png' alt='')
+                  .info
+                    .info_name Selahattin Kuzucu
+                    .info_email conn.carson@hoppe.com
+                .block-member_type
+                  .tag-type.is-coop Co-Organizer
+                  a.btn.btn-circle.trans(data-toggle="modal" data-target="#modalDeleteCo")
+                    svg(width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path.svg-trash(fill-rule='evenodd' clip-rule='evenodd' d='M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z' fill='#FF6A55')
+                      path.svg-trash(fill-rule='evenodd' clip-rule='evenodd' d='M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z' fill='#FF6A55')
+                      path.svg-trash(fill-rule='evenodd' clip-rule='evenodd' d='M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z' fill='#FF6A55')
+
+  #modalEventCreate.modalGen.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary Create Event
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .modal_body-col
+              h3.ttl-col Basic Information
+              .m-input
+                span.m-input_label Event Name
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Give your event name ")
+              .gr-input
+                .m-input
+                  span.m-input_label Start date
+                    small.warning *
+                  .input-area
+                    input.input.datetimepicker#datetimepicker-start(type='text' placeholder="Select date")
+                .m-input
+                  span.m-input_label End date
+                    small.warning *
+                  .input-area
+                    input.input.datetimepicker#datetimepicker-end(type='text' placeholder="Select date")
+              .gr-input
+                .m-input
+                  span.m-input_label Start time
+                    small.warning *
+                  .input-area.area-select.js-select
+                    input.input.input-text.input-time(type="text" placeholder="Select time ")
+                    .box-select
+                      ul.l-select
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:15") 12:15
+                        li(data-value="12:30") 12:30
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                .m-input
+                  span.m-input_label End time
+                    small.warning *
+                  .input-area.area-select.js-select
+                    input.input.input-text.input-time(type="text" placeholder="Select time ")
+                    .box-select
+                      ul.l-select
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:15") 12:15
+                        li(data-value="12:30") 12:30
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+                        li(data-value="12:00") 12:00
+              .m-input
+                span.m-input_label Category
+                  small.warning *
+                .input-area
+                  select.input.select-box(name="select" required)
+                    option(value="" disabled selected) Please choose Category
+                    option(value="1") 1
+                    option(value="2") 2
+                    option(value="3") 3
+            .modal_body-col
+              h3.ttl-col Additional Information
+              .m-input
+                .m-editor
+                  span.m-input_label About this event
+                  .m-editor_area
+                    #editorEventCreate
+                      p
+                      p
+              .m-input.m-input_counter.js-counter
+                span.m-input_label Event organizer’s name
+                .input-area
+                  input.input.input-text(type="text" maxlength="100" placeholder="Event organizer’s name")
+                  .counter
+                    span.count-up 0
+                    |/
+                    span.count-max 50
+              .m-input
+                span.m-input_label Email
+                .input-area
+                  input.input.input-text(type="text" placeholder="Your email")
+              .m-groupColor
+                span.m-input_label Choose color
+                .m-groupColor_list
+                  button(type='button' value='#857DB1' class='btn' style='background: #857DB1; --my-color-var: #857DB1; ')
+                  button(type='button' value='#FF0000' class='btn' style='background: #FF0000; --my-color-var: #FF0000; ')
+                  button(type='button' value='#FF6600' class='btn' style='background: #FF6600; --my-color-var: #FF6600; ')
+                  button(type='button' value='#FF9900' class='btn' style='background: #FF9900; --my-color-var: #FF9900; ')
+                  button(type='button' value='#FFCC00' class='btn' style='background: #FFCC00; --my-color-var: #FFCC00; ')
+                  button(type='button' value='#FFFF00' class='btn' style='background: #FFFF00; --my-color-var: #FFFF00; ')
+                  button(type='button' value='#66CC00' class='btn' style='background: #66CC00; --my-color-var: #66CC00; ')
+                  button(type='button' value='#009900' class='btn' style='background: #009900; --my-color-var: #009900; ')
+                  button(type='button' value='#006600' class='btn' style='background: #006600; --my-color-var: #006600; ')
+                  button(type='button' value='' class='btn' id='pickerButton')
+                    img(src=path + "/assets/images/ico_hsl.png", alt="")
+                .pickerModal
+                  .modal_head
+                    .pickerModal_title Choose group color
+                    button(type='button' class="btn btn-circle trans" id='pickerButtonClose')
+                      img(src=path + "/assets/images/ico_close_white.svg", alt="")
+
+                  .modal_body
+                    .hex
+                      .hex_wrap
+                        .hex_title Hex code
+                        .hex_code.showHex #A4A7FF
+                      .color
+                    .hsl
+                      .hsl_item
+                        span.hsl_item-title H
+                        input(type="range" step="1" oninput="renderbgColor()" min="0" max="360" id="hue" value="238")
+                        input(type="text" oninput="handleChange()" class='hsl_item-number showHue' value='238')
+                      .hsl_item
+                        span.hsl_item-title S
+                        input(type="range" step="1" oninput="renderbgColor()" min="0" max="100" id="sat" value="99")
+                        input(type="text" oninput="handleChange()" class='hsl_item-number showSat' value='99')
+                      .hsl_item
+                        span.hsl_item-title L
+                        input(type="range" step="1" oninput="renderbgColor()" min="0" max="100" id="light" value="82")
+                        input(type="text" oninput="handleChange()" class='hsl_item-number showLight' value='82')
+
+                  .modal_foot.line.justify-content-end
+                    button(type="submit", class="btn btn-primary trans")
+                      span Cancel
+                    button(type="submit", class="btn btn-primary trans")
+                      span Apply
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-100")
+              span Create Event
+
+  #modalAddCo.modalGen.modalGen--sponsor.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary Add Co-Organizer
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .gr-input
+              .m-input
+                span.m-input_label First name
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="First name")
+              .m-input
+                span.m-input_label Last name
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Last name")
+            .m-input
+              span.m-input_label Team member email
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" placeholder="Enter the email address to invite your team member")
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-100")
+              span Send Invitation
+
+  #modalDeleteCo.modalEvent.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary.ttl-primary--normal Delete Team
+        .modal-wrapper
+          .modal_body
+            p.text Are you sure you want to delete [Co-Ordanizer name]?
+          .modal_foot
+            a.btn.btn-black.trans(href="#")
+              span Cancel
+            button(type="submit", class="btn btn-primary trans")
+              span Confirm

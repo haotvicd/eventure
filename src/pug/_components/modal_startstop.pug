@@ -1,0 +1,47 @@
+#modalCloseEvent.modalEvent.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    form.modal-content
+      .modal_head
+        h2.ttl-primary.ttl-primary--normal Close event
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          p.text This action will permanently close this event. Are you sure you want to close this event?
+          .m-input
+            span.m-input_label Please type “
+              strong CLOSE
+              |” to confirm
+            .input-area
+              input.input.input-text(type="text" placeholder="Enter here")
+        .modal_foot
+          a.btn.btn-black.trans(href="#")
+            span Cancel
+          button(type="submit", class="btn btn-secondary btn-close trans")
+            span Save
+
+#modalStartStop.modalEvent.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    form.modal-content
+      .modal_head
+        h2.ttl-primary.ttl-primary--normal.start Start event
+        h2.ttl-primary.ttl-primary--normal.pause Pause event
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          p.text Are you sure you want to start this event?
+          .m-input
+            span.m-input_label Please type “
+              strong.start START
+              strong.pause PAUSE
+              |” to confirm
+            .input-area
+              input.input.input-text(type="text" placeholder="Enter here")
+        .modal_foot
+          a.btn.btn-black.trans(href="#")
+            span Cancel
+          a.btn.btn-primary.btn-close.trans.start(href="javascript:;")
+            span Start event
+          a.btn.btn-secondary.btn-close.trans.pause(href="javascript:;")
+            span Pause event

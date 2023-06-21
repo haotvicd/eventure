@@ -1,0 +1,286 @@
+.m-content_head
+  div
+    h2.title-tab Sessions
+    span.description-tab Add to your event schedule with the groups
+  .m-content_head-btn
+    a.btn.btn-sm.btn-tag.trans(href="#" data-toggle="modal" data-target="#groupManager")
+      span Group Management
+    a.btn.btn-sm.btn-primary.btn-add.trans(href="#" data-toggle="modal" data-target="#addActivity")
+      span Add an Activity
+
+.m-group
+  span.m-group_label Group
+  .m-group_list
+    button(class="btn trans current", data-name='all')
+      span All
+    button(class="btn trans", data-name='group01')
+      span.btn_icon(data-bg='#FFC88B' class='setBg')
+      span Group 1
+    button(class="btn trans", data-name='group02')
+      span.btn_icon(data-bg='#B7FFE5' class='setBg')
+      span Group 2
+    button(class="btn trans", data-name='group03')
+      span.btn_icon(data-bg='#FEBCFF' class='setBg')
+      span Group 3
+
+.m-calendar.overwrap
+  .m-calendar_inner
+    .swiper-container.js-m-calendar
+      .swiper-wrapper
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label.current Tue
+            button(class="btn trans m-calendar_item-box current")
+              span.m-calendar_item-day 19
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Wed
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 20
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Fri
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 22
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Sun
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 24
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Mon
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 25
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Tue
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 26
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Wed
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 27
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Thu
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 28
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Fri
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 29
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Fri
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 22
+              span.m-calendar_item-month Aug
+        .item.swiper-slide
+          .m-calendar_item
+            span.m-calendar_item-label Fri
+            button(class="btn trans m-calendar_item-box")
+              span.m-calendar_item-day 22
+              span.m-calendar_item-month Aug
+      //- .item
+      //-   .m-calendar_item
+      //-     span.m-calendar_item-label Fri
+      //-     button(class="btn trans m-calendar_item-box")
+      //-       span.m-calendar_item-day 22
+      //-       span.m-calendar_item-month Aug
+      //- .item
+      //-   .m-calendar_item
+      //-     span.m-calendar_item-label Fri
+      //-     button(class="btn trans m-calendar_item-box")
+      //-       span.m-calendar_item-day 22
+      //-       span.m-calendar_item-month Aug
+      //- .item
+      //-   .m-calendar_item
+      //-     span.m-calendar_item-label Fri
+      //-     button(class="btn trans m-calendar_item-box")
+      //-       span.m-calendar_item-day 22
+      //-       span.m-calendar_item-month Aug
+      //- .item
+      //-   .m-calendar_item
+      //-     span.m-calendar_item-label Fri
+      //-     button(class="btn trans m-calendar_item-box")
+      //-       span.m-calendar_item-day 22
+      //-       span.m-calendar_item-month Aug
+      //- .item
+      //-   .m-calendar_item
+      //-     span.m-calendar_item-label Fri
+      //-     button(class="btn trans m-calendar_item-box")
+      //-       span.m-calendar_item-day 22
+      //-       span.m-calendar_item-month Aug
+
+  .m-calendar_button.prev
+    img(src=path+"/assets/images/ico_slide_prev.svg", alt="")
+  .m-calendar_button.next
+    img(src=path+"/assets/images/ico_slide_next.svg", alt="")
+
+.m-sessions
+  .m-sessions_block
+    .m-sessions_block-time
+      .time-point.start 11:00
+      .time-point.break 11:20
+        .modal-break
+          .modal-break_inner
+            .modal-break_head
+              .title
+                .ico
+                  img(src=path+"/assets/images/ico_break_yellow.svg", alt="")
+                |Break Time
+              .m-timeline_modal-control
+                button.btn.btn-circle.trans(type='button')
+                  img(src='./assets/images/ico_trash.svg' alt='')
+                button.btn.btn-black.btn-edit.trans(type='button')
+                  span Edit
+            .modal-break_body
+              strong Break time name
+              span Tuesday, August 19th 2022
+                small Start at 11:20 - 20 Mins
+              p Description of break time They will find you. They will deliver to you.
+      .time-point.end 12:00
+    .m-sessions_block-content
+      .ct-head
+        ul.l-group
+          li(style="background-color: #FFC88B") Group 1
+          li(style="background-color: #B7FFE5") Group 2
+          li(style="background-color: #FEBCFF") Group 3
+        .m-timeline_modal-control
+          button.btn.btn-circle.trans(type='button')
+            img(src='./assets/images/ico_trash.svg' alt='')
+          button.btn.btn-black.btn-edit.trans(type='button')
+            span Edit
+      .ct-body
+        h2.session-title All our PRO level features at your fingertips
+        p.session-desc Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.
+      .ct-footer.swiper-container
+        .swiper-wrapper
+          .ct-footer_block.swiper-slide
+            strong Host
+            ul.l-mem
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus02.png", alt="")
+                .l-mem_info
+                  .name Esther Howard
+                  p.tt Cofounder & CEO, Spaktoro
+          .ct-footer_block.swiper-slide
+            strong Speaker
+            ul.l-mem
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus01.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, New York
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus03.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus04.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus04.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus04.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro
+  .m-sessions_block.m-sessions_block--break
+    .m-sessions_block-time
+      .time-point.start 11:30
+      .time-point.end 12:00
+    .m-sessions_block-content
+      .ct-head
+        h2.session-title Breaktime name
+        .m-timeline_modal-control
+          button.btn.btn-circle.trans(type='button')
+            img(src='./assets/images/ico_trash.svg' alt='')
+          button.btn.btn-black.btn-edit.trans(type='button')
+            span Edit
+      .ct-body
+        p.session-desc Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.
+  .m-sessions_block
+    .m-sessions_block-time
+      .time-point.start 13:30
+      .time-point.end 15:00
+    .m-sessions_block-content
+      .ct-head
+        ul.l-group
+          li(style="background-color: #FFC88B") Group 1
+        .m-timeline_modal-control
+          button.btn.btn-circle.trans(type='button')
+            img(src='./assets/images/ico_trash.svg' alt='')
+          button.btn.btn-black.btn-edit.trans(type='button')
+            span Edit
+      .ct-body
+        h2.session-title Save Money, Without Thinking About It
+        p.session-desc Our couriers have a very particular set of skills. They will find you. They will deliver to you. This is Intercom: the Business Messenger you and your customers will love. Father Goes For Kidney Treatment – Leaves Hospital As A Women.
+      .ct-footer.swiper-container
+        .swiper-wrapper
+          .ct-footer_block.swiper-slide
+            strong Host
+            ul.l-mem
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus02.png", alt="")
+                .l-mem_info
+                  .name Esther Howard
+                  p.tt Cofounder & CEO, Spaktoro
+          .ct-footer_block.swiper-slide
+            strong Speaker
+            ul.l-mem
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus01.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, New York
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus03.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus04.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus04.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro
+              li.l-mem_item(data-toggle="modal" data-target="#modalViewSpeakerMain")
+                .image
+                  img(src=path+"/assets/images/img_cus04.png", alt="")
+                .l-mem_info
+                  .name Robert Fox
+                  p.tt Cofounder & CEO, Spaktoro

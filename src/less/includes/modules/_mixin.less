@@ -1,0 +1,71 @@
+@screen-phone-small: 480px;
+@screen-phone: 767px;
+@screen-tablet: 922px;
+@screen-tablet-max: 1024px;
+@screen-desktop: 1200px;
+@bg1 : #BBB2E9;
+@bg2 : #FF6A55;
+@bg3 : #857DB1;
+@color1 : #BBB2E9;
+@color2: #FF6A55;
+// ===========================================
+// Responsive Mixins
+// ===========================================
+.media-phone-small(@rules) {
+	@media screen and (max-width: @screen-phone-small) {
+		@rules();
+	}
+}
+.media-phone(@rules) {
+	@media screen and (max-width: @screen-phone) {
+		@rules();
+	}
+}
+
+.media-tablet(@rules) {
+	@media screen and (min-width: (@screen-phone + 1px)) and (max-width: (@screen-desktop - 1px)) {
+		@rules();
+	}
+}
+.media-tablet-max(@rules) {
+	@media screen and (max-width: (@screen-tablet-max)) {
+		@rules();
+	}
+}
+
+.media-desktop(@rules) {
+	@media screen and (min-width: @screen-desktop) {
+		@rules();
+	}
+}
+
+.media-custom-max(@width, @rules) {
+	@media screen and (max-width: @width) {
+		@rules();
+	}
+}
+
+.media-custom-min(@width, @rules) {
+	@media screen and (min-width: @width) {
+		@rules();
+	}
+}
+
+// Greater Than
+.media-gt-phone(@rules) {
+	@media (min-width: (@screen-phone + 1px)) {
+		@rules();
+	}
+}
+
+.media-gt-tablet(@rules) {
+	@media (min-width: (@screen-tablet + 1px)) {
+		@rules();
+	}
+}
+.br-sp {
+	display: none;
+	@media screen and (max-width: 767px) {
+		display: block;
+	}
+}

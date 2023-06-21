@@ -1,0 +1,307 @@
+.m-content_head
+  div
+    h2.title-tab Pre-Recorded Videos
+    span.description-tab You can upload videos which can be played during a Live session.
+    .m-content_head-button
+      button.btn.btn-primary.btn-cloud_upload.trans.btn-sm(
+        data-toggle="modal"
+        data-target="#uploadVideo"
+      )
+        span Upload
+      span.txt Or
+      button.btn.btn-black.btn-add--library.trans.btn-sm(
+        data-toggle="modal"
+        data-target="#uploadVideoFromLibrary"
+      )
+        span Add new from library
+
+.m-allvideo
+  .m-allvideo_head
+    h3.m-allvideo_head-title All video
+    button.btn.btn-sm.btn-secondary.btn-delete.trans
+      span Delete
+  .m-allvideo_table.js-checkAll
+    .m-allvideo_table-head
+      .m-allvideo_table-th.col1
+        label.module-check
+          input.form-checkbox.checkAll(type="checkbox", name="speakers[]")
+          span.label Check
+      .m-allvideo_table-th.col2
+        span.txt Video name
+      .m-allvideo_table-th.col3
+        span.txt Duration
+      .m-allvideo_table-th.col4
+        span.txt Date Created
+      .m-allvideo_table-th.col5
+        span.txt Time
+      .m-allvideo_table-th.col6
+        span.txt Choose Sessions
+    .m-allvideo_table-body
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col2
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video01.png", alt="What describes you best?")
+          span.txt What describes you best?
+        .m-allvideo_table-td.col3
+          span.txt 00:12:00
+        .m-allvideo_table-td.col4
+          span.txt 15 Aug 2022
+        .m-allvideo_table-td.col5
+          span.txt 11:00
+        .m-allvideo_table-td.col6
+          .m-input.m-session
+            .input-a
+              .input-a_inner
+                input.input.input-text.input-search(data-search type="text" placeholder="Search session")
+                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+            .wrap-select
+              ul.l-multiple
+                li(data-filter-item data-filter-name="all our pro level features at your finge")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="All our PRO level features at your finge")
+                    span.label
+                      span All our PRO level features at your finge
+                        small 08:00 - 60 mins
+                li(data-filter-item data-filter-name="save money, without thinking about it")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Save Money, Without Thinking About It")
+                    span.label
+                      span Save Money, Without Thinking About It
+                        small 10:30 - 90 mins
+                li(data-filter-item data-filter-name="betcha can’t eat just one!")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Betcha can’t eat just one!")
+                    span.label
+                      span Betcha can’t eat just one!
+                        small 12:20 - 60 mins
+                li(data-filter-item data-filter-name="experience listens. be heard.")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Experience Listens. Be Heard.")
+                    span.label
+                      span Experience Listens. Be Heard.
+                        small 14:40 - 90 mins
+
+          button.btn.btn-black.btn-sm.btn-add--session.trans
+            span Add Session
+            small.m-session_number
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col2
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video02.png", alt="What describes you best?")
+          span.txt Melts in your mouth, not in...
+        .m-allvideo_table-td.col3
+          span.txt 00:03:07
+        .m-allvideo_table-td.col4
+          span.txt 15 Aug 2022
+        .m-allvideo_table-td.col5
+          span.txt 12:00
+        .m-allvideo_table-td.col6
+          .m-input.m-session
+            .input-a
+              .input-a_inner
+                input.input.input-text.input-search(data-search type="text" placeholder="Search session")
+                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+            .wrap-select
+              ul.l-multiple
+                li(data-filter-item data-filter-name="all our pro level features at your finge")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="All our PRO level features at your finge")
+                    span.label
+                      span All our PRO level features at your finge
+                        small 08:00 - 60 mins
+                li(data-filter-item data-filter-name="save money, without thinking about it")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Save Money, Without Thinking About It")
+                    span.label
+                      span Save Money, Without Thinking About It
+                        small 10:30 - 90 mins
+                li(data-filter-item data-filter-name="betcha can’t eat just one!")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Betcha can’t eat just one!")
+                    span.label
+                      span Betcha can’t eat just one!
+                        small 12:20 - 60 mins
+                li(data-filter-item data-filter-name="experience listens. be heard.")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Experience Listens. Be Heard.")
+                    span.label
+                      span Experience Listens. Be Heard.
+                        small 14:40 - 90 mins
+
+          button.btn.btn-black.btn-sm.btn-add--session.trans
+            span Add Session
+            small.m-session_number
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col2
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video03.png", alt="What describes you best?")
+          span.txt I accept the  Terms of use
+        .m-allvideo_table-td.col3
+          span.txt 00:04:23
+        .m-allvideo_table-td.col4
+          span.txt 15 Aug 2022
+        .m-allvideo_table-td.col5
+          span.txt 11:00
+        .m-allvideo_table-td.col6
+          .m-input.m-session
+            .input-a
+              .input-a_inner
+                input.input.input-text.input-search(data-search type="text" placeholder="Search session")
+                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+            .wrap-select
+              ul.l-multiple
+                li(data-filter-item data-filter-name="all our pro level features at your finge")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="All our PRO level features at your finge")
+                    span.label
+                      span All our PRO level features at your finge
+                        small 08:00 - 60 mins
+                li(data-filter-item data-filter-name="save money, without thinking about it")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Save Money, Without Thinking About It")
+                    span.label
+                      span Save Money, Without Thinking About It
+                        small 10:30 - 90 mins
+                li(data-filter-item data-filter-name="betcha can’t eat just one!")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Betcha can’t eat just one!")
+                    span.label
+                      span Betcha can’t eat just one!
+                        small 12:20 - 60 mins
+                li(data-filter-item data-filter-name="experience listens. be heard.")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Experience Listens. Be Heard.")
+                    span.label
+                      span Experience Listens. Be Heard.
+                        small 14:40 - 90 mins
+
+          button.btn.btn-black.btn-sm.btn-add--session.trans
+            span Add Session
+            small.m-session_number
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+      .m-allvideo_table-tr
+        .m-allvideo_table-td.col1
+          label.module-check
+            input.check-item(type="checkbox", name="speakers[]")
+            span.label Check
+        .m-allvideo_table-td.col2
+          a.thumb(
+            href="#"
+            data-toggle="modal"
+            data-target="#watchVideo"
+          )
+            img(src=path+"/assets/images/video04.png", alt="What describes you best?")
+          span.txt You can change or cancel
+        .m-allvideo_table-td.col3
+          span.txt 00:20:17
+        .m-allvideo_table-td.col4
+          span.txt 15 Aug 2022
+        .m-allvideo_table-td.col5
+          span.txt 11:00
+        .m-allvideo_table-td.col6
+          .m-input.m-session
+            .input-a
+              .input-a_inner
+                input.input.input-text.input-search(data-search type="text" placeholder="Search session")
+                a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+            .wrap-select
+              ul.l-multiple
+                li(data-filter-item data-filter-name="all our pro level features at your finge")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="All our PRO level features at your finge")
+                    span.label
+                      span All our PRO level features at your finge
+                        small 08:00 - 60 mins
+                li(data-filter-item data-filter-name="save money, without thinking about it")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Save Money, Without Thinking About It")
+                    span.label
+                      span Save Money, Without Thinking About It
+                        small 10:30 - 90 mins
+                li(data-filter-item data-filter-name="betcha can’t eat just one!")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Betcha can’t eat just one!")
+                    span.label
+                      span Betcha can’t eat just one!
+                        small 12:20 - 60 mins
+                li(data-filter-item data-filter-name="experience listens. be heard.")
+                  label.module-check
+                    input.form-checkbox(type="checkbox", name="type[]" value="Experience Listens. Be Heard.")
+                    span.label
+                      span Experience Listens. Be Heard.
+                        small 14:40 - 90 mins
+
+          button.btn.btn-black.btn-sm.btn-add--session.trans
+            span Add Session
+            small.m-session_number
+          button.btn.trans.btn-noborder
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C10.5523 10 11 10.4477 11 11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11C9 10.4477 9.44772 10 10 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14.5523 10 15 10.4477 15 11V16C15 16.5523 14.5523 17 14 17C13.4477 17 13 16.5523 13 16V11C13 10.4477 13.4477 10 14 10Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C8.34315 2 7 3.34315 7 5H4H3C2.44772 5 2 5.44772 2 6C2 6.55228 2.44772 7 3 7H4V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7H21C21.5523 7 22 6.55228 22 6C22 5.44772 21.5523 5 21 5H20H17C17 3.34315 15.6569 2 14 2H10ZM15 5C15 4.44772 14.5523 4 14 4H10C9.44772 4 9 4.44772 9 5H15ZM7 7H6V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7H17H7Z" fill="#6F767E"/>
+            </svg>
+
+.pagination-nav
+  ul.pagination-list
+    li.page-item
+      a.pages.prev.trans(href="#")
+        img(src=path+"/assets/images/ico_pag_back.svg", alt="")
+        | Previous
+    li.page-item
+      a.pages.trans(href="#") 1
+    li.page-item
+      span.current.pages 2
+    li.page-item
+      a.pages.trans(href="#") 3
+    li.page-item
+      a.dots.trans(href="#") ...
+    li.page-item
+      a.pages.trans(href="#") 22
+    li.page-item
+      a.pages.next.trans(href="#") Next
+        img(src=path+"/assets/images/ico_pag_next.svg", alt="")

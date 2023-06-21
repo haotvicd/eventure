@@ -1,0 +1,470 @@
+#addActivity.modal.fade(role="dialog" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered(role="document")
+    .modal-content
+      .modal_head
+        .ttl-primary.sm Add an activity
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          .m-activity_top
+            .ttl-secondary
+              span Divide the activities into groups
+              span Would you like to divide the activities into groups?
+
+          ul.nav.m-activity_tab(role='tablist')
+            li.nav-item
+              a#session_act-tab.nav-link.active(data-toggle='tab' href='#session_act' role='tab' aria-controls='session_act' aria-selected='true')
+                span.session Session
+                p Can be Talks, Workshops, Discussions, Celebrations, etc.
+            li.nav-item
+              a#break-tab.nav-link(data-toggle='tab' href='#break' role='tab' aria-controls='break' aria-selected='false')
+                span.break Break
+                p Tea, Coffee and Lunch breaks for attendees to take some time off.
+
+          .tab-content
+            #session_act.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='session_act-tab')
+              .m-activity_content.line
+                .m-activity_content-title Session Information
+                .m-activity_content-wrap
+                  .m-activity_content-colum
+                    .m-activity_content-row
+                      .m-input.m-input_counter.js-counter
+                        span.m-input_label Session name
+                          small.warning *
+                        .input-area
+                          input.input.input-text(type="text" maxlength="100" placeholder="Event organizer’s name ")
+                          .counter
+                            span.count-up 0
+                            |/
+                            span.count-max 100
+                    .m-activity_content-row
+                      .m-input
+                        span.m-input_label Start date
+                          small.warning *
+                        .input-area
+                          input.input.datetimepicker#datetimepicker-startdate(type='text' placeholder="Select date")
+                    .m-activity_content-row.row
+                      .col-6
+                        .m-input
+                          span.m-input_label Start time
+                            small.warning *
+                          .input-area.area-select.js-select
+                            input.input.input-text.input-time(type="text" placeholder="Select time ")
+                            .box-select
+                              ul.l-select
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:15") 12:15
+                                li(data-value="12:30") 12:30
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                      .col-6
+                        .m-input
+                          span.m-input_label Duration (mins)
+                            small.warning *
+                          .input-area.area-select.js-select
+                            input.input.input-text.input-time(type="text" placeholder="Select time ")
+                            .box-select
+                              ul.l-select
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:15") 12:15
+                                li(data-value="12:30") 12:30
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+
+                    .m-activity_content-row
+                      .m-input
+                        span.m-input_label Host
+                          small.warning *
+                          button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .m-input.treeSelector
+                        a.btn-clear-select(href="javascript:;")
+                          img(src=path+"/assets/images/ico_clear.svg", alt="")
+                        .form-control.branch.input(data-value="" data-placeholder="Enter speaker") Enter speaker
+                        .custom-select-list
+                          .input-a
+                            .input-a_inner
+                              input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                              a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                          .wrap-select
+                            ul.l-multiple
+                              li(data-filter-item data-filter-name="cody fisher")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                    span Cody Fisher
+                                      small katherine.nolan@gmail.com
+                              li(data-filter-item data-filter-name="theresa webb")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    span Theresa Webb
+                                      small amanda.clark@gmail.com
+                              li(data-filter-item data-filter-name="esther howard")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                    span Esther Howard
+                                      small paul.morrison@gmail.com
+                              li(data-filter-item data-filter-name="wade warren")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    span Wade Warren
+                                      small tracey.langdon@gmail.com
+                              li(data-filter-item data-filter-name="dianne russell")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                    span Dianne Russell
+                                      small alison.langdon@gmail.com
+
+                    .m-activity_content-row
+                      .m-input.d-flex.justify-content-between
+                        span.m-input_label Speaker
+                          button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                        span.m-input_label 1/
+                          small 10 speakers
+                      .m-input.treeSelector
+                        a.btn-clear-select(href="javascript:;")
+                          img(src=path+"/assets/images/ico_clear.svg", alt="")
+                        .form-control.branch.input(data-value="" data-placeholder="Enter speaker") Enter speaker
+                        .custom-select-list
+                          .input-a
+                            .input-a_inner
+                              input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                              a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                          .wrap-select
+                            ul.l-multiple
+                              li(data-filter-item data-filter-name="cody fisher")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                    span Cody Fisher
+                                      small katherine.nolan@gmail.com
+                              li(data-filter-item data-filter-name="theresa webb")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    span Theresa Webb
+                                      small amanda.clark@gmail.com
+                              li(data-filter-item data-filter-name="esther howard")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                    span Esther Howard
+                                      small paul.morrison@gmail.com
+                              li(data-filter-item data-filter-name="wade warren")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    span Wade Warren
+                                      small tracey.langdon@gmail.com
+                              li(data-filter-item data-filter-name="dianne russell")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                    span Dianne Russell
+                                      small alison.langdon@gmail.com
+
+                    .m-activity_content-row.moder-row
+                      .m-input.d-flex.justify-content-between
+                        span.m-input_label Moderator
+                          button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .m-input.treeSelector
+                        a.btn-clear-select(href="javascript:;")
+                          img(src=path+"/assets/images/ico_clear.svg", alt="")
+                        .form-control.branch.input(data-value="" data-placeholder="Enter speaker") Enter Moderator
+                        .custom-select-list
+                          .input-a
+                            .input-a_inner
+                              input.input.input-text.input-search(data-search type="text" placeholder="Search Moderator ")
+                              a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                          .wrap-select
+                            ul.l-multiple
+                              li(data-filter-item data-filter-name="cody fisher")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                    span Cody Fisher
+                                      small katherine.nolan@gmail.com
+                              li(data-filter-item data-filter-name="theresa webb")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    span Theresa Webb
+                                      small amanda.clark@gmail.com
+                              li(data-filter-item data-filter-name="esther howard")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                    span Esther Howard
+                                      small paul.morrison@gmail.com
+                              li(data-filter-item data-filter-name="wade warren")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    span Wade Warren
+                                      small tracey.langdon@gmail.com
+                              li(data-filter-item data-filter-name="dianne russell")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                    span Dianne Russell
+                                      small alison.langdon@gmail.com
+
+                    .m-activity_content-row
+                      .bl-setting
+                        .bl-setting_row
+                          .label-setting
+                            span Recording
+                            small Choose whether you want to record for future viewing
+                          .m-input
+                            input#recording.input-checkbox(type='checkbox' checked)
+                            label.checkbox-label(for='recording') Toggle
+
+                  .m-activity_content-colum
+
+                    .m-activity_content-row
+                      .m-input
+                        span.m-input_label Groups
+                          button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .m-input.treeSelector
+                        a.btn-clear-select(href="javascript:;")
+                          img(src=path+"/assets/images/ico_clear.svg", alt="")
+                        .form-control.branch.input(data-value="" data-placeholder="Enter speaker") Enter speaker
+                        .custom-select-list
+                          .input-a
+                            .input-a_inner
+                              input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                              a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                          .wrap-select
+                            ul.l-multiple
+                              li(data-filter-item data-filter-name="cody fisher")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                    span Cody Fisher
+                                      small katherine.nolan@gmail.com
+                              li(data-filter-item data-filter-name="theresa webb")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    span Theresa Webb
+                                      small amanda.clark@gmail.com
+                              li(data-filter-item data-filter-name="esther howard")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                    span Esther Howard
+                                      small paul.morrison@gmail.com
+                              li(data-filter-item data-filter-name="wade warren")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    span Wade Warren
+                                      small tracey.langdon@gmail.com
+                              li(data-filter-item data-filter-name="dianne russell")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                    span Dianne Russell
+                                      small alison.langdon@gmail.com
+
+                    .m-activity_content-row
+                      .m-input
+                        span.m-input_label Tags
+                          button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .m-input.treeSelector
+                        a.btn-clear-select(href="javascript:;")
+                          img(src=path+"/assets/images/ico_clear.svg", alt="")
+                        .form-control.branch.input(data-value="" data-placeholder="Enter speaker") Enter speaker
+                        .custom-select-list
+                          .input-a
+                            .input-a_inner
+                              input.input.input-text.input-search(data-search type="text" placeholder="Search speaker ")
+                              a.btn-clear.trans(href="javascript:;") ⌘&nbsp;F&nbsp;
+                          .wrap-select
+                            ul.l-multiple
+                              li(data-filter-item data-filter-name="cody fisher")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Cody Fisher")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar01.png", alt="")
+                                    span Cody Fisher
+                                      small katherine.nolan@gmail.com
+                              li(data-filter-item data-filter-name="theresa webb")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Theresa Webb")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar02.png", alt="")
+                                    span Theresa Webb
+                                      small amanda.clark@gmail.com
+                              li(data-filter-item data-filter-name="esther howard")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Esther Howard")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar03.png", alt="")
+                                    span Esther Howard
+                                      small paul.morrison@gmail.com
+                              li(data-filter-item data-filter-name="wade warren")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Wade Warren")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar04.png", alt="")
+                                    span Wade Warren
+                                      small tracey.langdon@gmail.com
+                              li(data-filter-item data-filter-name="dianne russell")
+                                label.module-check
+                                  input.form-checkbox(type="checkbox", name="type[]" value="Dianne Russell")
+                                  span.label
+                                    img(src=path+"/assets/images/img_avatar06.png", alt="")
+                                    span Dianne Russell
+                                      small alison.langdon@gmail.com
+
+                    .m-activity_content-row
+                      .m-input.m-input_counter.js-counter
+                        span.m-input_label Session description
+                        .input-area
+                          textarea.input.input-text(name="" maxlength="1000" placeholder="Enter session description")
+                          .counter
+                            span.count-up 0
+                            |/
+                            span.count-max 1000
+                    .m-activity_content_break
+                      span.m-input_label Break time in session
+                        button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+                      .m-activity_content-row.row
+                        .col-6
+                          .m-input
+                            span.m-input_label Start time
+                              small.warning *
+                            .input-area.area-select.js-select
+                              input.input.input-text.input-time(type="text" placeholder="Select time ")
+                              .box-select
+                                ul.l-select
+                                  li(data-value="12:00") 12:00
+                                  li(data-value="12:15") 12:15
+                                  li(data-value="12:30") 12:30
+                                  li(data-value="12:00") 12:00
+                                  li(data-value="12:00") 12:00
+                                  li(data-value="12:00") 12:00
+                                  li(data-value="12:00") 12:00
+                                  li(data-value="12:00") 12:00
+                                  li(data-value="12:00") 12:00
+                        .col-6
+                          .m-input
+                            span.m-input_label Duration (mins)
+                              small.warning *
+                            .input-area.area-select.js-select
+                              input.input.input-text.input-time(type="text" placeholder="Select time ")
+                              .box-select
+                                ul.l-select
+                                  li(data-value="5") 5
+                                  li(data-value="10") 10
+                                  li(data-value="15") 15
+                                  li(data-value="20") 20
+                        a.btn-delete(href="#")
+                          img(src=path+"/assets/images/ico_trash.svg", alt="")
+                      a.btn.btn-primary.btn-add.trans(href="#")
+                        span Add break
+
+            #break.tab-pane.fade(role='tabpanel' aria-labelledby='break-tab')
+              .m-activity_content.line
+                .m-activity_content-title Break Information
+                .m-activity_content-wrap
+                  .m-activity_content-colum
+                    .m-activity_content-row
+                      .m-input.m-input_counter.js-counter
+                        span.m-input_label Break name
+                          small.warning *
+                        .input-area
+                          input.input.input-text(name="" maxlength="100" placeholder="Event break name ")
+                          .counter
+                            span.count-up 0
+                            |/
+                            span.count-max 100
+                    .m-activity_content-row
+                      .m-input
+                        span.m-input_label Break date
+                          small.warning *
+                        .input-area
+                          input.input.datetimepicker#datetimepicker-breakdate(type='text' placeholder="Select date")
+                    .m-activity_content-row.row
+                      .col-6
+                        .m-input
+                          span.m-input_label Start at
+                            small.warning *
+                          .input-area.area-select.js-select
+                            input.input.input-text.input-time(type="text" placeholder="Select time ")
+                            .box-select
+                              ul.l-select
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:15") 12:15
+                                li(data-value="12:30") 12:30
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                      .col-6
+                        .m-input
+                          span.m-input_label Duration (mins)
+                            small.warning *
+                          .input-area.area-select.js-select
+                            input.input.input-text.input-time(type="text" placeholder="Select time ")
+                            .box-select
+                              ul.l-select
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:15") 12:15
+                                li(data-value="12:30") 12:30
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+                                li(data-value="12:00") 12:00
+
+                  .m-activity_content-colum
+                    .m-activity_content-row
+                      .m-input.m-input_counter.js-counter
+                        span.m-input_label Break description
+                        .input-area
+                          textarea.input.input-text(type="text" maxlength="1000" placeholder="Enter break description")
+                          .counter
+                            span.count-up 0
+                            |/
+                            span.count-max 1000
+
+        .modal_foot
+          button(type="submit", class="btn btn-primary trans w-220")
+            span Save

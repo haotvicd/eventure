@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="charset" content="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=".">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Homepage</title>
+    <link rel="icon" href=".assets/images/favicon.ico">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin="">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/libs/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+  </head>
+  <body class="homepage">
+    <div class="homepage">
+      <header class="m-header">
+        <div class="wrapper">
+          <div class="m-header_inner">
+            <h1 class="m-header_logo"><a class="trans" href="#"><img class="pc-only" src="./assets/images/logo_head.svg" alt="eventure" width="187"><img class="sp-only" src="./assets/images/logo_sp.png" alt="eventure" width="52"></a></h1>
+            <nav class="nav">
+              <div class="nav_head sp-only"><a class="close-nav" href="javascript:;"><img src="./assets/images/ico_close_white.svg" alt=""></a>
+                <div class="nav-logo"><img src="./assets/images/logo_head.svg" alt="eventure" width="156"></div>
+              </div>
+              <div class="nav_body"><a class="nav_link pc-only trans" href="#">Support</a>
+                <div class="nav_user">
+                  <div class="nav_user_wrap"><a class="nav_user_icon" href="javascript:;"><img src="./assets/images/ico_avatar.png" alt=""></a>
+                    <div class="user-info sp-only">
+                      <div class="user-name">Eleanor Pena</div>
+                      <div class="user-since">Member since Mar 15, 2022</div>
+                    </div>
+                  </div>
+                  <div class="nav_user-menu">
+                    <div class="nav_user-menu_inner">
+                      <ul class="user-menu">
+                        <li><a class="active" href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12ZM12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5588 19.5488C20.6672 17.7154 22 15.0134 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.0134 3.33284 17.7154 5.44116 19.5488C7.19693 21.0756 9.49052 22 12 22C14.4162 22 16.6323 21.143 18.3609 19.7165C18.4276 19.6614 18.4936 19.6055 18.5588 19.5488ZM12.2579 19.9959C12.1723 19.9986 12.0863 20 12 20C11.9914 20 11.9827 20 11.9741 20C11.8937 19.9997 11.8135 19.9983 11.7337 19.9956C10.3914 19.9517 9.13273 19.5772 8.03655 18.9508C8.95181 17.7632 10.3882 17 12 17C13.6118 17 15.0482 17.7632 15.9634 18.9508C14.865 19.5785 13.6033 19.9533 12.2579 19.9959ZM17.5624 17.7498C16.2832 16.0781 14.2675 15 12 15C9.73249 15 7.7168 16.0781 6.43759 17.7498C4.93447 16.2953 4 14.2568 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 14.2568 19.0655 16.2953 17.5624 17.7498Z" fill="#6F767E"></path>
+                            </svg>My Profile</a></li>
+                        <li><a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C7.58172 5 4 8.58172 4 13C4 15.2122 4.89659 17.2131 6.34862 18.6623C6.73952 19.0525 6.74012 19.6856 6.34998 20.0765C5.95983 20.4674 5.32666 20.468 4.93576 20.0779C3.12321 18.2688 2 15.7646 2 13C2 7.47715 6.47715 3 12 3C17.5228 3 22 7.47715 22 13C22 15.7611 20.8796 18.2625 19.0711 20.0711C18.6805 20.4616 18.0474 20.4616 17.6569 20.0711C17.2663 19.6805 17.2663 19.0474 17.6569 18.6569C19.1057 17.208 20 15.2094 20 13C20 8.58172 16.4183 5 12 5Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 9.70711C17.0976 9.31658 17.0976 8.68342 16.7071 8.29289C16.3166 7.90237 15.6834 7.90237 15.2929 8.29289L13.2934 10.2924C12.9018 10.105 12.4631 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16C13.6569 16 15 14.6569 15 13C15 12.5369 14.895 12.0982 14.7076 11.7066L16.7071 9.70711ZM11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13Z" fill="#6F767E"></path>
+                            </svg>Dashboard</a></li>
+                        <li class="is-logout"><a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17.7071 7.79289C17.3166 7.40237 16.6834 7.40237 16.2929 7.79289C15.9024 8.18342 15.9024 8.81658 16.2929 9.20711L18.0858 11H9C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13H18.0858L16.2929 14.7929C15.9024 15.1834 15.9024 15.8166 16.2929 16.2071C16.6834 16.5976 17.3166 16.5976 17.7071 16.2071L20.5 13.4142C21.2811 12.6332 21.281 11.3668 20.5 10.5858L17.7071 7.79289Z" fill="#6F767E"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 3.34315 4.34315 2 6 2H12C13.6569 2 15 3.34315 15 5V6C15 6.55228 14.5523 7 14 7C13.4477 7 13 6.55228 13 6V5C13 4.44772 12.5523 4 12 4H6C5.44772 4 5 4.44772 5 5V19C5 19.5523 5.44772 20 6 20H12C12.5523 20 13 19.5523 13 19V18C13 17.4477 13.4477 17 14 17C14.5523 17 15 17.4477 15 18V19C15 20.6569 13.6569 22 12 22H6C4.34315 22 3 20.6569 3 19V5Z" fill="#6F767E"></path>
+                            </svg>Log out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div><a class="nav_link sp-only trans" href="#"><span>Support</span></a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="m-head-event">
+          <div class="wrapper"><a class="btn-back trans" href="#">BACK</a>
+            <div class="m-head-event_inner">
+              <div class="m-head-event_info">
+                <div class="m-head-event_title">
+                  <h2 class="title">Event-led Growth Summit</h2><span class="tag">Upcoming</span>
+                </div>
+                <div class="m-head-event_time">Start 19 Aug 2022, 11:00 - End 22 Aug 2022, 17:00</div>
+              </div>
+              <ul class="m-head-event_control">
+                <li><a class="btn btn-black btn-share trans" href="#"><span>Share</span></a></li>
+                <li><a class="btn btn-primary btn-start trans" href="#" data-toggle="modal" data-target="#modalStartStop"><span>Start Event</span></a></li>
+                <li><a class="btn btn-secondary btn-close trans" href="#" data-toggle="modal" data-target="#modalCloseEvent"><span>Close Event</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabs-control">
+            <div class="wrapper">
+              <ul class="nav nav-tabs">
+                <li class="nav-link"><a class="active" href="#tab1" data-toggle="tab">General</a></li>
+                <li class="nav-link"><a href="#tab2" data-toggle="tab">Agenda</a></li>
+                <li class="nav-link"><a href="#tab3" data-toggle="tab">Registrations</a></li>
+                <li class="nav-link"><a href="#tab4" data-toggle="tab">Branding</a></li>
+                <li class="nav-link"><a href="#tab5" data-toggle="tab">Networking</a></li>
+                <li class="nav-link"><a href="#tab6" data-toggle="tab">Booth</a></li>
+                <li class="nav-link"><a href="#tab7" data-toggle="tab">Setting</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-control">
+          <div class="wrapper">
+            <ul class="nav nav-tabs">
+              <li class="nav-link"><a href="#tab1" data-toggle="tab">General</a></li>
+              <li class="nav-link"><a href="#tab2" data-toggle="tab" data-trigger="schedule">Schedule</a></li>
+              <li class="nav-link"><a href="#tab3" data-toggle="tab">Registrations</a></li>
+              <li class="nav-link"><a class="active" href="#tab4" data-toggle="tab">Branding</a></li>
+              <li class="nav-link"><a href="#tab5" data-toggle="tab">Networking</a></li>
+              <li class="nav-link"><a href="#tab6" data-toggle="tab">Booth</a></li>
+              <li class="nav-link"><a href="#tab7" data-toggle="tab">Setting</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="m-content">
+          <div class="tab-content">
+            <div class="tab-pane fade" id="tab1"></div>
+            <div class="tab-pane fade" id="tab2"></div>
+            <div class="tab-pane fade show active" id="tab4">
+              <div class="m-tab-content">
+                <div class="wrapper">
+                  <div class="row">
+                    <div class="col-3">
+                      <div class="m-asideList">
+                        <ul class="nav nav-tabs side-tab" role="tablist">
+                          <li class="nav-link"><a id="session-tab" data-toggle="tab" href="#brand_event">Event</a></li>
+                          <li class="nav-link"><a class="active" id="speaker-tab" data-toggle="tab" href="#brand_reception">Reception</a></li>
+                          <li class="nav-link"><a id="videos-tab" data-toggle="tab" href="#brand_stage">Stage Backdrop</a></li>
+                          <li class="nav-link"><a id="records-tab" data-toggle="tab" href="#brand_sponsor">Sponsor</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-9">
+                      <div class="tab-content">
+                        <div class="tab-pane fade" id="brand_event">
+                          <div class="m-content_head">
+                            <div>
+                              <h2 class="title-tab">Event</h2><span class="description-tab">Define the design, theme and branding for your event</span>
+                            </div>
+                          </div>
+                          <div class="m-content_body">
+                            <form class="brand-event-form">
+                              <div class="m-input"><span class="m-input_label">Event logo<span class="m-input_desc">Add your own brand logo to increase your brand engagement</span></span>
+                                <div class="input-file-wrap is-circle">
+                                  <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                                  <div class="btn-upload"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Click or drop image</span></div>
+                                  <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload event logo</span></div>
+                                  <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                                  <p>JPEG, JPG, SVG, PNG | Up to 2 MB</p>
+                                </div>
+                              </div>
+                              <div class="m-input"><span class="m-input_label">Event banner<span class="m-input_desc">Add a banner image which will be displayed in the landing page</span></span>
+                                <div class="input-file-wrap">
+                                  <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                                  <div class="btn-upload"><img src="./assets/images/btn_upload.png" alt="Click or drop image"></div>
+                                  <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload event banner</span></div>
+                                  <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                                  <p>Recommended format: 1563x1040px | JPG, SVG, PNG | Up to 10 MB</p>
+                                </div>
+                              </div>
+                              <div class="m-editor"><span class="m-input_label">Description</span>
+                                <div class="m-editor_area">
+                                  <div id="editorBranding">
+                                    <p>No spam, ever. Your address will only be used for the company news. You can easily unsubscribe any time with a single click. You must be at least eighteen years old to view this content. Are you over eighteen and willing to see adult content?</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade show active" id="brand_reception">
+                          <div class="m-content_head">
+                            <div>
+                              <h2 class="title-tab">Reception</h2><span class="description-tab">Create a grand first impression for your attendees of the event.</span>
+                            </div>
+                            <div class="m-content_head-btn"><a class="btn btn-sm btn-primary btn-edit-big trans" href="#" data-toggle="modal" data-target="#receptionModal"><small class="icon">
+                                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                                    <path d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                                  </svg></small><span>Edit</span></a></div>
+                          </div>
+                          <div class="m-content_body">
+                            <div class="reception-box-review"><img src="./assets/images/img_demo.jpg" alt=""></div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="brand_stage">
+                          <div class="m-content_head">
+                            <div>
+                              <h2 class="title-tab">Stage Backdrop</h2><span class="description-tab">Modify the backdrop of your live stage for a branded experience</span>
+                            </div>
+                          </div>
+                          <div class="m-content_body">
+                            <form class="brand-event-form">
+                              <div class="m-input"><span class="m-input_label">Upload backdrop<span class="m-input_desc">Add a banner which will be displayed in the lounge</span></span>
+                                <div class="input-file-wrap">
+                                  <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                                  <div class="btn-upload"><img src="./assets/images/btn_upload.png" alt="Click or drop image"></div>
+                                  <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload backdrop</span></div>
+                                  <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                                  <p>Recommended format: 1868x1328px | JPG, SVG, PNG | Up to 10 MB</p>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="brand_sponsor">
+                          <div class="m-content_head">
+                            <div>
+                              <h2 class="title-tab">Sponsor</h2><span class="description-tab">Manage sponsors for your event</span>
+                            </div>
+                            <div class="m-content_head-btn"><a class="btn btn-sm btn-tag trans" href="#" data-toggle="modal" data-target="#groupSponsorManager"><span>Group Management</span></a><a class="btn btn-sm btn-primary btn-add trans" href="#" data-toggle="modal" data-target="#modalSponsor"><span>Add Sponsor</span></a></div>
+                          </div>
+                          <div class="m-content_body">
+                            <div class="l-group"><span class="ttl">Group</span>
+                              <ul class="list">
+                                <li><a class="trans" href="#"><span>1.</span><span>Diamond Sponsor</span></a></li>
+                                <li><a class="trans" href="#"><span>2.</span><span>Golden Sponsor</span></a></li>
+                                <li><a class="trans" href="#"><span>3.</span><span>Silver Sponsor</span></a></li>
+                                <li><a class="trans" href="#"><span>4.</span><span>Media Partner</span></a></li>
+                                <li><a class="trans" href="#"><span>5.</span><span>Gift Sponsor</span></a></li>
+                              </ul>
+                            </div>
+                            <div class="l-speaker-list tbl-sponsor">
+                              <div class="tbl-head">
+                                <div class="tbl_col col1"><span class="tbl-head_title">Position<a class="btn-tip" href="#"><img src="./assets/images/ico_info_bg.svg" alt=""></a></span></div>
+                                <div class="tbl_col col2"><span class="tbl-head_title">Name</span></div>
+                                <div class="tbl_col col3"><span class="tbl-head_title">Website URL</span></div>
+                                <div class="tbl_col col4"><span class="tbl-head_title">Actions</span></div>
+                              </div>
+                              <div class="tbl-body">
+                                <div class="tbl-body_group">
+                                  <div class="group-title">Group 1.<span>Diamond Sponsor</span></div>
+                                  <ul class="group-list">
+                                    <li class="group-list_row">
+                                      <div class="tbl_col col1">
+                                        <div class="pos">1</div>
+                                      </div>
+                                      <div class="tbl_col col2">
+                                        <div class="name">
+                                          <div class="image"><img src="./assets/images/ava_demo.png" alt=""></div><span>Sponsor name 1</span>
+                                        </div>
+                                      </div>
+                                      <div class="tbl_col col3"><a class="link" href="#">https://linkhomepage.com</a></div>
+                                      <div class="tbl_col col4">
+                                        <div class="control"><a class="btn btn-circle trans" data-toggle="modal" data-target="#modalEditSponsor">
+                                            <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                                              <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                                            </svg></a><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                                            </svg></a></div>
+                                      </div>
+                                    </li>
+                                    <li class="group-list_row">
+                                      <div class="tbl_col col1">
+                                        <div class="pos">2</div>
+                                      </div>
+                                      <div class="tbl_col col2">
+                                        <div class="name">
+                                          <div class="image"><img src="./assets/images/ava_demo.png" alt=""></div><span>Sponsor name 2</span>
+                                        </div>
+                                      </div>
+                                      <div class="tbl_col col3"><a class="link" href="#">https://linkhomepage.com</a></div>
+                                      <div class="tbl_col col4">
+                                        <div class="control"><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                                              <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                                            </svg></a><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                                            </svg></a></div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="tbl-body_group">
+                                  <div class="group-title">Group 2.<span>Golden Sponsor</span></div>
+                                  <p class="no-sponsor">No sponsors in Golden Sponsor</p>
+                                </div>
+                                <div class="tbl-body_group">
+                                  <div class="group-title">Group 3.<span>Silver Sponsor</span></div>
+                                  <ul class="group-list">
+                                    <li class="group-list_row">
+                                      <div class="tbl_col col1">
+                                        <div class="pos">1</div>
+                                      </div>
+                                      <div class="tbl_col col2">
+                                        <div class="name">
+                                          <div class="image"><img src="./assets/images/ava_demo.png" alt=""></div><span>Sponsor name 3</span>
+                                        </div>
+                                      </div>
+                                      <div class="tbl_col col3"><a class="link" href="#">https://linkhomepage.com</a></div>
+                                      <div class="tbl_col col4">
+                                        <div class="control"><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                                              <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                                            </svg></a><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                                            </svg></a></div>
+                                      </div>
+                                    </li>
+                                    <li class="group-list_row">
+                                      <div class="tbl_col col1">
+                                        <div class="pos">2</div>
+                                      </div>
+                                      <div class="tbl_col col2">
+                                        <div class="name">
+                                          <div class="image"><img src="./assets/images/ava_demo.png" alt=""></div><span>Sponsor name 4</span>
+                                        </div>
+                                      </div>
+                                      <div class="tbl_col col3"><a class="link" href="#">https://linkhomepage.com</a></div>
+                                      <div class="tbl_col col4">
+                                        <div class="control"><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                                              <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                                            </svg></a><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                                            </svg></a></div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="tbl-body_group">
+                                  <div class="group-title">Group 4.<span>Media Partner</span></div>
+                                  <ul class="group-list">
+                                    <li class="group-list_row">
+                                      <div class="tbl_col col1">
+                                        <div class="pos">1</div>
+                                      </div>
+                                      <div class="tbl_col col2">
+                                        <div class="name">
+                                          <div class="image"><img src="./assets/images/ava_demo.png" alt=""></div><span>Sponsor name 5</span>
+                                        </div>
+                                      </div>
+                                      <div class="tbl_col col3"><a class="link" href="#">https://linkhomepage.com</a></div>
+                                      <div class="tbl_col col4">
+                                        <div class="control"><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                                              <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                                            </svg></a><a class="btn btn-circle trans">
+                                            <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                                              <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                                            </svg></a></div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="tbl-body_group">
+                                  <div class="group-title">Group 5.<span>Gift Sponsor</span></div>
+                                  <p class="no-sponsor">No sponsors in Gift Sponsor</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modalRecpt modal fade" id="receptionModal" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-content_head">
+                <h2 class="title">Edit page Reception</h2>
+                <div class="m-content_head-btn"><a class="btn btn-cancel trans" href="#"><span>Cancel</span></a>
+                  <button class="btn btn-primary btn-save trans btn-sm"><span>Save</span></button>
+                </div>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal-content_body">
+                  <div class="view-side">
+                    <div class="size">Reception size:<span>1440px X 958px</span></div>
+                    <div class="box-view"></div>
+                  </div>
+                  <div class="control-side">
+                    <p class="desc"><span class="icon"><img src="./assets/images/ico_light.svg" alt=""></span>Drag and drop objects to place on the Reception. You can then customize them in the canvas.</p>
+                    <div class="edit-area">
+                      <ul class="nav nav-tabs">
+                        <li class="nav-link"><a class="active" href="#add-block" data-toggle="tab">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.19287 4C2.19287 2.89543 3.0883 2 4.19287 2H12.1929C13.2974 2 14.1929 2.89543 14.1929 4V5.33333C14.1929 6.4379 13.2974 7.33333 12.1929 7.33333H4.19287C3.0883 7.33333 2.19287 6.4379 2.19287 5.33333V4ZM3.85954 4.66667C3.85954 4.29848 4.15801 4 4.5262 4H9.19287C9.56106 4 9.85954 4.29848 9.85954 4.66667C9.85954 5.03486 9.56106 5.33333 9.19287 5.33333H4.5262C4.15801 5.33333 3.85954 5.03486 3.85954 4.66667ZM11.8595 5.33333C12.2277 5.33333 12.5262 5.03486 12.5262 4.66667C12.5262 4.29848 12.2277 4 11.8595 4C11.4913 4 11.1929 4.29848 11.1929 4.66667C11.1929 5.03486 11.4913 5.33333 11.8595 5.33333Z" fill="#FCFCFC"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.19287 10.666C2.19287 9.56145 3.0883 8.66602 4.19287 8.66602H12.1929C13.2974 8.66602 14.1929 9.56145 14.1929 10.666V11.9993C14.1929 13.1039 13.2974 13.9993 12.1929 13.9993H4.19287C3.0883 13.9993 2.19287 13.1039 2.19287 11.9993V10.666ZM3.85954 11.3327C3.85954 10.9645 4.15801 10.666 4.5262 10.666H9.19287C9.56106 10.666 9.85954 10.9645 9.85954 11.3327C9.85954 11.7009 9.56106 11.9993 9.19287 11.9993H4.5262C4.15801 11.9993 3.85954 11.7009 3.85954 11.3327ZM11.8595 11.9993C12.2277 11.9993 12.5262 11.7009 12.5262 11.3327C12.5262 10.9645 12.2277 10.666 11.8595 10.666C11.4913 10.666 11.1929 10.9645 11.1929 11.3327C11.1929 11.7009 11.4913 11.9993 11.8595 11.9993Z" fill="#FCFCFC"></path>
+                            </svg>Add block</a></li>
+                        <li class="nav-link"><a href="#opt-block" data-toggle="tab">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 4.66667C2 4.29848 2.29848 4 2.66667 4L13.3333 4C13.7015 4 14 4.29848 14 4.66667C14 5.03486 13.7015 5.33333 13.3333 5.33333L2.66667 5.33333C2.29848 5.33333 2 5.03486 2 4.66667Z" fill="#FCFCFC"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.3327C2 10.9645 2.29848 10.666 2.66667 10.666L13.3333 10.666C13.7015 10.666 14 10.9645 14 11.3327C14 11.7009 13.7015 11.9993 13.3333 11.9993L2.66667 11.9993C2.29848 11.9993 2 11.7009 2 11.3327Z" fill="#FCFCFC"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.6665 13.334C7.77107 13.334 8.6665 12.4386 8.6665 11.334C8.6665 10.2294 7.77107 9.33398 6.6665 9.33398C5.56193 9.33398 4.6665 10.2294 4.6665 11.334C4.6665 12.4386 5.56193 13.334 6.6665 13.334Z" fill="#FCFCFC"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.3335 6.66602C10.4381 6.66602 11.3335 5.77059 11.3335 4.66602C11.3335 3.56145 10.4381 2.66602 9.3335 2.66602C8.22893 2.66602 7.3335 3.56145 7.3335 4.66602C7.3335 5.77059 8.22893 6.66602 9.3335 6.66602Z" fill="#FCFCFC"></path>
+                            </svg>Block Options</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane fade show active" id="add-block">
+                          <div class="drag-list">
+                            <div class="tag-drag">
+                              <div class="ic"><img src="./assets/images/ico_add_bg.svg" alt=""></div>
+                              <div class="ct"><strong>Add background</strong>
+                                <p>Add a background photo for your reception on which you can place videos or link</p>
+                              </div>
+                            </div>
+                            <div class="tag-drag">
+                              <div class="ic"><img src="./assets/images/ico_add_image.svg" alt=""></div>
+                              <div class="ct"><strong>Add image/video</strong>
+                                <p>Add promo image/videos to welcome attendees like product showcases, services</p>
+                              </div>
+                            </div>
+                            <div class="tag-drag">
+                              <div class="ic"><img src="./assets/images/ico_add_sponsor.svg" alt=""></div>
+                              <div class="ct"><strong>Add Sponsor</strong>
+                                <p>Add Sponsor to welcome attendees like product showcases, services</p>
+                              </div>
+                            </div>
+                            <div class="tag-drag">
+                              <div class="ic"><img src="./assets/images/ico_add_text.svg" alt=""></div>
+                              <div class="ct"><strong>Add text</strong>
+                                <p>Add more description areas of the event</p>
+                              </div>
+                            </div>
+                            <div class="tag-drag">
+                              <div class="ic"><img src="./assets/images/ico_add_link.svg" alt=""></div>
+                              <div class="ct"><strong>Add link</strong>
+                                <p>Add transparent clickable areas which can be link to areas of the event</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="opt-block">
+                          <div class="module-edit">
+                            <div class="ttl">Add background</div>
+                            <div class="m-input"><span class="m-input_label">Choose image</span>
+                              <div class="input-file-wrap">
+                                <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                                <div class="btn-upload"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image</span></div>
+                                <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image</span></div>
+                                <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                              </div>
+                            </div>
+                            <p class="format">Recommended format: 1440 x 958px | JPG, JPEG, PNG | Up to 20 MB</p>
+                          </div>
+                          <div class="module-edit">
+                            <div class="ttl">Add Image/Video</div>
+                            <div class="m-input"><span class="m-input_label">Choose image/video</span>
+                              <div class="input-file-wrap">
+                                <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml, video/mp4, video/x-m4v, video/*"><img class="img-upload" src="" alt="your image">
+                                <div class="btn-upload"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image/video</span></div>
+                                <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image/video</span></div>
+                                <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image/video</span></div>
+                              </div>
+                            </div>
+                            <p class="format">Image format: JPG, JPEG, PNG | Up to 5 MB<br>Video format: MP4 | Up to 1000 MB</p>
+                            <div class="block-checkbox">
+                              <div class="m-input">
+                                <input class="input-checkbox" id="autoplay" type="checkbox" checked>
+                                <label class="checkbox-label" for="autoplay">Toggle</label>
+                              </div>
+                              <div class="name-check">Auto play video</div>
+                            </div>
+                          </div>
+                          <div class="module-edit">
+                            <div class="ttl">Add Sponsor</div>
+                            <div class="m-input"><span class="m-input_label">Choose sponsor</span>
+                              <div class="input-area">
+                                <select class="input select-box" name="select" required>
+                                  <option value="" disabled selected>Please choose one</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="module-edit">
+                            <div class="ttl">Add text</div>
+                            <div class="m-input"><span class="m-input_label">Content</span>
+                              <div class="m-editor_area">
+                                <div id="editorRecpt"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="module-edit">
+                            <div class="ttl">Add link</div>
+                            <div class="m-input"><span class="m-input_label">URL</span>
+                              <div class="input-area">
+                                <input class="input input-text" type="text" placeholder="https://...">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modalGen modalGen--sponsor modal fade" id="modalEditSponsor" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+              <div class="modal_head">
+                <h2 class="ttl-primary">Edit Sponsor</h2>
+                <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="./assets/images/ico_close_white.svg" alt=""></button>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <div class="modal_body-col modal_body-col--width100">
+                    <div class="m-input"><span class="m-input_label">Sponsor logo<small class="warning">*</small>
+                        <button class="btn-tooltip" type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></button></span>
+                      <div class="input-file-wrap">
+                        <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                        <div class="btn-upload"><img src="./assets/images/btn_upload.png" alt="Click or drop image"></div>
+                        <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image</span></div>
+                        <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                        <p>Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB</p>
+                      </div>
+                    </div>
+                    <div class="m-input m-input_counter js-counter"><span class="m-input_label">Sponsor name<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" maxlength="50" placeholder="Sponsor name">
+                        <div class="counter"><span class="count-up">0</span>/<span class="count-max">50</span></div>
+                      </div>
+                    </div>
+                    <div class="m-input"><span class="m-input_label">Website URL<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="https://">
+                      </div>
+                    </div>
+                    <div class="m-input"><span class="m-input_label">Group<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <select class="input select-box" name="select" required>
+                          <option value="" disabled selected>Please choose group</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_foot">
+                  <button class="btn btn-primary trans w-100" type="submit"><span>Save</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modalGrMng modal fade" id="groupSponsorManager" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal_head">
+                <div class="ttl-primary sm">Group management</div>
+                <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="./assets/images/ico_close_white.svg" alt=""></button>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <div class="m-group_control line">
+                    <div class="m-group_control-item">
+                      <div class="m-group_control-item--left"><span class="m-group_control-item--menu"><img src="./assets/images/ico_menu.svg" alt=""></span>
+                        <div class="m-group_control-item--title"><span>1.</span><span class="name">Diamond Sponsor</span></div>
+                      </div>
+                      <div class="m-group_control-item--right"><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                            <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                          </svg></a><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                          </svg></a></div>
+                    </div>
+                    <div class="m-group_control-item">
+                      <div class="m-group_control-item--left"><span class="m-group_control-item--menu"><img src="./assets/images/ico_menu.svg" alt=""></span>
+                        <div class="m-group_control-item--title"><span>2.</span><span class="name">Golden Sponsor</span></div>
+                      </div>
+                      <div class="m-group_control-item--right"><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                            <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                          </svg></a><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                          </svg></a></div>
+                    </div>
+                    <div class="m-group_control-item">
+                      <div class="m-group_control-item--left"><span class="m-group_control-item--menu"><img src="./assets/images/ico_menu.svg" alt=""></span>
+                        <div class="m-group_control-item--title"><span>3.</span><span class="name">Silver Sponsor</span></div>
+                      </div>
+                      <div class="m-group_control-item--right"><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                            <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                          </svg></a><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                          </svg></a></div>
+                    </div>
+                    <div class="m-group_control-item">
+                      <div class="m-group_control-item--left"><span class="m-group_control-item--menu"><img src="./assets/images/ico_menu.svg" alt=""></span>
+                        <div class="m-group_control-item--title"><span>4.</span><span class="name">Media Partner</span></div>
+                      </div>
+                      <div class="m-group_control-item--right"><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                            <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                          </svg></a><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                          </svg></a></div>
+                    </div>
+                    <div class="m-group_control-item">
+                      <div class="m-group_control-item--left"><span class="m-group_control-item--menu"><img src="./assets/images/ico_menu.svg" alt=""></span>
+                        <div class="m-group_control-item--title"><span>5.</span><span class="name">Gift Sponsor</span></div>
+                      </div>
+                      <div class="m-group_control-item--right"><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-edit" d="M4.48573 21.1909L9.78903 20.1302C9.98262 20.0915 10.1604 19.9964 10.3 19.8568L16.9498 13.2069C17.3403 12.8164 17.3403 12.1832 16.9498 11.7927L12.7072 7.55006C12.3167 7.15954 11.6835 7.15954 11.293 7.55006L4.64317 14.1999C4.50357 14.3395 4.40842 14.5173 4.3697 14.7109L3.30904 20.0142C3.16909 20.7139 3.78601 21.3308 4.48573 21.1909Z" fill="#fff"></path>
+                            <path class="svg-edit" d="M20.6925 5.2216L19.2783 3.80739C18.1068 2.63582 16.2073 2.63582 15.0357 3.80739L14.0504 4.79268C13.6599 5.1832 13.6599 5.81637 14.0504 6.20689L18.293 10.4495C18.6836 10.8401 19.3167 10.8401 19.7073 10.4495L20.6925 9.46425C21.8641 8.29267 21.8641 6.39318 20.6925 5.2216Z" fill="#fff"></path>
+                          </svg></a><a class="btn btn-circle trans">
+                          <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.51857 7.51855C7.92767 7.51855 8.25931 7.8502 8.25931 8.2593V11.963C8.25931 12.3721 7.92767 12.7037 7.51857 12.7037C7.10947 12.7037 6.77783 12.3721 6.77783 11.963V8.2593C6.77783 7.8502 7.10947 7.51855 7.51857 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M10.482 7.51855C10.8911 7.51855 11.2227 7.8502 11.2227 8.2593V11.963C11.2227 12.3721 10.8911 12.7037 10.482 12.7037C10.0729 12.7037 9.74121 12.3721 9.74121 11.963V8.2593C9.74121 7.8502 10.0729 7.51855 10.482 7.51855Z" fill="#fff"></path>
+                            <path class="svg-trash" fill-rule="evenodd" clip-rule="evenodd" d="M7.5187 1.59277C6.2914 1.59277 5.29648 2.5877 5.29648 3.815H3.07426H2.33351C1.92441 3.815 1.59277 4.14664 1.59277 4.55574C1.59277 4.96484 1.92441 5.29648 2.33351 5.29648H3.07426V14.1854C3.07426 15.4127 4.06918 16.4076 5.29648 16.4076H12.7039C13.9312 16.4076 14.9261 15.4127 14.9261 14.1854V5.29648H15.6669C16.0759 5.29648 16.4076 4.96484 16.4076 4.55574C16.4076 4.14664 16.0759 3.815 15.6669 3.815H14.9261H12.7039C12.7039 2.5877 11.709 1.59277 10.4817 1.59277H7.5187ZM11.2224 3.815C11.2224 3.4059 10.8908 3.07426 10.4817 3.07426H7.5187C7.1096 3.07426 6.77796 3.4059 6.77796 3.815H11.2224ZM5.29648 5.29648H4.55574V14.1854C4.55574 14.5945 4.88738 14.9261 5.29648 14.9261H12.7039C13.113 14.9261 13.4446 14.5945 13.4446 14.1854V5.29648H12.7039H5.29648Z" fill="#fff"></path>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_foot line">
+                  <button class="btn btn-primary trans w-100" type="submit" data-toggle="modal" data-target="#addGroupSponsorModal"><span>Add new group</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modalGrMngAdd modal fade" id="addGroupSponsorModal" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-wrapper">
+                <div class="modal_head"><a class="btn-back trans" href="#">BACK</a>
+                  <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="./assets/images/ico_close_white.svg" alt=""></button>
+                </div>
+                <div class="addGroup">
+                  <div class="modal_body">
+                    <div class="ttl-primary sm">Add sponsor group</div>
+                    <div class="m-input"><span class="m-input_label">Group name<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="Enter group name">
+                      </div>
+                    </div>
+                    <div class="m-input js-count"><span class="m-input_label">Description</span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" maxlength="50" placeholder="Enter group description">
+                        <div class="counter"><span class="count-up">0</span>/<span class="count-max">50</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal_foot">
+                    <button class="btn btn-primary trans w-100" type="submit"><span>Save</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modalGen modalGen--sponsor modal fade" id="modalSponsor" tabindex="-1" role="dialog" aria-labelledby="addGroupModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+              <div class="modal_head">
+                <h2 class="ttl-primary">Add Sponsor</h2>
+                <button class="btn btn-circle trans" type="button" data-dismiss="modal"><img src="./assets/images/ico_close_white.svg" alt=""></button>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <div class="modal_body-col modal_body-col--width100">
+                    <div class="m-input"><span class="m-input_label">Sponsor logo<small class="warning">*</small>
+                        <button class="btn-tooltip" type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></button></span>
+                      <div class="input-file-wrap">
+                        <input class="input-file" type="file" name="" accept="image/png, image/jpeg, image/svg+xml"><img class="img-upload" src="" alt="your image">
+                        <div class="btn-upload"><img src="./assets/images/btn_upload.png" alt="Click or drop image"></div>
+                        <div class="btn-update"><img src="./assets/images/ico_up.svg" alt="Click or drop image"><span>Upload image</span></div>
+                        <div class="btn-remove"><img src="./assets/images/ico_trash.svg" alt="Click or drop image"><span>Remove image</span></div>
+                        <p>Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB</p>
+                      </div>
+                    </div>
+                    <div class="m-input m-input_counter js-counter"><span class="m-input_label">Sponsor name<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" maxlength="50" placeholder="Sponsor name">
+                        <div class="counter"><span class="count-up">0</span>/<span class="count-max">50</span></div>
+                      </div>
+                    </div>
+                    <div class="m-input"><span class="m-input_label">Website URL<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <input class="input input-text" type="text" placeholder="https://">
+                      </div>
+                    </div>
+                    <div class="m-input"><span class="m-input_label">Group<small class="warning">*</small></span>
+                      <div class="input-area">
+                        <select class="input select-box" name="select" required>
+                          <option value="" disabled selected>Please choose group</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_foot">
+                  <button class="btn btn-primary trans w-100" type="submit"><span>Save</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="m-footer">
+        <div class="wrapper">
+          <div class="m-footer_upper"><a class="m-footer_logo trans" href="#"><img src="./assets/images/logo_footer.png" alt="eventure" width="132" height="34"></a>
+            <div class="m-footer_nav">
+              <ul class="links">
+                <li><a class="trans" href="#">Privacy Policy</a></li>
+                <li><a class="trans" href="#">Terms of User</a></li>
+              </ul>
+              <div class="community"><span>JOIN OUR COMMUNITY</span>
+                <ul>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_facebook.svg" alt="Facebook"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_twitter.svg" alt="Twitter"></a></li>
+                  <li><a class="trans" href="#"><img src="./assets/images/ico_linkin.svg" alt="Linked In"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div><small class="copy-right">Copyright © 2022 Fractal. All rights reserved</small>
+        </div>
+      </footer>
+    </div>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/js/libs/moment-with-locales.js"></script>
+    <script src="./assets/js/libs/bootstrap-datetimepicker.min.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="./assets/js/libs/jquery.ezdz.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelement-and-player.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/schedule.js"></script>
+    <script src="./assets/js/color-picker.js"></script>
+    <script>
+      $('.js-video').mediaelementplayer({
+        hideCaptionsButtonWhenEmpty: false,
+        features: ['playpause', 'current', 'duration', 'progress', 'tracks', 'volume', 'fullscreen'],
+        timeAndDurationSeparator: '<span>  /  </span>'
+      });
+    </script>
+  </body>
+</html>

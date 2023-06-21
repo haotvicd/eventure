@@ -1,0 +1,75 @@
+#addGroupModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal_head
+        a(href='#' class="btn-back trans") BACK
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .addGroup
+          .modal_body
+            .ttl-primary.sm Add group
+            .m-input
+              span.m-input_label Group name
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" placeholder="Enter group name")
+
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Description
+              .input-area
+                input.input.input-text(type="text" maxlength="50" placeholder="Enter group description")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 50
+
+            .m-groupColor
+              span.m-input_label Choose color
+              .m-groupColor_list
+                button(type='button' value='#FFC88B' class='btn' style='background: #FFC88B; --my-color-var: #FFC88B; ')
+                button(type='button' value='#B7FFE5' class='btn' style='background: #B7FFE5; --my-color-var: #B7FFE5; ')
+                button(type='button' value='#FFE3F1' class='btn' style='background: #FFE3F1; --my-color-var: #FFE3F1; ')
+                button(type='button' value='#FFF6D8' class='btn' style='background: #FFF6D8; --my-color-var: #FFF6D8; ')
+                button(type='button' value='#FDFFAB' class='btn' style='background: #FDFFAB; --my-color-var: #FDFFAB; ')
+                button(type='button' value='#D8FFF6' class='btn' style='background: #D8FFF6; --my-color-var: #D8FFF6; ')
+                button(type='button' value='#BCD7FF' class='btn' style='background: #BCD7FF; --my-color-var: #BCD7FF; ')
+                button(type='button' value='#C5BCFF' class='btn' style='background: #C5BCFF; --my-color-var: #C5BCFF; ')
+                button(type='button' value='#FEBCFF' class='btn' style='background: #FEBCFF; --my-color-var: #FEBCFF; ')
+                button(type='button' value='' class='btn pickerButton')
+                  img(src=path + "/assets/images/ico_hsl.png", alt="")
+              .pickerModal
+                .modal_head
+                  .pickerModal_title Choose group color
+                  button(type='button' class="btn btn-circle trans pickerButtonClose")
+                    img(src=path + "/assets/images/ico_close_white.svg", alt="")
+
+                .modal_body
+                  .hex
+                    .hex_wrap
+                      .hex_title Hex code
+                      .hex_code.showHex #A4A7FF
+                    .color
+                  .hsl
+                    .hsl_item
+                      span.hsl_item-title H
+                      input(type="range" step="1" min="0" max="360" class="hue" value="238")
+                      input(type="text" class='hsl_item-number showHue' value='238')
+                    .hsl_item
+                      span.hsl_item-title S
+                      input(type="range" step="1" min="0" max="100" class="sat" value="99")
+                      input(type="text" class='hsl_item-number showSat' value='99')
+                    .hsl_item
+                      span.hsl_item-title L
+                      input(type="range" step="1" min="0" max="100" class="light" value="82")
+                      input(type="text" class='hsl_item-number showLight' value='82')
+
+                .modal_foot.line.justify-content-end
+                  button(type="submit", class="btn btn-primary trans")
+                    span Cancel
+                  button(type="submit", class="btn btn-primary trans")
+                    span Apply
+
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-100")
+              span Save

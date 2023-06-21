@@ -1,0 +1,53 @@
+#modalEditSponsor.modalGen.modalGen--sponsor.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    form.modal-content
+      .modal_head
+        h2.ttl-primary Edit Sponsor
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+
+        .modal_body
+          .modal_body-col.modal_body-col--width100
+            .m-input
+              span.m-input_label Sponsor logo
+                small.warning *
+                button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+              .input-file-wrap
+                input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                img.img-upload(src='' alt='your image')
+                .btn-upload
+                  img(src=path+"/assets/images/btn_upload.png", alt="Click or drop image")
+                .btn-update
+                  img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                  span Upload image
+                .btn-remove
+                  img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                  span Remove image
+                p Recommended format: 480x480px | JPG, SVG, PNG | Up to 5 MB
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Sponsor name
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" maxlength="50" placeholder="Sponsor name")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 50
+            .m-input
+              span.m-input_label Website URL
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" placeholder="https://")
+            .m-input
+              span.m-input_label Group
+                small.warning *
+              .input-area
+                select.input.select-box(name="select" required)
+                  option(value="" disabled selected) Please choose group
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+        .modal_foot
+          button(type="submit", class="btn btn-primary trans w-100")
+            span Save

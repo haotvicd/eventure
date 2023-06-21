@@ -1,0 +1,21 @@
+#watchVideo.modal.fade(tabindex='-1' role='dialog' aria-labelledby='watchVideo' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content.modal_video
+      .modal_head.modal_video-head
+        h3.title Video name what describes you best?
+        div.button
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            <svg class='delete' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 9.23858 4.23858 7 7 7H10C10.5523 7 11 7.44772 11 8C11 8.55228 10.5523 9 10 9H7C5.34315 9 4 10.3431 4 12C4 13.6569 5.34315 15 7 15H10C10.5523 15 11 15.4477 11 16C11 16.5523 10.5523 17 10 17H7C4.23858 17 2 14.7614 2 12Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13 8C13 7.44772 13.4477 7 14 7H17C19.7614 7 22 9.23858 22 12C22 14.7614 19.7614 17 17 17H14C13.4477 17 13 16.5523 13 16C13 15.4477 13.4477 15 14 15H17C18.6569 15 20 13.6569 20 12C20 10.3431 18.6569 9 17 9H14C13.4477 9 13 8.55228 13 8Z" fill="#6F767E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13H9C8.44772 13 8 12.5523 8 12Z" fill="#6F767E"/>
+            </svg>
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.47114 0.52827C1.21079 0.26792 0.788682 0.26792 0.528332 0.52827C0.267983 0.788619 0.267982 1.21073 0.528332 1.47108L4.0569 4.99965L0.52827 8.52827C0.26792 8.78862 0.26792 9.21073 0.52827 9.47108C0.78862 9.73143 1.21073 9.73143 1.47108 9.47108L4.99971 5.94245L8.52834 9.47109C8.78868 9.73144 9.2108 9.73144 9.47115 9.47109C9.73149 9.21074 9.73149 8.78863 9.47115 8.52828L5.94251 4.99965L9.47108 1.47108C9.73143 1.21073 9.73143 0.78862 9.47108 0.528271C9.21073 0.267921 8.78862 0.267922 8.52827 0.528271L4.99971 4.05684L1.47114 0.52827Z" fill="#1A1D1F"/>
+            </svg>
+      .modal-wrapper
+        .modal_body
+          video#player1.js-video(width='100%' height='540' preload='none' style='max-width: 100%; border-radius: 16px;' poster=path+'/assets/images/img_video_ol.jpg' controls='' playsinline='' webkit-playsinline='')
+            source(src='//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true' type='video/mp4')
+            track(src='dist/mediaelement.vtt' srclang='en' label='English' kind='subtitles' type='text/vtt')

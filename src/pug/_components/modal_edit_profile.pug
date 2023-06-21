@@ -1,0 +1,101 @@
+#modalEditProfile.screen-1023.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      form.modal-content
+        .modal_head
+          h2.ttl-primary.sm Edit profile
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .m-activity_content
+              .m-activity_content-wrap
+                .m-activity_content-colum
+                  .m-activity_content-title.edge Basic Information
+
+                  .m-activity_content-row.row
+                    .col-6
+                      .m-input
+                        span.m-input_label First Name
+                          small.warning *
+                        .input-area
+                          input.input.input-text(type="text" value='Eleanor')
+                    .col-6
+                      .m-input
+                        span.m-input_label Last Name
+                          small.warning *
+                        .input-area
+                          input.input.input-text(type="text" value='Pena')
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Email
+                        small.warning *
+                      .input-area.edit-email
+                        input.input.input-text(type="text" value='jamsmischer@gmail.com' disabled)
+                        a.btn.btn-sm.btn-edit.trans(href='#')
+                          span Change
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Job title
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="text" value='Business Head')
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Organization
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="text" value='Fractal Company')
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label City
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="text" value='Auckland')
+
+                  .m-activity_content-row
+                    .m-input
+                      span.m-input_label Country
+                        small.warning *
+                      .input-area
+                        input.input.input-text(type="text" value='New Zealand')
+
+                .m-activity_content-colum
+                  .m-activity_content-title.edge Additional Information
+
+                  .m-activity_content-row
+                    .m-input
+                      .m-editor
+                        span.m-input_label About me
+                        .m-editor_area
+                          #editorProfileEdit
+
+                  .m-activity_content-row.social_row
+                    .m-input
+                      span.m-input_label Social Link 1
+                      .input-area
+                        input.input.input-text(type="text" value='https://twitter.com/abydyw')
+                        <a class="btn-delete" href="#"><img src="./assets/images/ico_trash.svg" alt=""></a>
+
+
+                  .m-activity_content-row.social_row
+                    .m-input
+                      span.m-input_label Social Link 2
+                      .input-area
+                        input.input.input-text(type="text" value='https://twitter.com/abydyw')
+                        <a class="btn-delete" href="#"><img src="./assets/images/ico_trash.svg" alt=""></a>
+
+                  .m-activity_content-row.social_row
+                    .m-input
+                      span.m-input_label Social Link 3
+                      .input-area
+                        input.input.input-text(type="text" value='https://twitter.com/abydyw')
+                        <a class="btn-delete" href="#"><img src="./assets/images/ico_trash.svg" alt=""></a>
+
+                  a(href="javascript:void()" class='trans link-add') +Add new Social link
+          .modal_foot
+            button(type="submit", class="btn btn-primary trans w-220")
+              span Save

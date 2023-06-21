@@ -1,0 +1,72 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Boots'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'boots-detail'
+  -pageChild    = 'page-boots detail'
+  -jsID         = 'calendar'
+  -uploadJs     = ''
+  -videoJs      = ''
+  -path         = '../'
+  -hasFooter    = false
+
+block container
+  .m-boots-detail
+    .m-boots-detail_head.sp-only
+      a.btn-back-detail(href="#")
+        img(src=path+"/assets/images/boots/ico_back.svg", alt="")
+        |Back
+      a.btn.btn-primary.btn-contact(href='#')
+        span Contact Us
+    .wrapper
+      .m-boots-detail_inner
+        .m-boots-detail_banner
+          img(src=path+"/assets/images/boots/big_img1.jpg", alt="")
+        .m-boots-detail_content
+          .orgz_head
+            .logo
+              img(src=path+"/assets/images/boots/big_logo1.png", alt="")
+            .des
+              span.name Starbucks
+              p.text Described by Queenstown House & Garden magazine as having 'one of the best views we've ever seen' you will love relaxing in this newly built
+              ul.tags-l.pc-only
+                li
+                  a(href="#") Food
+                li
+                  a(href="#") drink
+                li
+                  a(href="#") coffe
+          ul.tags-l.sp-only
+            li
+              a(href="#") Food
+            li
+              a(href="#") drink
+            li
+              a(href="#") coffe
+          .orgz_about
+            .contact-box
+              strong Leave Us A Message
+              p For more info about our brand please feel free to get in touch with us.
+              a.btn.btn-primary(href="#")
+                span Contact Us
+            .about-us
+              strong About Us
+              p Our story begins in 1971 along the cobblestone streets of Seattle’s historic Pike Place Market. It was here where Starbucks opened its first store, offering fresh-roasted coffee beans, tea and spices from around the world for our customers to take home. Our name was inspired by the classic tale, “Moby-Dick,” evoking the seafaring tradition of the early coffee traders.
+          .orgz_detail
+            p
+              img(src=path+"/assets/images/boots/detail_img1.jpg", alt="")
+            p.text Ten years later, a young New Yorker named Howard Schultz would walk through these doors and become captivated with Starbucks coffee from his first sip. After joining the company in 1982, a different cobblestone road would lead him to another discovery.
+            p.text It was on a trip to Milan in 1983 that Howard first experienced Italy’s coffeehouses, and he returned to Seattle inspired to bring the warmth and artistry of its coffee culture to Starbucks. By 1987, we swapped our brown aprons for green ones and embarked on our next chapter as a coffeehouse.
+            .gallery
+              div
+                img(src=path+"/assets/images/boots/detail_img2.jpg", alt="")
+              div
+                img(src=path+"/assets/images/boots/detail_img3.jpg", alt="")
+            p.text Ten years later, a young New Yorker named Howard Schultz would walk through these doors and become captivated with Starbucks coffee from his first sip. After joining the company in 1982, a different cobblestone road would lead him to another discovery.
+            p.text It was on a trip to Milan in 1983 that Howard first experienced Italy’s coffeehouses, and he returned to Seattle inspired to bring the warmth and artistry of its coffee culture to Starbucks. By 1987, we swapped our brown aprons for green ones and embarked on our next chapter as a coffeehouse.
+            p
+              img(src=path+"/assets/images/boots/detail_img4.jpg", alt="")

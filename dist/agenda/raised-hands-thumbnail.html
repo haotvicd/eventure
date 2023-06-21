@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="charset" content="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="../">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Agenda</title>
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin="">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="..//assets/css/libs/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="..//assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+  </head>
+  <body class="agenda">
+    <div class="agenda">
+      <header class="m-header">
+        <div class="wrapper">
+          <div class="m-header_inner">
+            <div class="header-info">
+              <h1 class="m-header_logo"><a class="trans" href="#"><img src="..//assets/images/logo_osm.svg" alt="osm"></a></h1>
+              <nav class="nav-info"><a class="btn-style1 ico-schedule">View Schedule</a></nav>
+            </div>
+            <nav class="nav"><a class="nav_link nav_icon trans" href="#">Messages<span class="ico_messages"></span></a><a class="widget-open nav_link nav_icon activated new trans" href="#">Alerts<span class="ico_notification"></span></a>
+              <div class="nav_user"><a class="nav_user_icon" href="javascript:;"><img src="..//assets/images/ico_avatar.png" alt=""></a></div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="layout-agenda">
+          <div class="layout-main"> 
+            <div class="main-header"> <a class="header-back trans" href="#"></a>
+              <div class="header-top"> 
+                <ul class="header-top-group">
+                  <li><a class="btn btn-secondary header-top-item btn-live">Live</a></li>
+                  <li>
+                    <div class="header-at-skin header-top-item">19:30s</div>
+                  </li>
+                </ul>
+                <ul class="header-top-group">
+                  <li> 
+                    <div class="header-person header-top-item">244 person</div>
+                  </li>
+                  <li> 
+                    <div class="header-rec header-top-item">REC</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-title">Save Money, Without Thinking About It. Betcha can’t eat!</div>
+              <div class="header-action"><a class="btn btn-blue trans btn-pause-session" href="#">Pause Session</a><a class="btn btn-secondary trans btn-end-session" href="#">End Session</a></div>
+            </div>
+            <div class="main-video"> 
+              <div class="box-live">
+                <div class="box-live-main-list">
+                  <div class="box-live-main"><img src="..//assets/images/agenda/live-user2.jpg" alt="">
+                    <div class="box-live-info">
+                      <div class="live-info-ticket ticket-attendee"><img src="..//assets/images/ico-user.svg" alt="">
+                        <label>Attendee</label>
+                      </div>
+                      <div class="live-info-caption">Michael Smith</div>
+                      <div class="live-info-descriptions">Bussiness Conference Design & Facilitation, The Art of Metting</div>
+                    </div>
+                  </div>
+                  <div class="box-live-main"><img src="..//assets/images/agenda/live-user1.jpg" alt="">
+                    <div class="box-live-info">
+                      <div class="live-info-ticket ticket-hot"><img src="..//assets/images/ico-user.svg" alt="">
+                        <label>Host</label>
+                      </div>
+                      <div class="live-info-caption">Michael Smith</div>
+                      <div class="live-info-descriptions">Bussiness Conference Design & Facilitation, The Art of Metting</div>
+                    </div>
+                  </div>
+                  <div class="box-live-main"><img src="..//assets/images/agenda/live-user1.jpg" alt="">
+                    <div class="box-live-info">
+                      <div class="live-info-ticket ticket-speaker"><img src="..//assets/images/ico_speaker.svg" alt="">
+                        <label>Speaker</label>
+                      </div>
+                      <div class="live-info-caption">Michael Smith</div>
+                      <div class="live-info-descriptions">Bussiness Conference Design & Facilitation, The Art of Metting</div>
+                    </div>
+                  </div>
+                  <div class="box-live-main"><img src="..//assets/images/agenda/live-user1.jpg" alt="">
+                    <div class="box-live-info">
+                      <div class="live-info-caption">Michael Smith</div>
+                      <div class="live-info-descriptions">Bussiness Conference Design & Facilitation, The Art of Metting</div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="box-live-thumbnail">
+                  <li> <a> <img src="..//assets/images/agenda/live-thumbnail-user.jpg" alt="">
+                      <div class="box-live-thumbnail-caption">Michael Smith</div></a></li>
+                  <li> <a> <img src="..//assets/images/agenda/live-thumbnail-user.jpg" alt="">
+                      <div class="box-live-thumbnail-caption">Michael Smith</div></a></li>
+                  <li> <a> <img src="..//assets/images/agenda/live-thumbnail-user.jpg" alt="">
+                      <div class="box-live-thumbnail-caption">Michael Smith</div></a></li>
+                </ul>
+              </div>
+              <div class="video-control"> 
+                <div class="video-control-host"> 
+                  <div class="video-control-host-close btn-host">close</div>
+                  <div class="video-control-host-item"> 
+                    <div class="caption">Host</div>
+                    <div class="video-control-item-main on">
+                      <div class="video-control-host-status"><img class="banner" src="..//assets/images/img_avatar07.png"></div>
+                      <div class="video-control-host-info"> 
+                        <div class="title">Esther Howard</div>
+                        <div class="desc">Cofounder & CEO, Spaktoro</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="video-control-host-list">
+                    <div class="caption">Host</div>
+                    <div class="video-control-host-list-main"> 
+                      <div class="swiper video-host">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"> 
+                            <div class="video-control-item-main on"> 
+                              <div class="video-control-host-status"><img class="banner" src="..//assets/images/img_avatar01.png"></div>
+                              <div class="video-control-host-info"> 
+                                <div class="title">Esther Howard</div>
+                                <div class="desc">Cofounder & CEO, Spaktoro</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                            <div class="video-control-item-main"> 
+                              <div class="video-control-host-status"><img class="banner" src="..//assets/images/img_avatar02.png"></div>
+                              <div class="video-control-host-info"> 
+                                <div class="title">Esther Howard</div>
+                                <div class="desc">Cofounder & CEO, Spaktoro</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                            <div class="video-control-item-main"> 
+                              <div class="video-control-host-status"><img class="banner" src="..//assets/images/img_avatar03.png"></div>
+                              <div class="video-control-host-info"> 
+                                <div class="title">Esther Howard</div>
+                                <div class="desc">Cofounder & CEO, Spaktoro</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                            <div class="video-control-item-main on">
+                              <div class="video-control-host-status"><img class="banner" src="..//assets/images/img_avatar04.png"></div>
+                              <div class="video-control-host-info"> 
+                                <div class="title">Esther Howard</div>
+                                <div class="desc">Cofounder & CEO, Spaktoro</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                            <div class="video-control-item-main on"> 
+                              <div class="video-control-host-status"><img class="banner" src="..//assets/images/img_avatar05.png"></div>
+                              <div class="video-control-host-info"> 
+                                <div class="title">Esther Howard</div>
+                                <div class="desc">Cofounder & CEO, Spaktoro</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="video-control-main">
+                  <div class="control-left">
+                    <ul class="nav"> 
+                      <li> <a class="user-group btn-host"></a></li>
+                    </ul>
+                  </div>
+                  <div class="control-center">
+                    <ul class="nav group">
+                      <li> <a class="video"></a></li>
+                      <li> <a class="micro"></a></li>
+                      <li> <a class="video-share btn-video-share"></a>
+                        <div class="video-share-main"> 
+                          <div class="title">Present to audience</div>
+                          <div class="desc">Present a file from your computer or share your screen with the audience.</div>
+                          <ul> 
+                            <li> 
+                              <div class="img btn-share-screen"> <span class="ico-share-screen"></span></div>
+                              <div class="title">Share Screen</div>
+                              <div class="desc">Share a browser window or tab, or your entire screen with your audience.</div>
+                            </li>
+                            <li> 
+                              <div class="img btn-choose-file"><span class="ico-pdf"></span></div>
+                              <div class="title">Select PDF File</div>
+                              <div class="desc">Choose a PDF file from your computer to present to your audience.</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="nav">
+                      <li> <a class="video-menu"></a>
+                        <ul class="video-menu-item"> 
+                          <li> <a>Manage Moderator</a></li>
+                          <li> <a>Background & visual effect</a></li>
+                          <li> <a>Audio & Video settings</a></li>
+                        </ul>
+                        <li> <a class="btn-emoji emoji"></a>
+                          <ul class="video-emoji-list">
+                            <li> <a> <img class="banner" src="..//assets/images/emoji_1.svg"></a></li>
+                            <li> <a> <img class="banner" src="..//assets/images/emoji_2.svg"></a></li>
+                            <li> <a> <img class="banner" src="..//assets/images/emoji_3.svg"></a></li>
+                            <li> <a> <img class="banner" src="..//assets/images/emoji_4.svg"></a></li>
+                            <li> <a> <img class="banner" src="..//assets/images/emoji_5.svg"></a></li>
+                            <li> <a> <img class="banner" src="..//assets/images/emoji_6.svg"></a></li>
+                            <li> <a> <img class="banner" src="..//assets/images/emoji_7.svg"></a></li>
+                          </ul>
+                        </li>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="control-right">
+                    <ul class="nav"> 
+                      <li> <a class="btn-toggle-label">
+                           <span class="button1">Record Session</span>
+<span class="button2 move"></span>
+<span class="button3 push">Recording...</span></a></li>
+                      <li> <a class="card btn-layout-card"></a></li>
+                      <li> <a class="gird btn-layout-gird"></a></li>
+                      <li> 
+                        <div class="quality"> 
+                          <div class="quality-label"> <span class="ico-hd"></span></div>
+                          <ul class="quality-list">
+                            <li class="is-activated"> <a><span class="ico-hd"> </span>High Definition</a></li>
+                            <li> <a> <span class="ico-ld"> </span>Low Definition</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li> <a class="full-screen btn-fullscreen"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout-sidebar"> 
+            <div class="tab-main tag-js">
+              <div class="tab-header"><a class="is-activated" attr-body="#tab-main1">Live feeds</a><a attr-body="#tab-main2">People in session</a></div>
+              <div class="tab-body"> 
+                <div class="tab-content" id="tab-main1">
+                  <div class="tab-item tag-js">
+                    <div class="tab-header"><a attr-body="#tab-chats">Chats</a><a attr-body="#tab-qa">Q&A</a><a attr-body="#tab-poll">Poll</a><a class="is-activated" attr-body="#tab-raised-hands">Raised Hands</a><a attr-body="#tab-videos">Videos</a></div>
+                    <div class="tab-body">
+                      <div class="tab-content" id="tab-chats"> </div>
+                      <div class="tab-content" id="tab-qa"> </div>
+                      <div class="tab-content" id="tab-poll"> 
+                        <div class="tab-item-main"> 
+                          <div class="tab-panel"> <a class="btn-close">Close </a>
+                            <div class="tab-panel-header">Create Poll</div>
+                            <div class="tab-panel-body"> 
+                              <form class="form">
+                                <div class="form-item"> 
+                                  <div class="form-item-label">Question</div>
+                                  <div class="form-item-input"> 
+                                    <textarea class="textarea"></textarea>
+                                    <div class="form-item-count"> 
+                                      <div class="count">0</div>
+                                      <div class="limit">/300</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-item"> 
+                                  <div class="form-item-label">Enter answers</div>
+                                  <div class="form-item-group">
+                                    <div class="form-item-input"> 
+                                      <input class="input count-input">
+                                      <div class="form-item-count count-input">
+                                        <div class="count">0</div>
+                                        <div class="limit">/120</div>
+                                      </div>
+                                    </div>
+                                    <div class="form-item-input"> 
+                                      <input class="input count-input">
+                                      <div class="form-item-count count-input">
+                                        <div class="count">0</div>
+                                        <div class="limit">/120</div>
+                                      </div>
+                                    </div>
+                                    <div class="form-item-input"> 
+                                      <button class="btn btn-style4">
+                                        <label>+ Add answers</label>
+                                      </button>
+                                    </div>
+                                    <div class="form-item-input input-checkbox">
+                                      <label for="allow-multiple">Allow multiple answers
+                                        <input id="allow-multiple" type="checkbox"><span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-item"> 
+                                  <div class="form-item-label">Show results to attendees after voting?</div>
+                                  <div class="form-item-group">
+                                    <div class="form-item-input input-radio">
+                                      <label for="option1">Show poll results instanly
+                                        <input id="option1" type="radio" name="option"><span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                    <div class="form-item-input input-radio">
+                                      <label for="option2">Show poll results only after poll has ended
+                                        <input id="option2" type="radio" name="option"><span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                    <div class="form-item-input input-radio">
+                                      <label for="option3">Don’t show poll results
+                                        <input id="option3" type="radio" name="option"><span class="checkmark"></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-footer"> 
+                                  <button class="btn btn-deny trans" type="button">Save Draft</button>
+                                  <button class="btn btn-primary trans" type="button">Publish</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-content" id="tab-raised-hands">
+                        <ul class="user-request">
+                          <li>
+                            <div class="user-request-item">
+                              <div class="user-request-img"><img src="..//assets/images/img_cus02.png" alt=""></div>
+                              <div class="user-request-info">
+                                <div class="user-request-info-title">Pacome Anjorin</div>
+                                <div class="user-request-info-descriptions">National Sales Manager</div>
+                              </div>
+                              <div class="user-request-control"><a class="btn btn-style2 trans">Withdraw</a></div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="user-request-item">
+                              <div class="user-request-img"><img src="..//assets/images/img_avatar02.png" alt=""></div>
+                              <div class="user-request-info">
+                                <div class="user-request-info-title">Theophile Kpankon</div>
+                                <div class="user-request-info-descriptions">National Sales Manager</div>
+                              </div>
+                              <div class="user-request-control"><a class="btn btn-primary trans">Accept request</a><a class="btn btn-deny trans">Deny</a></div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="user-request-item">
+                              <div class="user-request-img"><img src="..//assets/images/img_cus02.png" alt=""></div>
+                              <div class="user-request-info">
+                                <div class="user-request-info-title">Pacome Anjorin</div>
+                                <div class="user-request-info-descriptions">National Sales Manager</div>
+                              </div>
+                              <div class="user-request-control"><a class="btn btn-primary trans">Accept request</a><a class="btn btn-deny trans">Deny</a></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content" id="tab-videos"> 
+                        <ul class="videos"> 
+                          <li> 
+                            <div class="videos-item"> 
+                              <div class="videos-thumbnail"> <img class="banner" src="..//assets/images/agenda/video_thumbnail_1.png" alt=""></div>
+                              <div class="videos-info"> 
+                                <div class="videos-title">Your Chrome, Everywhere</div>
+                                <div class="videos-time">00:03:07 </div>
+                                <div class="videos-action trans" data-toggle="modal" data-target="#modalPlay">Play video</div>
+                              </div>
+                            </div>
+                          </li>
+                          <li> 
+                            <div class="videos-item"> 
+                              <div class="videos-thumbnail"> <img class="banner" src="..//assets/images/agenda/video_thumbnail_2.png" alt=""></div>
+                              <div class="videos-info"> 
+                                <div class="videos-title">9 Disgusting Facts about Thanksg Disgusting Facts</div>
+                                <div class="videos-time">00:03:07 </div>
+                                <div class="videos-action trans" data-toggle="modal" data-target="#modalPlay">Play video</div>
+                              </div>
+                            </div>
+                          </li>
+                          <li> 
+                            <div class="videos-item"> 
+                              <div class="videos-thumbnail"> <img class="banner" src="..//assets/images/agenda/video_thumbnail_3.png" alt=""></div>
+                              <div class="videos-info"> 
+                                <div class="videos-title">For some reason, we couldn't load</div>
+                                <div class="videos-time">00:03:07 </div>
+                                <div class="videos-action trans" data-toggle="modal" data-target="#modalPlay">Play video</div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content" id="tab-main2"> 
+                  <div class="tab-item-main"> 
+                    <form class="form">
+                      <div class="form-item-inline"> 
+                        <div class="form-item people-search"> 
+                          <div class="form-item-input input-search"><span class="ico-search"></span>
+                            <input type="text" name="search" placeholder="Search for an attendee">
+                          </div>
+                        </div>
+                        <div class="form-item sort-type"> 
+                          <div class="form-item-input input-select">
+                            <input type="text" name="select_name2">
+                            <div class="label"> <span class="ico-list-view"></span></div>
+                            <ul> 
+                              <li data-value="0"><span class="ico-grid-view"> </span>Grid View </li>
+                              <li class="is-activated" data-value="1"> <span class="ico-list-view"> </span>List View</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="box-people-main">
+                      <div class="people-list"> 
+                        <div class="people-item"> <img class="btn-user-info" src="..//assets/images/img_avatar04.png" alt=""><a class="btn btn-hot trans" href=""><span class="ico-hot-white-circe"></span>Host</a>
+                          <div class="people-main"> 
+                            <div class="title">Adeleke Peter </div>
+                            <div class="desc"> 
+                              <p>Job title, Organization </p>
+                              <p>Ho Chi Minh City, VietNam</p>
+                            </div>
+                            <div class="box-action"> <a class="btn btn-send-msg trans" href="#"> <span class="ico-comment"> </span>Send message</a><a class="btn btn-action trans" href="#"> <span class="ico-dotx"></span></a></div>
+                          </div>
+                        </div>
+                        <div class="people-item"> <img class="btn-user-info" src="..//assets/images/img_avatar05.png" alt=""><a class="btn btn-mic trans" href=""><span class="ico-mic-circe2"></span>Host</a>
+                          <div class="people-main"> 
+                            <div class="title">Adeleke Peter </div>
+                            <div class="desc"> 
+                              <p>Job title, Organization </p>
+                              <p>Ho Chi Minh City, VietNam</p>
+                            </div>
+                            <div class="box-action"> <a class="btn btn-send-msg trans" href="#"> <span class="ico-comment"> </span>Send message</a><a class="btn btn-action trans" href="#"> <span class="ico-dotx"></span></a></div>
+                          </div>
+                        </div>
+                        <div class="people-item"> <img class="btn-user-info" src="..//assets/images/img_avatar06.png" alt="">
+                          <div class="people-main"> 
+                            <div class="title">Adeleke Peter </div>
+                            <div class="desc"> 
+                              <p>Job title, Organization </p>
+                              <p>Ho Chi Minh City, VietNam</p>
+                            </div>
+                            <div class="box-action"> <a class="btn btn-send-msg trans" href="#"> <span class="ico-comment"> </span>Send message</a><a class="btn btn-action trans" href="#"> <span class="ico-dotx"></span></a></div>
+                          </div>
+                        </div>
+                        <div class="people-item"> <img class="btn-user-info" src="..//assets/images/img_avatar01.png" alt="">
+                          <div class="people-main"> 
+                            <div class="title">Adeleke Peter </div>
+                            <div class="desc"> 
+                              <p>Job title, Organization </p>
+                              <p>Ho Chi Minh City, VietNam</p>
+                            </div>
+                            <div class="box-action"> <a class="btn btn-send-msg trans" href="#"> <span class="ico-comment"> </span>Send message</a><a class="btn btn-action trans" href="#"> <span class="ico-dotx"></span></a></div>
+                          </div>
+                        </div>
+                        <div class="people-item"> <img class="btn-user-info" src="..//assets/images/img_avatar01.png" alt="">
+                          <div class="people-main"> 
+                            <div class="title">Adeleke Peter </div>
+                            <div class="desc"> 
+                              <p>Job title, Organization </p>
+                              <p>Ho Chi Minh City, VietNam</p>
+                            </div>
+                            <div class="box-action"> <a class="btn btn-send-msg trans" href="#"> <span class="ico-comment"> </span>Send message</a><a class="btn btn-action trans" href="#"> <span class="ico-dotx"></span></a></div>
+                          </div>
+                        </div>
+                        <div class="people-item"> <img class="btn-user-info" src="..//assets/images/img_avatar01.png" alt="">
+                          <div class="people-main"> 
+                            <div class="title">Adeleke Peter </div>
+                            <div class="desc"> 
+                              <p>Job title, Organization </p>
+                              <p>Ho Chi Minh City, VietNam</p>
+                            </div>
+                            <div class="box-action"> <a class="btn btn-send-msg trans" href="#"> <span class="ico-comment"> </span>Send message</a><a class="btn btn-action trans" href="#"> <span class="ico-dotx"></span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widget"> 
+          <div class="widget-row"> 
+            <div class="widget-close">Close</div>
+            <div class="header"> 
+              <div class="caption">Alerts</div>
+              <div class="description">Event wide announcements and notifications</div>
+            </div>
+            <div class="body">
+              <div class="notification-sound">
+                <div class="notification-sound-label">Notification sounds </div>
+                <div class="notification-sound-input">
+                  <input class="input-checkbox" id="pre-event" type="checkbox" checked>
+                  <label class="checkbox-label" for="pre-event">Toggle</label>
+                </div>
+              </div>
+              <div class="notification-main"><a class="btn btn-create-notification trans" data-toggle="modal" data-target="#modalCreateNotification"> <span class="ico-alert-inline"></span>Create Notification </a>
+                <div class="notification-list"> 
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                  <div class="notification-row">
+                    <div class="notification-header">Announcement</div>
+                    <div class="notification-body">Come on in for the final session: How to Become A Better Speaker and Moderator</div>
+                    <div class="notification-footer">
+                      <div class="notification-date">a year ago </div><a class="notification-action" href="#">Join Session</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-confirm fade" id="modalCreateNotification" tabindex="-1" role="dialog" aria-labelledby="createNotification" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal_head">
+                <h2 class="title">Create Announcement</h2>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <form class="form">
+                    <div class="form-item"> 
+                      <div class="form-item-label required">Message</div>
+                      <div class="form-item-input"> 
+                        <textarea class="textarea">Hey there, down here 👋 Want to hear something cool? </textarea>
+                        <div class="form-item-count"> 
+                          <div class="count">0</div>
+                          <div class="limit">/300</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <div class="form-item-input"> 
+                        <div class="reception-group-action"> 
+                          <button class="btn btn-style7 btn-receptions-action">
+                            <label>+ Add an action (optional)</label>
+                          </button>
+                          <div class="form-item-warning"> <span class="ico-warning"></span>Where do you want attendees to go</div>
+                        </div>
+                        <div class="receptions-type"> 
+                          <div class="form-item-label">Add an action</div>
+                          <div class="receptions-type-main">
+                            <div class="receptions-type-txt"> </div><a class="btn-clear-reception"><span class="ico-close"></span></a>
+                          </div>
+                        </div>
+                        <div class="external-link">
+                          <div class="form-item-label required">External link</div>
+                          <div class="form-item-input"> 
+                            <input type="text" placeholder="Search">
+                          </div>
+                        </div>
+                        <div class="receptions-action">
+                          <div class="form-search"> 
+                            <button> <span class="ico-search"></span></button>
+                            <input type="text" placeholder="Search">
+                          </div>
+                          <div class="form-list"> 
+                            <div class="title">Suggestions</div>
+                            <ul id="receptions-options">
+                              <li> <a class="active">Reception</a></li>
+                              <li> <a>Agenda</a></li>
+                              <li> <a>Networking</a></li>
+                              <li> <a>Booths</a></li>
+                              <li> <a>External link</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item no-border"> 
+                      <div class="form-item-input"> <a class="btn-reception-preview"> <span class="ico-eye-inline"> </span>Show Preview</a></div>
+                    </div>
+                    <div class="form-footer"> 
+                      <button class="btn btn-deny trans" type="button" data-dismiss="modal">Cancel</button>
+                      <button class="btn btn-primary trans" type="button">Send</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-confirm fade" id="modalPlay" tabindex="-1" role="dialog" aria-labelledby="playVideoConfirm" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+              <div class="modal_head">
+                <h2 class="title">Broadcast video</h2>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <div class="modal_body_descriptions">Do you want to broadcast this video to everyone in this session?</div>
+                </div>
+                <div class="modal_foot">
+                  <button class="btn btn-black trans" type="button" data-dismiss="modal"><span>Cancel</span></button>
+                  <button class="btn btn-primary trans" type="button"><span>Confirm</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-confirm fade" id="modalEnd" tabindex="-1" role="dialog" aria-labelledby="endVideoConfirm" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <form class="modal-content">
+              <div class="modal_head">
+                <h2 class="title">This video has ended</h2>
+              </div>
+              <div class="modal-wrapper">
+                <div class="modal_body">
+                  <div class="modal_body_descriptions">Do you want to start another one?</div>
+                </div>
+                <div class="modal_foot">
+                  <button class="btn btn-black trans" type="button" data-dismiss="modal"><span>No</span></button>
+                  <button class="btn btn-primary trans" type="button"><span>Yes</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="..//assets/js/libs/moment-with-locales.js"></script>
+    <script src="..//assets/js/libs/bootstrap-datetimepicker.min.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="..//assets/js/libs/jquery.ezdz.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelement-and-player.min.js"></script>
+    <script src="..//assets/js/common.js"></script>
+  </body>
+</html>

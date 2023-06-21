@@ -1,0 +1,75 @@
+.tbl-networking {
+  .tbl-head,
+  .tbl-body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .tbl_col {
+    &.col1 {
+      width: 9.14179%;
+    }
+    &.col2 {
+      width: 16.51119%;
+      padding-left: 0;
+    }
+    &.col3 {
+      width: 6.716417%;
+    }
+    &.col4 {
+      width: 37.59328%;
+    }
+    &.col5 {
+      width: 20.388059%;
+    }
+    &.col7 {
+      width: 13%;
+    }
+    &.col6 {
+      width: 9.649264%;
+      text-align: right;
+    }
+  }
+  .tbl-body {
+    &_row {
+      border-bottom: 1px solid #272B30;
+      padding: 16px 0;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+  .seq {
+    display: flex;
+    align-items: center;
+    img {
+      width: 20px;
+    }
+    small {
+      margin-left: 27px;
+    }
+  }
+  .text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    display: block;
+  }
+  .status {
+    background: url(../images/ico_eye_show.svg) no-repeat left center;
+    color: #83bf6e;
+    &.is-hide {
+      background: url(../images/ico_eye_hide.svg) no-repeat left center;
+      color: #FF6A55;
+    }
+  }
+  .control {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    .btn {
+      &:last-child {
+        margin-left: 12px;
+      }
+    }
+  }
+}

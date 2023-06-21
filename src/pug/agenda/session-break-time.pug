@@ -1,0 +1,115 @@
+extends ../_layout/default
+
+block vars
+  -title        = 'Session'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'agenda-session'
+  -jsID         = 'calendar'
+  -uploadJs     = 'true'
+  -videoJs      = 'true'
+  -path         = '../'
+  -hasFooter    = false
+
+block container
+  .layout-basic
+    .layout-inner
+      .tab-main.tag-js.tab-main-session
+        .tab-header
+          .tab-header-tab
+            a(attr-body="#tab-main1") My Schedule
+            a.is-activated(attr-body="#tab-main2") All Sessions
+          .box-form-search
+            button.btn(type='button')
+              span.ico-search
+            input(type="text" placeholder="Search session name")
+        .tab-control
+          .tab-control-caption Filter by Tags
+          .tab-control-body
+            .filter-tags
+              select.filter-tags-select
+                option
+                option(value="Entertainment") Entertainment
+                option(value="Blockchain") Blockchain
+                option(value="Food") Food
+                option(value="Groundbreaking") Groundbreaking
+                option(value="Groundbreaking") Groundbreaking
+                option(value="Motivational") Motivational
+                option(value="Leadership") Leadership
+                option(value="Transportation") Transportation
+                option(value="Defence") Defence
+                option(value="Next Generation") Next Generationence
+            ul
+              li
+                a Entertainment
+              li
+                a Blockchain
+              li
+                a Food
+              li
+                a Groundbreaking
+              li
+                a Motivational
+              li
+                a Leadership
+              li
+                a Transportation
+              li
+                a Defence
+              li
+                a Next Generation
+        .tab-body
+          #tab-main1.tab-content
+            include components/session-content-my.pug
+          #tab-main2.tab-content
+            include components/session-content-all-with-break-time.pug
+
+  include ../_components/widget
+  #modalViewSpeakerMain.modalGen.modalGen--sponsor.modalGen--view.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content.speaker-content
+        .modal_head
+          h2.ttl-primary View Info
+          button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+            img(src=path + "/assets/images/ico_close_white.svg", alt="")
+        .modal-wrapper
+          .modal_body
+            .modal_body__block
+              p.title Information
+              .item-body
+                .item-body_user
+                  .image
+                    img(src=path+"/assets/images/img_cus02.png", alt="")
+                  .info
+                    .name Esther Howard
+                    .email thomas.lawrence@gmail.com
+                    .type Speaker
+                .item-body_information
+                  .row-information
+                    .row
+                      .col-6
+                        .box-information
+                          small Job Title:
+                          p Mechanic
+                      .col-6
+                        .box-information
+                          small Organization:
+                          p ...
+                  .row-information
+                    .row
+                      .col-6
+                        .box-information
+                          small Province/City:
+                          p Ho Chi Minh City
+                      .col-6
+                        .box-information
+                          small Country:
+                          p VietNam
+                  .row-information
+                    .row
+                      .col-12
+                        .box-information
+                          small Sessions:
+                          p Session 3, Session 4

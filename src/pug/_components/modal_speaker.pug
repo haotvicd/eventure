@@ -1,0 +1,80 @@
+#modalSpeaker.modalGen.modalGen--speaker.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addGroupModalTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    form.modal-content
+      .modal_head
+        h2.ttl-primary Add Speaker
+        button(type='button' class="btn btn-circle trans" data-dismiss="modal")
+          img(src=path + "/assets/images/ico_close_white.svg", alt="")
+      .modal-wrapper
+        .modal_body
+          .modal_body-col.modal_body-col--col1
+            h3.ttl-col Information
+            .gr-input
+              .m-input
+                span.m-input_label First name
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="First name")
+              .m-input
+                span.m-input_label Last name
+                  small.warning *
+                .input-area
+                  input.input.input-text(type="text" placeholder="Last name")
+            .m-input
+              span.m-input_label Email
+                small.warning *
+              .input-area
+                input.input.input-text(type="text" placeholder="Enter email ID of speaker")
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Job Title
+              .input-area
+                input.input.input-text(type="text" maxlength="50" placeholder="Enter speaker’s job title")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 50
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Organization
+              .input-area
+                input.input.input-text(type="text" maxlength="50" placeholder="Enter speaker’s organization")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 50
+            .m-input
+              span.m-input_label Province/City
+              .input-area
+                input.input.input-text(type="text" placeholder="Enter speaker’s Province/City")
+            .m-input
+              span.m-input_label Country
+              .input-area
+                input.input.input-text(type="text" placeholder="Enter email ID of speaker")
+            .m-input.m-input_counter.js-counter
+              span.m-input_label Speaker’s biography
+              .input-area
+                textarea.input.input-text.input-textarea(name="", maxlength="1000" cols="30", rows="10")
+                .counter
+                  span.count-up 0
+                  |/
+                  span.count-max 1000
+          .modal_body-col.modal_body-col--col2
+            h3.ttl-col Avatar Speaker
+            .m-input
+              span.m-input_label Upload Avatar
+                small.warning *
+              .input-file-wrap.is-circle
+                input.input-file(type="file", name="" accept="image/png, image/jpeg, image/svg+xml")
+                img.img-upload(src='' alt='your image')
+                .btn-upload
+                  img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                  span Click or drop image
+                .btn-update
+                  img(src=path+"/assets/images/ico_up.svg", alt="Click or drop image")
+                  span Upload image
+                .btn-remove
+                  img(src=path+"/assets/images/ico_trash.svg", alt="Click or drop image")
+                  span Remove image
+                p JPEG, JPG, SVG, PNG | Up to 10 MB
+        .modal_foot
+          button(type="submit", class="btn btn-primary trans w-100")
+            span Save

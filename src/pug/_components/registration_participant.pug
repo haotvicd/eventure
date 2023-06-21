@@ -1,0 +1,188 @@
+.m-content_head
+  div
+    h2.title-tab Participants List
+    span.description-tab Manage your attendees & speakers from here
+
+.m-control
+  button.btn.btn-sm.btn-import.trans
+    span Import
+  button.btn.btn-sm.btn-export.trans
+    span Export Data
+
+.m-dataTable.empty(style='display: none;')
+  .m-dataTable_thead
+    .m-dataTable_thead-th.col1
+      a(href="#" class='txt sortable') Attendees (
+        span.txt 0
+        |)
+    .m-dataTable_thead-th.col2
+      span.txt Email address
+    .m-dataTable_thead-th.col3
+      span.txt Type
+    .m-dataTable_thead-th.col4
+      span.txt Join via...
+      button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+    .m-dataTable_thead-th.col5
+      span.txt Status
+      button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+  .m-dataTable_empty
+    h3 There is no registration for this event.
+    p Please go ahead and invite participants or upload a list of confirmed registrants.
+    button.btn.btn-sm.btn-invite.trans
+      span Invite participants
+
+
+.m-dataTable
+  .m-dataTable_thead
+    .m-dataTable_thead-th.col1
+      a(href="#" class='txt sortable') Attendees (
+        span.txt 199
+        |)
+    .m-dataTable_thead-th.col2
+      span.txt Email address
+    .m-dataTable_thead-th.col3
+      span.txt Type
+    .m-dataTable_thead-th.col4
+      span.txt Join via...
+      button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+    .m-dataTable_thead-th.col5
+      span.txt Status
+      button.btn-tooltip(type='button' data-toggle='tooltip' data-placement='top' title='Tooltip on top')
+
+  .m-dataTable_tbody
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Perry Willmon
+      .m-dataTable_tbody-td.col2
+        span.txt osgoodwy@gmail.com
+      .m-dataTable_tbody-td.col3
+        span.txt Speaker
+      .m-dataTable_tbody-td.col4
+        span.txt Registration
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_registered.png", alt="")
+        span.txt Registered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Kendall Mckernan
+      .m-dataTable_tbody-td.col2
+        span.txt ulfaha@mail.ru
+      .m-dataTable_tbody-td.col3
+        span.txt Speaker
+      .m-dataTable_tbody-td.col4
+        span.txt Event Ticket
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_registered.png", alt="")
+        span.txt Registered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Odis Rhinehart
+      .m-dataTable_tbody-td.col2
+        span.txt zitka@mail.ru
+      .m-dataTable_tbody-td.col3
+        span.txt Exhibitor
+      .m-dataTable_tbody-td.col4
+        span.txt Invitation
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_unregistered.png", alt="")
+        span.txt Unregistered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Kris Roher
+      .m-dataTable_tbody-td.col2
+        span.txt fzaaaaa@gmail.com
+      .m-dataTable_tbody-td.col3
+        span.txt Attendee
+      .m-dataTable_tbody-td.col4
+        span.txt Registration
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_registered.png", alt="")
+        span.txt Registered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Val Purvis
+      .m-dataTable_tbody-td.col2
+        span.txt miyokoto@mail.ru
+      .m-dataTable_tbody-td.col3
+        span.txt Exhibitor
+      .m-dataTable_tbody-td.col4
+        span.txt Invitation
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_registered.png", alt="")
+        span.txt Registered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Coy Frappier
+      .m-dataTable_tbody-td.col2
+        span.txt seema@gmail.com
+      .m-dataTable_tbody-td.col3
+        span.txt Attendee
+      .m-dataTable_tbody-td.col4
+        span.txt Invitation
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_unregistered.png", alt="")
+        span.txt Unregistered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Mason Modlin
+      .m-dataTable_tbody-td.col2
+        span.txt bertou@yandex.ru
+      .m-dataTable_tbody-td.col3
+        span.txt Speaker
+      .m-dataTable_tbody-td.col4
+        span.txt Event Ticket
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_unregistered.png", alt="")
+        span.txt Unregistered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Bill Gaston
+      .m-dataTable_tbody-td.col2
+        span.txt rrian@yandex.ru
+      .m-dataTable_tbody-td.col3
+        span.txt Attendee
+      .m-dataTable_tbody-td.col4
+        span.txt Invitation
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_registered.png", alt="")
+        span.txt Registered
+
+    .m-dataTable_tbody-tr
+      .m-dataTable_tbody-td.col1
+        span.txt Keneth Conroy
+      .m-dataTable_tbody-td.col2
+        span.txt seannand@mail.ru
+      .m-dataTable_tbody-td.col3
+        span.txt Exhibitor
+      .m-dataTable_tbody-td.col4
+        span.txt Event Ticket
+      .m-dataTable_tbody-td.col5.user
+        img(src=path+"/assets/images/ico_registered.png", alt="")
+        span.txt Registered
+
+.pagination-nav
+  ul.pagination-list
+    li.page-item
+      a.pages.prev.trans(href="#")
+        img(src=path+"/assets/images/ico_pag_back.svg", alt="")
+        | Previous
+    li.page-item
+      a.pages.trans(href="#") 1
+    li.page-item
+      span.current.pages 2
+    li.page-item
+      a.pages.trans(href="#") 3
+    li.page-item
+      a.dots.trans(href="#") ...
+    li.page-item
+      a.pages.trans(href="#") 22
+    li.page-item
+      a.pages.next.trans(href="#") Next
+        img(src=path+"/assets/images/ico_pag_next.svg", alt="")
